@@ -1,0 +1,11 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=ChromeAddins.chm
+Default topic=Chrome Addins developpers guide
+Display compile progress=No
+Language=0x40c French (France)
+Title=Chrome Addins developpers guide
+
+
+[INFOTYPES]
+

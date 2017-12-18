@@ -1,0 +1,34 @@
+"First learn computer science and all the theory. Next develop a programming style. Then forget all that and just hack."\n\n- George Carrette.
+"Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live."\n\n- Martin Golding.
+"For a long time it puzzled me how something so expensive, so leading edge, could be so useless.  And then it occurred to me that a computer is a stupid machine with the ability to do incredibly smart things, while computer programmers are smart people with the ability to do incredibly stupid things.  They are, in short, a perfect match."\n\n- Bill Bryson.
+"Fifty years of programming language research, and we end up with C++?"\n\n-Richard A. O’Keefe.
+"I think Microsoft named .Net so it wouldn’t show up in a Unix directory listing."\n\n- Oktal.
+"First make it run. Then make it run fast."\n\n- Brian Kernighan.
+"If it keeps up, man will atrophy all his limbs but the push-button finger."\n\n-Frank Lloyd Wright.
+"Any code of your own that you haven't looked at for six or more months might as well have been written by someone else."\n\n-Eagleson’s Law.
+"Writing code has a place in the human hierarchy worth somewhere above grave robbing and beneath managing."\n\n- Gerald Weinberg.
+"There is no programming language-no matter how structured-that will prevent programmers from making bad programs."\n\n- Larry Flon.
+Artificial Intelligence usually beats natural stupidity.
+Login: yes\nPassword: i dont have one\npassword is incorrect\n\nLogin: yes\nPassword: incorrect.
+See daddy ? All the keys are in alphabetical order now.
+Hey ! It compiles ! Ship it !
+Those who can't write programs, write help files.
+"Heavier-than-air flying machines are impossible."\n\n- Lord Kelvin, president, Royal Society, 1895.
+Blink your eyelids periodically to lubricate your eyes.
+"Computers are like bikinis. They save people a lot of guesswork."\n\n-Sam Ewing.
+ASCII and ye shall receive.
+"Java is, in many ways, C++-."\n\n- Michael Feldman.
+The Internet: where men are men, women are men, and children are FBI agents.
+"Come to think of it, there are already a million monkeys on a million typewriters, and Usenet is nothing like Shakespeare."\n\n- Blair Houghton.
+"Of course, the best way to get accurate information on Usenet is to post something wrong and wait for corrections."\n\n- Matthew Austern.
+IRC is just a multiplayer notepad.
+"It is not about bits, bytes and protocols, but profits, losses and margins."\n\n-Lou Gerstner.
+It's been said that Bill Gates named his company after his dick...
+"'Intel Inside': The world's most widely used warning label."\n\n- Jim Hopper.
+^X^C\nquit\n:q\n^C\nend\nx\nexit\n^D\n^Z\n^K^B\n?\nhelp
+"Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter."\n\n-Eric Raymond.
+"Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves."\n\n- Alan Kay.
+"True innovation often comes from the small startup who is lean enough to launch a market but lacks the heft to own it."\n\n- Timm Martin.
+"The function of good software is to make the complex appear to be simple."\n\n- Grady Booch.
+"There are only two industries that refer to their customers as ‘users’."\n\n-Edward Tufte.
+"To iterate is human, to recurse divine."\n\n- L. Peter Deutsch.

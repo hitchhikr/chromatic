@@ -1,0 +1,239 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/2/trunk/Debug/Snippets
+END
+StarterConsoleLCC32.c
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterConsoleLCC32.c
+END
+StarterWindowGoAsm.asm
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterWindowGoAsm.asm
+END
+DrawLine.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Snippets/DrawLine.asm
+END
+MAsmHeader.asm
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/11/trunk/Debug/Snippets/MAsmHeader.asm
+END
+StarterConsole.asm
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterConsole.asm
+END
+StarterWindow.asm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterWindow.asm
+END
+MAsm32BuildAllRelease.asm
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/12/trunk/Debug/Snippets/MAsm32BuildAllRelease.asm
+END
+WinProc.asm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Snippets/WinProc.asm
+END
+MAsm32BuildAllDebug.asm
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/12/trunk/Debug/Snippets/MAsm32BuildAllDebug.asm
+END
+DigitalMarsBuildRelease.c
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/12/trunk/Debug/Snippets/DigitalMarsBuildRelease.c
+END
+FlatStarterWindow.asm
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/12/trunk/Debug/Snippets/FlatStarterWindow.asm
+END
+GoAsmBuildRelease.asm
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/12/trunk/Debug/Snippets/GoAsmBuildRelease.asm
+END
+DigitalMarsBuildDebug.c
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/12/trunk/Debug/Snippets/DigitalMarsBuildDebug.c
+END
+StarterConsoleDigitalMars.c
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterConsoleDigitalMars.c
+END
+TAsm32BuildRelease.asm
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/12/trunk/Debug/Snippets/TAsm32BuildRelease.asm
+END
+StarterWindowGCC.c
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterWindowGCC.c
+END
+GoAsmBuildDebug.asm
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/12/trunk/Debug/Snippets/GoAsmBuildDebug.asm
+END
+StarterConsoleGoAsm.asm
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterConsoleGoAsm.asm
+END
+TAsm32BuildDebug.asm
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/12/trunk/Debug/Snippets/TAsm32BuildDebug.asm
+END
+StarterWindowLCC32.c
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterWindowLCC32.c
+END
+ResolveIP.asm
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Snippets/ResolveIP.asm
+END
+CopyMem.asm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Snippets/CopyMem.asm
+END
+MAsm32BuildLibRelease.asm
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/12/trunk/Debug/Snippets/MAsm32BuildLibRelease.asm
+END
+StarterLib.asm
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterLib.asm
+END
+WriteWinText.asm
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/Debug/Snippets/WriteWinText.asm
+END
+FlatStarterConsole.asm
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/12/trunk/Debug/Snippets/FlatStarterConsole.asm
+END
+LoadFile.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Snippets/LoadFile.asm
+END
+GccBuildRelease.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12/trunk/Debug/Snippets/GccBuildRelease.c
+END
+MAsm32BuildLibDebug.asm
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/12/trunk/Debug/Snippets/MAsm32BuildLibDebug.asm
+END
+FreeMem.asm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Snippets/FreeMem.asm
+END
+ClearMem.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Snippets/ClearMem.asm
+END
+GccBuildDebug.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/12/trunk/Debug/Snippets/GccBuildDebug.c
+END
+StarterConsoleGCC.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterConsoleGCC.c
+END
+AllocMem.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Snippets/AllocMem.asm
+END
+Lcc32BuildRelease.c
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/12/trunk/Debug/Snippets/Lcc32BuildRelease.c
+END
+StarterHtml.html
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/2/trunk/Debug/Snippets/StarterHtml.html
+END
+SaveFile.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Snippets/SaveFile.asm
+END
+Lcc32BuildDebug.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/12/trunk/Debug/Snippets/Lcc32BuildDebug.c
+END
+StarterWindowDigitalMars.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/12/trunk/Debug/Snippets/StarterWindowDigitalMars.c
+END

@@ -1,0 +1,83 @@
+﻿Build started 14/10/2010 22:06:30.
+     1>Project "D:\Src\Pc\chromatic\Src\Script_Engine\lua514\lua514.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\lua514.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _CRT_SECURE_NO_WARNINGS /D _DEBUG /D _LIB /D _WIN32 /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /FR".\Debug\\" /Gd /TC /analyze- /errorReport:prompt src\lapi.c src\lauxlib.c src\lbaselib.c src\lcode.c src\ldblib.c src\ldebug.c src\ldo.c src\ldump.c src\lfunc.c src\lgc.c src\linit.c src\liolib.c src\llex.c src\lmathlib.c src\lmem.c src\loadlib.c src\lobject.c src\lopcodes.c src\loslib.c src\lparser.c src\lstate.c src\lstring.c src\lstrlib.c src\ltable.c src\ltablib.c src\ltm.c src\lundump.c src\lvm.c src\lzio.c src\print.c
+         print.c
+         lzio.c
+         lvm.c
+         lundump.c
+         ltm.c
+         ltablib.c
+         ltable.c
+         lstrlib.c
+         lstring.c
+         lstate.c
+         lparser.c
+         loslib.c
+         lopcodes.c
+         lobject.c
+         loadlib.c
+         lmem.c
+         lmathlib.c
+         llex.c
+         liolib.c
+         linit.c
+         Generating Code...
+         Compiling...
+         lgc.c
+         lfunc.c
+         ldump.c
+         ldo.c
+         ldebug.c
+         ldblib.c
+         lcode.c
+         lbaselib.c
+         lauxlib.c
+         lapi.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Src\Pc\chromatic\Src\Script_Engine\lua514\.\Debug\lua514.lib) does not match the Library's OutputFile property value (D:\Src\Pc\chromatic\libs\lua514d.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(lua514) does not match the Library's OutputFile property value (lua514d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\..\libs\lua514d.lib" /NOLOGO .\Debug\lapi.obj
+         .\Debug\lauxlib.obj
+         .\Debug\lbaselib.obj
+         .\Debug\lcode.obj
+         .\Debug\ldblib.obj
+         .\Debug\ldebug.obj
+         .\Debug\ldo.obj
+         .\Debug\ldump.obj
+         .\Debug\lfunc.obj
+         .\Debug\lgc.obj
+         .\Debug\linit.obj
+         .\Debug\liolib.obj
+         .\Debug\llex.obj
+         .\Debug\lmathlib.obj
+         .\Debug\lmem.obj
+         .\Debug\loadlib.obj
+         .\Debug\lobject.obj
+         .\Debug\lopcodes.obj
+         .\Debug\loslib.obj
+         .\Debug\lparser.obj
+         .\Debug\lstate.obj
+         .\Debug\lstring.obj
+         .\Debug\lstrlib.obj
+         .\Debug\ltable.obj
+         .\Debug\ltablib.obj
+         .\Debug\ltm.obj
+         .\Debug\lundump.obj
+         .\Debug\lvm.obj
+         .\Debug\lzio.obj
+         .\Debug\print.obj
+         lua514.vcxproj -> D:\Src\Pc\chromatic\Src\Script_Engine\lua514\.\Debug\lua514.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Debug\lua514.bsc" .\Debug\lapi.sbr .\Debug\lauxlib.sbr .\Debug\lbaselib.sbr .\Debug\lcode.sbr .\Debug\ldblib.sbr .\Debug\ldebug.sbr .\Debug\ldo.sbr .\Debug\ldump.sbr .\Debug\lfunc.sbr .\Debug\lgc.sbr .\Debug\linit.sbr .\Debug\liolib.sbr .\Debug\llex.sbr .\Debug\lmathlib.sbr .\Debug\lmem.sbr .\Debug\loadlib.sbr .\Debug\lobject.sbr .\Debug\lopcodes.sbr .\Debug\loslib.sbr .\Debug\lparser.sbr .\Debug\lstate.sbr .\Debug\lstring.sbr .\Debug\lstrlib.sbr .\Debug\ltable.sbr .\Debug\ltablib.sbr .\Debug\ltm.sbr .\Debug\lundump.sbr .\Debug\lvm.sbr .\Debug\lzio.sbr .\Debug\print.sbr
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\lua514.unsuccessfulbuild".
+         Touching ".\Debug\lua514.lastbuildstate".
+     1>Done Building Project "D:\Src\Pc\chromatic\Src\Script_Engine\lua514\lua514.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.00

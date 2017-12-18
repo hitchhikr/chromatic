@@ -1,0 +1,138 @@
+----------------------------------------------------------------------------------
+To do:
+
+General:
+
+    - Finish to replace PILL by LUA.
+	- Complete the dialog editor.
+	- Add a way to replace the default functions of childs windows (load/save, etc)
+	  (Probably with a table of pointers).
+	- Re-enable the macros recorder.
+    - Convert the chromaticsup.dll to C.
+    - Convert all .ini to .xml (using the tinyxml library).
+    - Handle files sharing violations.
+
+Languages:
+
+    - Give the user a choice in case of several SingleComment entries.
+    - The possibility to add a new language from the interface.
+
+Debugger:
+
+	A:
+
+	- Retrieve the user defined breakpoints
+	  (from all opened files and modules in debugged project)
+	  (files and line numbers passed to dbghelp).
+	- Add the disassembler.
+	- Add a tooltip to view the current value of the keyword under mouse pointer.
+
+	B:
+
+	- Add a memory viewer in the debugger.
+	- Create different types of breakpoints (like start/end timer for profiling purposes
+	  and datas watches (VC like)).
+	- Add a processes / threads datas viewer.
+
+Templates:
+
+	- Add Virtual Dub filter project (Asm/C).
+	- Add 3DSMax plugins projects (C/Asm ?).
+	- Add VST plugins projects (C/Asm ?).
+	- Add NT driver project template in C/C++.
+	- Add decent directx templates.
+	- Add complete support for intel Cpp compiler (and ms one).
+	- Add one or several wizard(s).
+	- Add templates for FreePascal.
+
+Menus:
+
+	- Add MingW32 usermenus.
+	- Add FreePascal usermenus.
+    - Modify the system to use 4 bytes keys instead of indexes
+      (with a keys sanity checkup system).
+
+----------------------------------------------------------------------------------
+Dialog editor:
+
+- Handle properties of the various controls (add interactivity).
+- Handle multiple selection of the controls.
+- Handle alignments functions.
+- Handle  file loading/saving of dialogs.
+- Add the test engine.
+- Add dialog to resources export.
+  To be considered: An extra option to use scripts here in order to add the ability
+  to produce code according to the dialog resources.
+
+----------------------------------------------------------------------------------
+What might be done (or not):
+
+Editor:
+
+- Add separations lines in sourcecodes.
+- Improve C language handling (especially fncs selections).
+- Generator of html documentation for procedures
+  (possibly with registers backtracing for assembly).
+- Keyboard shortcuts editor.
+- Create a bookmarks browser.
+- Add a sort function for selected blocks of text.
+- Text zooming (based on selected font).
+- Add customization abilities for the statusbar (not very important).
+- Include a hex editor mode for windows childs (Maybe an AddIn)
+  (it could be interesting to be able to paste unknown data from clipboard in
+  hex form directly into these windows for further editing).
+
+Coding help:
+
+- Handle include commands by listing INCLUDEDIR/LIBDIR/#INCLUDE/ETC. files in a listbox
+  (belongs to code completion).
+- Include windows structures in code completion.
+- Include user's procedures/variables in code completion.
+- Editor for the databases (or use them directly as text)
+- Use SQLLITE for the databases.
+- Create a better auto-correction engine (not just case correction).
+
+Projects:
+
+- Add project metrics (procedures/variables loads/redundancies/orphans entities).
+- Hierarchic organigram of procedures (inter-connexions in diagrams form).
+- Create a full project explorer.
+- A tasks scheduler for projects (with auto-reminder and so on... a la gantt).
+- Add a svn/cvs manager.
+- Create a MDI project type (never had the time to include this).
+- Add the ability to create new sub folders.
+- Projects templates editor (just add the ability to save a project as a template
+  existing or new depending on the user choice (combobox)).
+- Attach the directories to the skins for easier selections.
+- Add templates for pocket pc projects.
+- Add the ability to allow the selection of the compilation & assembling tool/file
+  (probably the ability to use 1 skin/file).
+- Ability to create sub-directories in projects structures.
+
+Misc:
+
+- Add a context menu in toolbars.
+- Allow user to modify main context menu.
+- Languages editor.
+- Skins editor.
+- Include an expression to ASM converter/creator (probably an Addin).
+- Include a diff utility (probably an Addin).
+- Include a PEButcher based on PE handling routines provided to AddIns.
+- Convert bmp/ico/cur viewer into a complete paint program.
+- Descent Snippets/Templates managers.
+- Write the tons of required documentations.
+- Change the look of the properties (treeview/vertical).
+- Allow the user to change the font of the dialogs and lists
+  or use the current system font.
+
+Debugger:
+
+- Add a builtin packets sniffer (w2000++) to help in debugging of network applications.
+- Complete the disassembler (SSE2/3).
+- Create a monkey mode
+  (bomb a debugged application with random windows messages to check it's robustness).
+  (+ a system to record/replay messages sequencies).
+- Hook API calls in debugged applications (with ability to report memory leaks).
+- Add a physical memory dumper.
+- Add scripting abilities to debugger (or some plugins possibilities).
+- Add separations lines in disassembled code (after ret/jmp/iret).

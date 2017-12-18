@@ -1,0 +1,43 @@
+[Project]
+Name=AddInASCII
+Type=ADDIN
+TypeExt=WINDLL
+TypeRename=
+TypeName=Chromatic AddIn
+Image=Cubes.ico
+Major=1
+Minor=0
+Revision=0
+Release=0
+IncludeVersion=1
+IncludeManifest=0
+OS=4
+FileType=2
+Title=AddInASCII
+Comments=Chromatic AddIn
+CompanyName=hitchhikr SoftWorks
+FileDescription=
+LegalCopyright=(C) Copyright 2001-2010 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.inc
+INCLUDE001=[INCLUDEDIR]\kernel32.inc
+INCLUDE002=[INCLUDEDIR]\user32.inc
+INCLUDE003=[INCLUDEDIR]\gdi32.inc
+INCLUDE004=[TEMPLATESDIR]\AddInConst.inc
+[LIBS]
+LIBRARY000=[LIBDIR]\kernel32.lib
+LIBRARY001=[LIBDIR]\user32.lib
+LIBRARY002=[LIBDIR]\gdi32.lib
+[MODULES]
+MODULE000=[PROJECTSDIR]\AddInASCII\AddInDatas.asm
+MODULE001=[PROJECTSDIR]\AddInASCII\AddIn.asm
+[DEFS]
+DEF=[PROJECTSDIR]\AddInASCII\AddIn.mdf
+[Windows]
+Window000=[PROJECTSDIR]\AddInASCII\AddIn.asm
+Focus=[PROJECTSDIR]\AddInASCII\AddIn.asm
+FocusLine=218
+Window001=[TEMPLATESDIR]\AddInConst.inc
+Window002=[PROJECTSDIR]\AddInASCII\AddInDatas.asm

@@ -1,0 +1,46 @@
+﻿Build started 14/10/2010 22:16:41.
+     1>Project "D:\Src\Pc\chromatic\Src\libdisasm\libdisasm.vcxproj" on node 2 (rebuild target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Release\libdisasm.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D _CRT_SECURE_NO_WARNINGS /D NDEBUG /D _LIB /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt ia32_implicit.c ia32_insn.c ia32_invariant.c ia32_modrm.c ia32_opcode_tables.c ia32_operand.c ia32_reg.c ia32_settings.c x86_disasm.c x86_format.c x86_imm.c x86_insn.c x86_misc.c x86_operand_list.c
+         ia32_implicit.c
+         ia32_insn.c
+         ia32_invariant.c
+         ia32_modrm.c
+         ia32_opcode_tables.c
+         ia32_operand.c
+         ia32_reg.c
+         ia32_settings.c
+         x86_disasm.c
+         x86_format.c
+         x86_imm.c
+         x86_insn.c
+         x86_misc.c
+         x86_operand_list.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Src\Pc\chromatic\Src\libdisasm\.\Release\libdisasm.lib) does not match the Library's OutputFile property value (D:\Src\Pc\chromatic\libs\libdisasm.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\libs\libdisasm.lib" /NOLOGO .\Release\ia32_implicit.obj
+         .\Release\ia32_insn.obj
+         .\Release\ia32_invariant.obj
+         .\Release\ia32_modrm.obj
+         .\Release\ia32_opcode_tables.obj
+         .\Release\ia32_operand.obj
+         .\Release\ia32_reg.obj
+         .\Release\ia32_settings.obj
+         .\Release\x86_disasm.obj
+         .\Release\x86_format.obj
+         .\Release\x86_imm.obj
+         .\Release\x86_insn.obj
+         .\Release\x86_misc.obj
+         .\Release\x86_operand_list.obj
+         libdisasm.vcxproj -> D:\Src\Pc\chromatic\Src\libdisasm\.\Release\libdisasm.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Release\libdisasm.unsuccessfulbuild".
+         Touching ".\Release\libdisasm.lastbuildstate".
+     1>Done Building Project "D:\Src\Pc\chromatic\Src\libdisasm\libdisasm.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.86

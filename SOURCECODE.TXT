@@ -1,0 +1,17 @@
+Take note:
+
+You need MASM32 and Visual C++ (6 or a more recent version but you'll have to convert the project
+and i don't guarantee the result) in order to create a new executable.
+
+BuildRC.bat need to be used if any resource is modified.
+ChromaticSupp.dll can be asembled within Chromatic itself (via MASM32).
+Creating the Addins and Filters require Chromatic as well.
+
+You may need some extra system headers but i don't remember which ones (maybe dbghelp.h & dbghelp.lib)
+Probably from the platform SDK.
+
+Innosetup is used with the provided InstallScript.iss file.
+
+The release directory contains stock clean .ini files used during the creation of the installation package.
+
+Franck Charlet - 29/10/2009.

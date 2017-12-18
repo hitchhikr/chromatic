@@ -1,0 +1,16 @@
+; This file is maintained by HCW. Do not modify this file directly.
+
+[OPTIONS]
+COMPRESS=12 Hall Zeck
+NOTES=0
+LCID=0x409 0x0 0x0 ; English (United States)
+REPORT=No
+TITLE=MAsmEd Addins
+COPYRIGHT=MAsmEd Addins help file Copyright (C) 2003 Franck Charlet
+HLP=Addins.hlp
+
+[FILES]
+Addins.RTF
+
+[WINDOWS]
+main="MAsmEd Addins",(0,0,1021,1024),27649; (C) 2003 Franck Charlet

@@ -1,0 +1,491 @@
+K 25
+svn:wc:ra_dav:version-url
+V 37
+/svn/!svn/ver/2/trunk/Debug/Templates
+END
+ServiceHandler.c
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/Debug/Templates/ServiceHandler.c
+END
+Empty.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/Debug/Templates/Empty.c
+END
+Plug.ico
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/2/trunk/Debug/Templates/Plug.ico
+END
+SpAddInDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/SpAddInDatas.c
+END
+FilterDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Debug/Templates/FilterDatas.c
+END
+OpenGL.ico
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/OpenGL.ico
+END
+AddInConst.inc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/29/trunk/Debug/Templates/AddInConst.inc
+END
+Filter.ico
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/Filter.ico
+END
+Static.ico
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/Static.ico
+END
+WinSDIWinMain.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/Debug/Templates/WinSDIWinMain.c
+END
+WinSDIWinMsg.c
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/WinSDIWinMsg.c
+END
+Filter.asm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Templates/Filter.asm
+END
+OGLMain.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLMain.asm
+END
+ConMain.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/Debug/Templates/ConMain.c
+END
+NTDriver.ico
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/NTDriver.ico
+END
+Filter.c
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/11/trunk/Debug/Templates/Filter.c
+END
+ServiceThread.asm
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/11/trunk/Debug/Templates/ServiceThread.asm
+END
+Header.asm
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Templates/Header.asm
+END
+Component.ico
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Debug/Templates/Component.ico
+END
+AddInDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/AddInDatas.asm
+END
+Console.ico
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Debug/Templates/Console.ico
+END
+NTDriver.asm
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/NTDriver.asm
+END
+NTOsKrnl.inc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/NTOsKrnl.inc
+END
+OGLStartup.asm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLStartup.asm
+END
+Filter.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/Filter.mdf
+END
+WinSDIDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/2/trunk/Debug/Templates/WinSDIDatas.c
+END
+AddIn.asm
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/Debug/Templates/AddIn.asm
+END
+CPLStrings.str
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Debug/Templates/CPLStrings.str
+END
+AddIn.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/Debug/Templates/AddIn.c
+END
+SpAddIn.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Templates/SpAddIn.asm
+END
+QEPlugin.asm
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/QEPlugin.asm
+END
+Windows.ico
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Debug/Templates/Windows.ico
+END
+NTMacros.asm
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/NTMacros.asm
+END
+WinSDI.ico
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/WinSDI.ico
+END
+OGLMain.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLMain.cpp
+END
+Panel.ico
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/Panel.ico
+END
+Audio.ico
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/Audio.ico
+END
+Cubes.ico
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/Cubes.ico
+END
+ACCELERATORS.acr
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/2/trunk/Debug/Templates/ACCELERATORS.acr
+END
+DirectX.ico
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Debug/Templates/DirectX.ico
+END
+ServiceHandler.asm
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/11/trunk/Debug/Templates/ServiceHandler.asm
+END
+ConDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/ConDatas.c
+END
+Empty.asm
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/Debug/Templates/Empty.asm
+END
+Panel.asm
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/Debug/Templates/Panel.asm
+END
+NTOsKrnl.lib
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/NTOsKrnl.lib
+END
+Panel.c
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/Debug/Templates/Panel.c
+END
+FilterDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/Debug/Templates/FilterDatas.asm
+END
+mIRCPlugin.inc
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Debug/Templates/mIRCPlugin.inc
+END
+AddIn.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/AddIn.mdf
+END
+OGLStartup.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLStartup.cpp
+END
+SpAddIn.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/2/trunk/Debug/Templates/SpAddIn.mdf
+END
+QEPlugin.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/QEPlugin.mdf
+END
+WinSDIWinMain.asm
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/11/trunk/Debug/Templates/WinSDIWinMain.asm
+END
+WinSDIWinMsg.asm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/Debug/Templates/WinSDIWinMsg.asm
+END
+ConMain.asm
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/11/trunk/Debug/Templates/ConMain.asm
+END
+Panel.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/Panel.mdf
+END
+ServiceThread.c
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/Debug/Templates/ServiceThread.c
+END
+Hal.inc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/Debug/Templates/Hal.inc
+END
+AddInDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/AddInDatas.c
+END
+MENUS.MNU
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/MENUS.MNU
+END
+mIRCPlugin.asm
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/mIRCPlugin.asm
+END
+WinSDIDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/11/trunk/Debug/Templates/WinSDIDatas.asm
+END
+OGLStartup.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLStartup.h
+END
+NTServ.ico
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/2/trunk/Debug/Templates/NTServ.ico
+END
+Dll.asm
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/11/trunk/Debug/Templates/Dll.asm
+END
+mIRCPlugin.c
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/mIRCPlugin.c
+END
+ServiceDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/Debug/Templates/ServiceDatas.asm
+END
+Dll.c
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/11/trunk/Debug/Templates/Dll.c
+END
+NTStatus.inc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/NTStatus.inc
+END
+ServiceDatas.c
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Debug/Templates/ServiceDatas.c
+END
+NtStruct.inc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Templates/NtStruct.inc
+END
+mIRCPlugin.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/mIRCPlugin.h
+END
+SpAddIn.c
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/11/trunk/Debug/Templates/SpAddIn.c
+END
+QEPlugin.c
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/!svn/ver/11/trunk/Debug/Templates/QEPlugin.c
+END
+Hal.lib
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/!svn/ver/2/trunk/Debug/Templates/Hal.lib
+END
+ConDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/11/trunk/Debug/Templates/ConDatas.asm
+END
+OGLStartup.inc
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/11/trunk/Debug/Templates/OGLStartup.inc
+END
+NTddk.inc
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/2/trunk/Debug/Templates/NTddk.inc
+END
+AddInConst.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/29/trunk/Debug/Templates/AddInConst.h
+END
+SpAddInDatas.asm
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/11/trunk/Debug/Templates/SpAddInDatas.asm
+END
+mIRCPlugin.mdf
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/2/trunk/Debug/Templates/mIRCPlugin.mdf
+END

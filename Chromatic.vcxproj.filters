@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{1576e04f-f2cd-4d51-b6f7-1f71258920b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main headers">
+      <UniqueIdentifier>{03e43018-0326-4ff1-8a0b-2dd0cebdfcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{735d3df6-0e59-4399-9680-937362a4a18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialogs">
+      <UniqueIdentifier>{e7d71e26-2ace-4eb7-8acd-e37d05c6d39c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WALib">
+      <UniqueIdentifier>{af2ac5c0-2f08-47e0-b0ff-e7d2f1ccf048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Engine">
+      <UniqueIdentifier>{fcb7e330-02b0-4db8-960c-2fc05867862d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script Engine\Script Classes">
+      <UniqueIdentifier>{7a4de616-ecd0-4d8f-82f3-ad2bcf8bf24e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\AddIns.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\APIDb.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\CmdMenus.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Crypt.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Debugger.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\FilesExtensions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Globals.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ImageLists.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\IniFiles.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Languages.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MDI_Childs.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MDI_Form.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Menus.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MiscFunctions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\MsgCodeMax.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\ProjectsBuilder.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Splitters.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\StatusBar.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Toolbars.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Classes\CStr.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_About.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Accelerators.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_AddIns.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_API.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_APIList.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Args.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_constants.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_CreateProject.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_DllDef.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_EnterValue.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Favorites.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Filters.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_FTP.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_ImageView.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Menus.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_MissingFiles.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Perms.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_PrjProps.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_ProcVarSearch.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Properties.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Registers.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Registry.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_ResProps.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Results.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_SearchInFiles.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_SelFiles.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Splash.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Strings.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Tips.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_Toolbars.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_UserDialogs.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_UserDialogsObjects.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_UserDialogsProps.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Dlg_UserMenusEd.cpp">
+      <Filter>Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Classes\WALib.cpp">
+      <Filter>WALib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Classes\WALib_WinSock.cpp">
+      <Filter>WALib</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Constants.cpp">
+      <Filter>Script Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Objects_Handler.cpp">
+      <Filter>Script Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Scripts.cpp">
+      <Filter>Script Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\AddInContextDat.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\BackDC.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\Button.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\CommonDialog.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\DockingBox.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\FileTime.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\GripBoxDat.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\ImageList.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\MiniChildDat.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\Now.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\Rect.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\Screen.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Script_Engine\Classes\SplitterDat.cpp">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\AddIns.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\APIDb.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\CmdMenus.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ConstCodeMax.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ConstMenus.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ConstMisc.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ConstRes.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Crypt.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Debugger.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\FilesExtensions.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Globals.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ImageLists.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\IniFiles.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Languages.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Main.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MDI_Childs.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MDI_Form.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Menus.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MiscFunctions.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\MsgCodeMax.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\ProjectsBuilder.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Splitters.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\StatusBar.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Toolbars.h">
+      <Filter>Main headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\CList.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\CStr.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_About.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Accelerators.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_AddIns.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_API.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_APIList.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Args.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Constants.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_CreateProject.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_DllDef.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_EnterValue.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Favorites.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Filters.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_FTP.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_ImageView.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Menus.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_MissingFiles.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Perms.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_PrjProps.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_ProcVarSearch.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Properties.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Registers.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Registry.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_ResProps.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Results.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_SearchInFiles.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_SelFiles.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Splash.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Strings.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Tips.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_Toolbars.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_UserDialogs.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_UserDialogsObjects.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_UserDialogsProps.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Dlg_UserMenusEd.h">
+      <Filter>Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\ChromaticSupDLL.h">
+      <Filter>WALib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\WADock.h">
+      <Filter>WALib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\WALib.h">
+      <Filter>WALib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Classes\WALib_WinSock.h">
+      <Filter>WALib</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Constants.h">
+      <Filter>Script Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Objects_Handler.h">
+      <Filter>Script Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Scripts.h">
+      <Filter>Script Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\AddInContextDat.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\BackDC.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\Button.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\CommonDialog.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\DockingBox.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\FileTime.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\GripBoxDat.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\ImageList.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\MiniChildDat.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\Now.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\Rect.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\Screen.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Script_Engine\Classes\SplitterDat.h">
+      <Filter>Script Engine\Script Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Src\Chromatic.RES" />
+  </ItemGroup>
+</Project>

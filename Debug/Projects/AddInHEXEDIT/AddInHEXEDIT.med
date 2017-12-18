@@ -1,0 +1,37 @@
+[MasmEdProject]
+Name=AddInHEXEDIT
+Type=ADDIN
+TypeExt=WINDLL
+TypeRename=
+TypeName=MAsmEd AddIn
+Image=Cubes.ico
+Major=1
+Minor=0
+Revision=0
+Release=4
+IncludeVersion=1
+IncludeManifest=0
+OS=4
+FileType=2
+Title=AddInHEXEDIT
+Comments=MAsmEd AddIn
+CompanyName=hitchhikr SoftWorks
+FileDescription=
+LegalCopyright=(c) Copyright 2002-2003 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.inc
+INCLUDE001=[TEMPLATESDIR]\AddInConst.inc
+INCLUDE002=[INCLUDEDIR]\user32.inc
+INCLUDE003=[INCLUDEDIR]\kernel32.inc
+INCLUDE004=[INCLUDEDIR]\gdi32.inc
+[LIBS]
+LIBRARY000=[LIBDIR]\user32.lib
+LIBRARY001=[LIBDIR]\kernel32.lib
+LIBRARY002=[LIBDIR]\gdi32.lib
+[MODULES]
+MODULE000=[PROJECTSDIR]\AddInHEXEDIT\AddInDatas.asm
+MODULE001=[PROJECTSDIR]\AddInHEXEDIT\AddIn.asm
+[DEFS]
+DEF=[PROJECTSDIR]\AddInHEXEDIT\AddIn.mdf

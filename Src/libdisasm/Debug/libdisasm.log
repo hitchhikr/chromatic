@@ -1,0 +1,33 @@
+﻿Build started 14/10/2010 22:16:29.
+     1>Project "D:\Src\Pc\chromatic\Src\libdisasm\libdisasm.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\libdisasm.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Src\Pc\chromatic\Src\libdisasm\.\Debug\libdisasm.lib) does not match the Library's OutputFile property value (D:\Src\Pc\chromatic\libs\libdisasmd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1153,5): warning MSB8012: TargetName(libdisasm) does not match the Library's OutputFile property value (libdisasmd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         All outputs are up-to-date.
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\libs\libdisasmd.lib" /NOLOGO .\Debug\ia32_implicit.obj
+         .\Debug\ia32_insn.obj
+         .\Debug\ia32_invariant.obj
+         .\Debug\ia32_modrm.obj
+         .\Debug\ia32_opcode_tables.obj
+         .\Debug\ia32_operand.obj
+         .\Debug\ia32_reg.obj
+         .\Debug\ia32_settings.obj
+         .\Debug\x86_disasm.obj
+         .\Debug\x86_format.obj
+         .\Debug\x86_imm.obj
+         .\Debug\x86_insn.obj
+         .\Debug\x86_misc.obj
+         .\Debug\x86_operand_list.obj
+         libdisasm.vcxproj -> D:\Src\Pc\chromatic\Src\libdisasm\.\Debug\libdisasm.lib
+       FinalizeBuildStatus:
+         Deleting file ".\Debug\libdisasm.unsuccessfulbuild".
+         Touching ".\Debug\libdisasm.lastbuildstate".
+     1>Done Building Project "D:\Src\Pc\chromatic\Src\libdisasm\libdisasm.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.15

@@ -1,0 +1,84 @@
+﻿Build started 14/10/2010 22:06:12.
+     1>Project "D:\Src\Pc\chromatic\Src\Script_Engine\lua514\lua514.vcxproj" on node 2 (rebuild target(s)).
+     1>_PrepareForClean:
+         Deleting file ".\Release\lua514.lastbuildstate".
+       InitializeBuildStatus:
+         Creating ".\Release\lua514.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D _CRT_SECURE_NO_WARNINGS /D NDEBUG /D _LIB /D _WIN32 /D _VC80_UPGRADE=0x0600 /D _MBCS /GF /Gm- /EHsc /MT /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release\\" /Fd".\Release\vc100.pdb" /FR".\Release\\" /Gd /TC /analyze- /errorReport:prompt src\lapi.c src\lauxlib.c src\lbaselib.c src\lcode.c src\ldblib.c src\ldebug.c src\ldo.c src\ldump.c src\lfunc.c src\lgc.c src\linit.c src\liolib.c src\llex.c src\lmathlib.c src\lmem.c src\loadlib.c src\lobject.c src\lopcodes.c src\loslib.c src\lparser.c src\lstate.c src\lstring.c src\lstrlib.c src\ltable.c src\ltablib.c src\ltm.c src\lundump.c src\lvm.c src\lzio.c src\print.c
+         lapi.c
+         lauxlib.c
+         lbaselib.c
+         lcode.c
+         ldblib.c
+         ldebug.c
+         ldo.c
+         ldump.c
+         lfunc.c
+         lgc.c
+         linit.c
+         liolib.c
+         llex.c
+         lmathlib.c
+         lmem.c
+         loadlib.c
+         lobject.c
+         lopcodes.c
+         loslib.c
+         lparser.c
+         Generating Code...
+         Compiling...
+         lstate.c
+         lstring.c
+         lstrlib.c
+         ltable.c
+         ltablib.c
+         ltm.c
+         lundump.c
+         lvm.c
+         lzio.c
+         print.c
+         Generating Code...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\Microsoft.CppBuild.targets(1151,5): warning MSB8012: TargetPath(D:\Src\Pc\chromatic\Src\Script_Engine\lua514\.\Release\lua514.lib) does not match the Library's OutputFile property value (D:\Src\Pc\chromatic\libs\lua514.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\Lib.exe /OUT:"..\..\..\libs\lua514.lib" /NOLOGO .\Release\lapi.obj
+         .\Release\lauxlib.obj
+         .\Release\lbaselib.obj
+         .\Release\lcode.obj
+         .\Release\ldblib.obj
+         .\Release\ldebug.obj
+         .\Release\ldo.obj
+         .\Release\ldump.obj
+         .\Release\lfunc.obj
+         .\Release\lgc.obj
+         .\Release\linit.obj
+         .\Release\liolib.obj
+         .\Release\llex.obj
+         .\Release\lmathlib.obj
+         .\Release\lmem.obj
+         .\Release\loadlib.obj
+         .\Release\lobject.obj
+         .\Release\lopcodes.obj
+         .\Release\loslib.obj
+         .\Release\lparser.obj
+         .\Release\lstate.obj
+         .\Release\lstring.obj
+         .\Release\lstrlib.obj
+         .\Release\ltable.obj
+         .\Release\ltablib.obj
+         .\Release\ltm.obj
+         .\Release\lundump.obj
+         .\Release\lvm.obj
+         .\Release\lzio.obj
+         .\Release\print.obj
+         lua514.vcxproj -> D:\Src\Pc\chromatic\Src\Script_Engine\lua514\.\Release\lua514.lib
+       BscMake:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\bscmake.exe /nologo /o".\Release\lua514.bsc" .\Release\lapi.sbr .\Release\lauxlib.sbr .\Release\lbaselib.sbr .\Release\lcode.sbr .\Release\ldblib.sbr .\Release\ldebug.sbr .\Release\ldo.sbr .\Release\ldump.sbr .\Release\lfunc.sbr .\Release\lgc.sbr .\Release\linit.sbr .\Release\liolib.sbr .\Release\llex.sbr .\Release\lmathlib.sbr .\Release\lmem.sbr .\Release\loadlib.sbr .\Release\lobject.sbr .\Release\lopcodes.sbr .\Release\loslib.sbr .\Release\lparser.sbr .\Release\lstate.sbr .\Release\lstring.sbr .\Release\lstrlib.sbr .\Release\ltable.sbr .\Release\ltablib.sbr .\Release\ltm.sbr .\Release\lundump.sbr .\Release\lvm.sbr .\Release\lzio.sbr .\Release\print.sbr
+       FinalizeBuildStatus:
+         Deleting file ".\Release\lua514.unsuccessfulbuild".
+         Touching ".\Release\lua514.lastbuildstate".
+     1>Done Building Project "D:\Src\Pc\chromatic\Src\Script_Engine\lua514\lua514.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:04.65

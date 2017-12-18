@@ -1,0 +1,41 @@
+[Project]
+Name=AddInDATETIME
+Type=ADDIN
+TypeExt=WINDLL
+TypeRename=
+TypeName=Chromatic AddIn
+Image=Cubes.ico
+Major=1
+Minor=0
+Revision=0
+Release=0
+IncludeVersion=1
+IncludeManifest=0
+OS=4
+FileType=2
+Title=AddInDATETIME
+Comments=Chromatic AddIn
+CompanyName=hitchhikr SoftWorks
+FileDescription=
+LegalCopyright=(C) Copyright 2001-2010 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.inc
+INCLUDE001=[TEMPLATESDIR]\AddInConst.inc
+INCLUDE002=[INCLUDEDIR]\user32.inc
+INCLUDE003=[INCLUDEDIR]\kernel32.inc
+[LIBS]
+LIBRARY000=[LIBDIR]\user32.lib
+LIBRARY001=[LIBDIR]\kernel32.lib
+[MODULES]
+MODULE000=[PROJECTSDIR]\AddInDATETIME\AddInDatas.asm
+MODULE001=[PROJECTSDIR]\AddInDATETIME\AddIn.asm
+[DEFS]
+DEF=[PROJECTSDIR]\AddInDATETIME\AddIn.mdf
+[Windows]
+Window000=[TEMPLATESDIR]\AddInConst.inc
+Focus=[TEMPLATESDIR]\AddInConst.inc
+FocusLine=1648
+Window001=[PROJECTSDIR]\AddInDATETIME\AddIn.asm
+Window002=[PROJECTSDIR]\AddInDATETIME\AddInDatas.asm

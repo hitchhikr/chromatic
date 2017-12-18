@@ -1,0 +1,38 @@
+[Project]
+Name=FilterRawToC
+Type=FILTER_C
+TypeExt=WINDLL
+TypeRename=
+TypeName=Chromatic filter
+Image=Filter.ico
+Major=0
+Minor=0
+Revision=0
+Release=0
+IncludeVersion=1
+IncludeManifest=0
+OS=4
+FileType=1
+Title=FilterRawToC
+Comments=
+CompanyName=hitchhikr SoftWorks
+FileDescription=
+LegalCopyright=(C) Copyright 2001-2010 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.h
+INCLUDE001=[INCLUDEDIR]\Commctrl.h
+INCLUDE002=[TEMPLATESDIR]\AddInConst.h
+[MODULES]
+MODULE000=[PROJECTSDIR]\FilterRawToC\FilterDatas.c
+MODULE001=[PROJECTSDIR]\FilterRawToC\Filter.c
+[DEFS]
+DEF=[PROJECTSDIR]\FilterRawToC\Filter.mdf
+[Constants]
+Name000=_WIN32_IE
+Value000=0x0500
+[Windows]
+Window000=[PROJECTSDIR]\FilterRawToC\Filter.c
+Focus=[PROJECTSDIR]\FilterRawToC\Filter.c
+FocusLine=87

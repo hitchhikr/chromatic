@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/Debug/Skins/ExtraCode
+END
+MAsm32_EndDOSExe.asm
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Debug/Skins/ExtraCode/MAsm32_EndDOSExe.asm
+END
+MAsm32_EndWinDLL.asm
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Debug/Skins/ExtraCode/MAsm32_EndWinDLL.asm
+END
+MAsm32_EndWinSYS.asm
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Debug/Skins/ExtraCode/MAsm32_EndWinSYS.asm
+END
+MAsm32_StartDOSExe.asm
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/18/trunk/Debug/Skins/ExtraCode/MAsm32_StartDOSExe.asm
+END
+MAsm32_EndWinExe.asm
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/2/trunk/Debug/Skins/ExtraCode/MAsm32_EndWinExe.asm
+END
+MAsm32_StartWinExe.asm
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/18/trunk/Debug/Skins/ExtraCode/MAsm32_StartWinExe.asm
+END

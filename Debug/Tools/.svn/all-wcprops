@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/2/trunk/Debug/Tools
+END
+RC.EXE
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/2/trunk/Debug/Tools/RC.EXE
+END
+CVTRES.EXE
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/2/trunk/Debug/Tools/CVTRES.EXE
+END
+RCDLL.DLL
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/2/trunk/Debug/Tools/RCDLL.DLL
+END
+lua_compiler.exe
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/2/trunk/Debug/Tools/lua_compiler.exe
+END

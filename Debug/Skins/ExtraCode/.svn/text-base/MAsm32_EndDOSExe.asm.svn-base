@@ -1,0 +1,4 @@
+		.code
+
+end start
+

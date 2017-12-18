@@ -1,0 +1,6 @@
+(defvar Context,(call WALib(WAMiscAllocMem),WAContext_Size))
+(if !Context,(end))
+(call WALib(WAMMGetContext),Context)
+(defvar WordPaste,"<table width=\"100%\" border=\"0\">\r\n</table>")
+(call WALib(WAMMInsertText),*Context#WAContext_hCurrentChild,WordPaste)
+(call WALib(WAMiscFreeMem),Context)

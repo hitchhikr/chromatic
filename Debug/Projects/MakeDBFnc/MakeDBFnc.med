@@ -1,0 +1,38 @@
+[Project]
+Name=MakeDB2
+Type=MSDOSEXE
+TypeExt=DOSEXE
+TypeRename=
+TypeName=Ms-Dos EXE application
+Image=Driver.ico
+Major=1
+Minor=0
+Revision=0
+Release=0
+IncludeVersion=1
+IncludeManifest=0
+OS=1
+FileType=1
+Title=MakeDB2
+Comments=
+CompanyName=hitchhikr softworks
+FileDescription=Convert Chromatic .api files
+LegalCopyright=(c) 2001 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.inc
+INCLUDE001=[INCLUDEDIR]\User32.inc
+INCLUDE002=[INCLUDEDIR]\Kernel32.inc
+INCLUDE003=[INCLUDEDIR]\Masm32.inc
+[LIBS]
+LIBRARY000=[LIBDIR]\User32.lib
+LIBRARY001=[LIBDIR]\Kernel32.lib
+LIBRARY002=[LIBDIR]\Masm32.lib
+[MODULES]
+MODULE000=[PROJECTSDIR]\MakeDBFnc\DosExeDatas.asm
+MODULE001=[PROJECTSDIR]\MakeDBFnc\DosExe.asm
+[Windows]
+Window000=[PROJECTSDIR]\MakeDBFnc\DosExe.asm
+Focus=[PROJECTSDIR]\MakeDBFnc\DosExe.asm
+FocusLine=0
