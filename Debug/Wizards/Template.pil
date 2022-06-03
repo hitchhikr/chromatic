@@ -1,0 +1,80 @@
+// ----------------------------------------
+// Chromatic IDE Wizard template
+// ----------------------------------------
+
+// ----------------------------------------
+// Declaration of variables
+(defvar ReturnCode, PILL_ERROR_GHOST)	// Abort project creation process by default
+(defvar PreviousButton_hWnd)
+(defvar NextButton_hWnd)
+
+// Chromatic host required to run this script
+(if !(isconst CHROMATIC), (end ReturnCode))
+
+// ----------------------------------------
+// Declaration of functions
+
+// Steps
+(deffunc FirstStep hwndDlg,
+	(call WALib(WAControlEnable), PreviousButton_hWnd, 0)
+	(call WALib(WAControlEnable), NextButton_hWnd, 1)
+)
+
+(deffunc MiddleStep hwndDlg,
+	(call WALib(WAControlEnable), PreviousButton_hWnd, 1)
+	(call WALib(WAControlEnable), NextButton_hWnd, 1)
+)
+
+(deffunc EndStep hwndDlg,
+	(call WALib(WAControlEnable), PreviousButton_hWnd, 1)
+	(call WALib(WAControlEnable), NextButton_hWnd, 0)
+)
+
+// Dialog Proc
+(deffunc DialogProc hwndDlg uMsg wParam lParam,
+	(if (= uMsg, WM_INITDIALOG),
+		(setvar PreviousButton_hWnd, (call GetDlgItem, hwndDlg, WASTOCK_BUTTON_PREVIOUS_ID))
+		(setvar NextButton_hWnd, (call GetDlgItem, hwndDlg, WASTOCK_BUTTON_NEXT_ID))
+		(FirstStep hwndDlg)
+	)
+	(if (= uMsg, WM_COMMAND),
+		(if (= wParam, WASTOCK_BUTTON_CANCEL_ID),
+			(call WALib(WAControlClose), hwndDlg)
+		)
+		(if (= wParam, WASTOCK_BUTTON_FINISH_ID),
+			// Proceed with creation
+			(setvar ReturnCode, PILL_ERROR_NONE)
+			(call WALib(WAControlClose), hwndDlg)
+		)
+		// Next step
+/*		(if (= wParam, WASTOCK_BUTTON_NEXT_ID),
+
+		) */
+/*		// Previous step
+		(if (= wParam, WASTOCK_BUTTON_PREVIOUS_ID),
+
+		) */
+	)
+)
+
+// ----------------------------------------
+// Code entry point here
+
+// Alloc room for context structure
+(if !(defvar Context, (call WALib(WAMiscAllocMem), WAContext_Size)), (end))
+// Obtain it
+(call WALib(WAMMGetContext), Context)
+
+// Create a wizard dialog
+(call WALib(WACreateStockModalDialog),
+	WASTOCK_MODALDLG_WIZARD,
+	-1, -1, WASTOCK_WIZARD_STDX, WASTOCK_WIZARD_STDY,
+	*Context#WAContext_hMDI,
+	"Chromatic Wizard",
+	&DialogProc,
+	1
+)
+
+// Free context
+(call WALib(WAMiscFreeMem), Context)
+(end ReturnCode)

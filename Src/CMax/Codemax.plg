@@ -1,0 +1,117 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: codemax - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/codemax.res" /d "_MBCS" "C:\Src\Pc\chromatic\Src\CMax\codemax.rc"" 
+Creating temporary file "C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E5.tmp" with contents
+[
+/nologo /ML /W4 /GX /O2 /D "NDEBUG" /D "_WINDOWS" /D "WIN32" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Src\Pc\chromatic\Src\CMax\bookmark.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\BreakPoint.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\buffer.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\cedit.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\ceditmsg.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\cmdarry.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\dragdrop.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\editcmd1.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\editdlgs.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\editsel.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\editview.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\exports.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\findrepl.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\hkeyctrl.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\hotkey.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\language.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\line.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\misc.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\msgpump.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\print.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\props.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\splitter.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\syntax.cpp"
+"C:\Src\Pc\chromatic\Src\CMax\undo.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E5.tmp" 
+Creating temporary file "C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E6.tmp" with contents
+[
+/nologo /ML /W1 /GX /O2 /D "NDEBUG" /D "_WINDOWS" /D "WIN32" /D "_MBCS" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Src\Pc\chromatic\Src\CMax\regexp.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E6.tmp" 
+Creating temporary file "C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E7.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comctl32.lib version.lib /nologo /subsystem:windows /dll /pdb:none /machine:I386 /def:".\codemax.def" /out:"..\..\Debug\cmaxXX.dll" /implib:"Release/cmaxXX.lib" 
+.\Release\bookmark.obj
+.\Release\BreakPoint.obj
+.\Release\buffer.obj
+.\Release\cedit.obj
+.\Release\ceditmsg.obj
+.\Release\cmdarry.obj
+.\Release\dragdrop.obj
+.\Release\editcmd1.obj
+.\Release\editdlgs.obj
+.\Release\editsel.obj
+.\Release\editview.obj
+.\Release\exports.obj
+.\Release\findrepl.obj
+.\Release\hkeyctrl.obj
+.\Release\hotkey.obj
+.\Release\language.obj
+.\Release\line.obj
+.\Release\misc.obj
+.\Release\msgpump.obj
+.\Release\print.obj
+.\Release\props.obj
+.\Release\regexp.obj
+.\Release\splitter.obj
+.\Release\syntax.obj
+.\Release\undo.obj
+.\Release\codemax.res
+]
+Creating command line "link.exe @C:\DOCUME~1\franck\LOCALS~1\Temp\RSP1E7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+bookmark.cpp
+BreakPoint.cpp
+buffer.cpp
+cedit.cpp
+ceditmsg.cpp
+cmdarry.cpp
+dragdrop.cpp
+editcmd1.cpp
+editdlgs.cpp
+editsel.cpp
+editview.cpp
+exports.cpp
+findrepl.cpp
+hkeyctrl.cpp
+hotkey.cpp
+language.cpp
+line.cpp
+misc.cpp
+msgpump.cpp
+print.cpp
+Generating Code...
+Compiling...
+props.cpp
+splitter.cpp
+syntax.cpp
+undo.cpp
+Generating Code...
+Compiling...
+regexp.cpp
+Linking...
+   Creating library Release/cmaxXX.lib and object Release/cmaxXX.exp
+
+
+
+<h3>Results</h3>
+cmaxXX.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

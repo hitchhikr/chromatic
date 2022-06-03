@@ -1,0 +1,6 @@
+(defvar Context,(call WALib(WAMiscAllocMem),WAContext_Size))
+(if !Context,(end))
+(call WALib(WAMMGetContext),Context)
+(defvar WordPaste,"<object width=\"32\" height=\"32\">\r\n</object>")
+(call WALib(WAMMInsertText),*Context#WAContext_hCurrentChild,WordPaste)
+(call WALib(WAMiscFreeMem),Context)

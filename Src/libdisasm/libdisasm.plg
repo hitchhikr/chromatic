@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: libdisasm - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\franck\LOCALS~1\Temp\RSP2B.tmp" with contents
+[
+/nologo /ML /W3 /O2 /D "WIN32" /D "NDEBUG" /D "_MBCS" /D "_LIB" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_implicit.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_insn.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_invariant.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_modrm.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_opcode_tables.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_operand.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_reg.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\ia32_settings.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_disasm.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_format.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_imm.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_insn.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_misc.c"
+"C:\Src\Pc\chromatic\Src\libdisasm\x86_operand_list.c"
+]
+Creating command line "cl.exe @C:\DOCUME~1\franck\LOCALS~1\Temp\RSP2B.tmp" 
+Creating temporary file "C:\DOCUME~1\franck\LOCALS~1\Temp\RSP2C.tmp" with contents
+[
+/nologo /out:"..\..\libs\libdisasm.lib" 
+.\Release\ia32_implicit.obj
+.\Release\ia32_insn.obj
+.\Release\ia32_invariant.obj
+.\Release\ia32_modrm.obj
+.\Release\ia32_opcode_tables.obj
+.\Release\ia32_operand.obj
+.\Release\ia32_reg.obj
+.\Release\ia32_settings.obj
+.\Release\x86_disasm.obj
+.\Release\x86_format.obj
+.\Release\x86_imm.obj
+.\Release\x86_insn.obj
+.\Release\x86_misc.obj
+.\Release\x86_operand_list.obj
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\franck\LOCALS~1\Temp\RSP2C.tmp"
+<h3>Output Window</h3>
+Compiling...
+ia32_implicit.c
+ia32_insn.c
+ia32_invariant.c
+ia32_modrm.c
+ia32_opcode_tables.c
+ia32_operand.c
+ia32_reg.c
+ia32_settings.c
+x86_disasm.c
+x86_format.c
+x86_imm.c
+x86_insn.c
+x86_misc.c
+x86_operand_list.c
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+libdisasm.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

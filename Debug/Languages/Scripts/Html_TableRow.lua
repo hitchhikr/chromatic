@@ -1,0 +1,6 @@
+(defvar Context,(call WALib(WAMiscAllocMem),WAContext_Size))
+(if !Context,(end))
+(call WALib(WAMMGetContext),Context)
+(defvar WordPaste,"<tr align=left valign=top>\r\n</tr>")
+(call WALib(WAMMInsertText),*Context#WAContext_hCurrentChild,WordPaste)
+(call WALib(WAMiscFreeMem),Context)

@@ -1,0 +1,8 @@
+(defvar Context,(call WALib(WAMiscAllocMem),WAContext_Size))
+(if !Context,(end))
+(call WALib(WAMMGetContext),Context)
+(defvar Color)
+(if !(call WALib(WAComDlgChooseColor),*Context#WAContext_hMDI,&Color),(end))
+(defvar WordPaste,(call WALib(WAStringCat),"$0",(call WALib(WAStringHex32),Color)))
+(call WALib(WAMMInsertText),*Context#WAContext_hCurrentChild,WordPaste)
+(call WALib(WAMiscFreeMem),Context)

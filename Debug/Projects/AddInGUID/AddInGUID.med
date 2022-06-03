@@ -1,0 +1,34 @@
+[Project]
+Name=AddInGUID
+Type=ADDIN
+TypeExt=WINDLL
+TypeRename=
+TypeName=Chromatic AddIn
+Image=Cubes.ico
+Major=1
+Minor=0
+Revision=0
+Release=0
+IncludeVersion=1
+IncludeManifest=0
+OS=4
+FileType=2
+Title=AddInGUID
+Comments=Chromatic AddIn
+CompanyName=hitchhikr SoftWorks
+FileDescription=
+LegalCopyright=(C) Copyright 2001-2010 Franck Charlet.
+LegalTradeMarks=
+ProductName=
+[INCLUDES]
+INCLUDE000=[INCLUDEDIR]\Windows.inc
+INCLUDE001=[TEMPLATESDIR]\AddInConst.inc
+[MODULES]
+MODULE000=[PROJECTSDIR]\AddInGUID\AddInDatas.asm
+MODULE001=[PROJECTSDIR]\AddInGUID\AddIn.asm
+[DEFS]
+DEF=[PROJECTSDIR]\AddInGUID\AddIn.mdf
+[Windows]
+Window000=[PROJECTSDIR]\AddInGUID\AddIn.asm
+Focus=[PROJECTSDIR]\AddInGUID\AddIn.asm
+FocusLine=7

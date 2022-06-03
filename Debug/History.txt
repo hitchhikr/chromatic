@@ -1,0 +1,2846 @@
+Chromatic history file
+Copyright (C) 2001-2010 Franck Charlet.
+
+--------------------------------------------------------------------------------
+Version 1.3.6
+
+- Improved hexadecimal & binary numbers highlighting,
+  conversions and also selections.
+- Fixed a bug in binary to dec or hex numbers conversions
+  (also those conversions are now automatically unsigned).
+
+--------------------------------------------------------------------------------
+Version 1.3.5
+
+- Fixed a small issue with comments in 68k language file.
+- Cleaned up the code for number conversions also several types
+  can now be specified for HexType & BinType in language files.
+
+--------------------------------------------------------------------------------
+Version 1.3.4
+
+- Removed the ChromeSup.dll which is now statically linked to the program
+  this fixed a few bugs due to obsolete functions begin used.
+  (the new static lib project has been added into the svn repository).
+
+--------------------------------------------------------------------------------
+Version 1.3.3
+
+- Source code now compiles under Visual Studio 2010 (projects added).
+- Added Motorola 680x0 language file.
+- Added languages manager in properties
+  (especially used to define priorities between languages
+   sharing the same files extensions).
+
+--------------------------------------------------------------------------------
+Version 1.3.2
+
+- Fixed free pascal skin and example.
+- Added an option to display a requester before exiting.
+- Most icons should look better on Windows 7.
+- Added a popup menu with several options in Windows dock list.
+- Fixed a bug which trashed projects files and main.ini when one of the user's
+  specified folder was empty.
+
+--------------------------------------------------------------------------------
+Version 1.3.1
+
+- Changed the behaviour of the filters menus, now each filters
+  profile is automatically available for both windows and files output.
+- Added a filter to convert binaries to dc.b statements.
+- Fixed several compilation issues with the examples.
+- Added octal column in ASCII addin.
+
+--------------------------------------------------------------------------------
+Version 1.30
+
+        [NEW]   - Started the process of replacing PILL with LUA.
+
+                - Started the process of removing ChromeSup.dll.
+                
+                - Renamed from "Chrome" to "Chromatic".
+                
+        [FIX]   - Fixed the numbers to binary conversions functions (bits were always on).
+
+--------------------------------------------------------------------------------
+Version 1.26
+
+        [NEW]   - Added the ability to run PILL scripts through user menus.
+                  ("ARGC" variable is used to retrieve the number of arguments
+                  of the command line while "ARGV" is an array containing the argument
+                  (from 0 (script name) to ARGC - 1).
+
+        [FIX]   - Target file (.exe or whatever) of a project is now deleted
+                  before any assembling/compilation is attempted.
+
+                - The ide crashed when the language's name of a mln file was modified
+                  while a source window using this very language was opened at the same time.
+
+                - Fixed several bugs with internal directories handling.
+
+                - Fixed a bug in open/execute file under caret functions.
+
+        [MISC]  - Unix formatted text files aren't marked as modified by default anymore.
+
+--------------------------------------------------------------------------------
+Version 1.25
+
+        [NEW]   - Source windows are now refreshed when their according language file
+                  have been modified (either within the ide or externally).
+
+        [FIX]   - Hopefully fixed the issue with relative paths of files when clicking
+                  on an error in the status box.
+
+                - Fixed the conversion of 0xxxh hex numbers type into floating points.
+
+                - Fixed a bug in the filters laboratory.
+
+        [MISC]  - Exchanged the old wedit.hlp with cpp.chm (so based standard c/c++
+                  keywords now have available help aswell).
+
+--------------------------------------------------------------------------------
+Version 1.24
+        
+        [NEW]   - Argument %1 use now used when using an external debugger for project
+                  Example:
+
+                        C:\odbg110\OLLYDBG.EXE "%1"
+
+                  Where %1 will be replaced by the project's complete filename.
+                  Allowing the ability to add extras commands arguments.
+
+                - Added an option to add selected external debugger into the list
+                  of debuggers.
+
+        [FIX]   - Project title is now used to create the project filename.
+
+--------------------------------------------------------------------------------
+Version 1.23
+
+        [NEW]   - Added two functions to decode a hexadecimal representation of 
+                  a floating point number and vice versa.
+
+        [FIX]   - Some syntax highlighting fixes in asm.mln.
+
+                - Updated AddInConst.inc & AddInConst.h.
+
+                - Fixed a bug in reload file (read only state of the file wasn't cleared).
+
+                - Open/Execute file under caret functions now uses AddInclude key located
+                  in Main.ini/ExtrasExt instead of hard coded stuff.
+
+        [MISC]  - Worked a little bit on the debugger (registers display & corrected step mode).
+
+--------------------------------------------------------------------------------
+Version 1.22
+
+        [NEW]   - Added Microsoft RC and CVTRES in a newly created TOOLSDIR
+                  mostly because i was fedup with the shitty windres and it
+                  seems rcc isn't included with digital mars anymore
+                  (was it included ?).
+
+                - Added the ability to add separation lines in scripts languages menus.
+
+        [FIX]   - Fixed a small bug in projects builder regarding multiple drives config.
+
+                - Fixed (and improved) LCC32 skin.
+
+                - Fixed the C version of NT services template.
+
+                - Fixed the drivers template and building process.
+
+                - OpenGL frameworks now compile correctly under LCC32.
+                  (This compiler doesn't understand non-constant initializers).
+
+--------------------------------------------------------------------------------
+Version 1.21
+
+        [NEW]   - Added support for GLSL and DXSL files.
+
+                - Languages scripts are now extracted from the languages files
+                  and located in a separate directory (Languages/Scripts).
+                  So it should be much easier to edit them now.
+                  Also created LANGSCRIPTSDIR directory.
+
+        [FIX]   - Fixed the two available filters.
+
+                - Fixed the OpenGL templates.
+
+        [MISC]  - AddIns and filters done in C must be compiled with *latest* version
+                  of MingW (and especially the latest windows api).
+
+                - Added 2 little OGL projects in Asm and C.
+
+--------------------------------------------------------------------------------
+Version 1.2
+
+        [NEW]   - Added docking windows (also available to AddIns).
+
+                - Updated MASM32 menus.
+
+                - Added support for DirectX SDK.
+
+                - Source-level debugger implemented (with code breakpoints ability).
+
+                - Added several misc. options here and there.
+
+                - Added a function to remove trailing spaces out of blocks.
+
+                - Added compilation constants for projects (available in project properties).
+
+                - Modified AddInASCII and AddInDATETIME to use docking windows.
+
+                - Added a (None) entry in default language selection combobox
+                  (To avoid ugly highlighting of plain texts).
+
+                - Added an option disable the include function of dropped files
+                  (When enabled, dropping files in sources windows will create a new window
+                   for each file instead of injecting it directly into the target window).
+
+                - Added handling for delete key in menus resources editor.
+
+                - Added an option to save/reload the state of projects.
+
+                - Improved project loading and creation: the ide will look for alternate
+                  filenames of libraries or objects before reporting them as missing
+                  (mainly to avoid troubles with .lib, .a, .obj and .o files).
+
+                - Project and workspaces files are now recognized during drag'n'drop operations
+                  from shell, the user can also drag'n'drop directory names
+                  (in that case Chrome will display a standard files selector).
+
+                - Added the ability to replace missing files in projects
+                  (a window with these files is displayed, if necessary
+                   right after loading a project).
+
+                - Added OpenGL projects for Asm and C/C++.
+
+                - "Close All" command will display the list of modified files
+                  (instead of asking to save them one by one).
+
+                - The IDE now save/restore the position of it's main window
+                  (mainly to avoid some annoying troubles with multi-monitors configs).
+
+        [FIX]   - Won't hang if "replace with" text is left empty.
+
+                - Fixed a visual glitch in tips window.
+
+                - Fixed several bugs in projects properties.
+
+                - Fixed a bug in masm32.skm concerning dos exes prologs.
+        
+                - Forgot to write productname and comments in version resources.
+
+                - Fixed the bug that made the properties to crash under Windows XP.
+
+                - AddIns are now correctly restarted when launching the IDE.
+
+                - Mouse pointer won't be hidden if it is not over the client area
+                  of a source window.
+
+                - Files contained (and opened) within workspace won't be added in recent
+                  opened files anymore.
+
+                - Fixed several visuals glitches occuring under windows XP.
+
+                - Some popup menus weren't displayed at correct location
+                  under certain circumstances.
+
+                - Custom libraries weren't written into project files during projects creation
+                  if files gathering wasn't selected, fixed.
+
+                - Service templates now handle services descriptions and contains a flag
+                  to specify if the service should be started right after installation or not.
+
+                - Fixed FreePascal skin.
+
+                - Projects crashed when windows XP manifests were included.
+
+                - Masm32 skin's WINEXE prolog now contains initialization code
+                  for commoncontrols.
+
+                - Fixed various bug in projects builder.
+
+                - The title of a project is now copied into the versioninfo resource
+                  right after it's creation (was left empty previously).
+
+                - Better handling of unsaved projects (also they are now included in
+                  auto-save notifications and in files change detections).
+
+                - Projects main icons are only saved when required.
+
+                - Optional extra code added to the start and end of projects are now
+                  plain ascii files and are located in their own directory (Skins\ExtraCode).
+
+                - Last used directory in search in files function is now correctly saved.
+
+                - Fixed show/hide mouse cursor.
+
+                - Bookmarks margin will be displayed after a mark all is issued
+                  (if any entry has been bookmarked).
+
+                - "Find"/"Mark all" and "Replace all" functions will use "All opened files"
+                  options (these options weren't working at all previously).
+
+                - Fixed a bug that made the files selectors not to appear under windows 9x.
+
+                - Fixed a bug with auto indent for windows without defined languages.
+
+        [MISC]  - Revised Assembly NT drivers model slightly
+                  (improved and corrected to be compatible with masm32v8).
+
+                - Cleaned up projects templates.
+
+                - Fixed CommonDialogs example project for Windows XP.
+
+                - Improved Windows SDI applications templates.
+
+--------------------------------------------------------------------------------
+Version 1.1
+
+        [NEW]   - Gathering of files referenced with IMPORTINCLUDE or IMPORTLIB
+                  in project creations is now optional. If disabled, Chrome will
+                  just use the given location of the file without further processing
+                  (If no directory is given, [TEMPLATEDIR] is assumed).
+
+                - User can now define the luminosity of colors schemes in properties.
+
+                - Introduced filters plugins (together with a filters laboratory to
+                  create filtering/converting chains).
+
+        [FIX]   - Fixed resources compilation problems with projects names
+                  containing spaces, except for compilers using WindRes.exe (like gcc).
+
+                - A bug in "Add current resource file" made the project state to reset.
+
+                - Cancel operations of file requesters in user menus now works.
+
+                - PSAPI.dll will only be loaded if necessary.
+
+        [MISC]  - Some structural changes in ProjectTypes.ini:
+                  CUSTOMINCLUDE/CUSTOMLIB have been renamed to IMPORTINCLUDE
+                  and IMPORTLIB respectively.
+
+                - Added a Windows XP manifest (don't know how it will look under that system).
+
+                - Gcc.skm renamed to MingW32.skm.
+
+--------------------------------------------------------------------------------
+Version 1.0
+
+        [NEW]   - Removed Visual Bashit and recoded the whole thing in C/C++.
+
+                - MAsmEd is now known as Chrome (as you might have guessed already).
+
+                - Added several functions for AddIns.
+                  The updated definitions file is in templates directory
+                  (AddInConst.inc/AddInConst.h).
+
+                - Ctrl+Space (Insert snippet) changed to Ctrl+Alt+Space
+                  Ctrl+Space is now dedicated to words completion engine
+                  (For WinAPI functions and constants).
+
+                - Added several options in properties concerning code completion.
+
+                - Added an option to display date header in output box.
+
+                - Added errors handling for NASM and GCC outputs.
+
+                - Added an option to automagically save bookmarks with files
+                  (saved in external *.MBK files).
+
+                  Note: - File will be removed/not created if no bookmarks are present.
+                        - Bookmarks of included/inserted files will be recalculated.
+                        - Chrome also include bookmarks for saved blocks of text.
+                        - Chrome will check for files dates to decide
+                          if a bookmarks file is obsolete or not.
+                        - Chrome will soon be able to cook eggs.
+                        - Bookmarks of snippets and sources templates can be saved too.
+
+                - Added vararg/req/=default macro keywords in Asm.mln
+                  (also added @@/@F/@B).
+
+                - Revised AddIns engine (introducing ZOMBIES addins and SupportAddins).
+
+                - Added the ability to directly update AddIns within the AddIns manager,
+                  Chrome will:
+
+                        - Shutdown old AddIn.
+                        - Delete file.
+                        - Copy new file into AddIns directory.
+                        - Restart complete AddIn sequence (if necessary).
+
+                  Note: newly created AddIns can just be copied in AddIns directory
+                  and will appear in the manager as soon as it is opened.
+
+                - Added options to search in all opened files 
+                  in search/replace commands (should be useful).
+
+                - Ctrl+Shift+V now creates a new window and copies the content
+                  of the clipboard into it.
+
+                - Added an opened windows list view (next to projects structure).
+
+                - Improved AddInASCII.
+
+                - Added some support for GCC (Templates + compilation skin).
+
+                - Slightly enhanced skins definitions.
+
+                - Added selectable tab/language in projects creation and created
+                  several projects templates (not enough, i know).
+
+                - General layout and design re-worked a bit.
+
+                - Statusbar now displays number of selected lines/columns while
+                  selecting blocks of texts, layout is:
+
+                        L: Current line[/Selected lines]/Total number of lines
+                        C: Current column[/Selected columns]
+                        Current position in percents.
+
+                  (Maybe, i'll add a customization for this later).
+
+                - Line tooltip now displays total lines number and percent position.
+
+                - Added an option to show/hide splash screen at startup.
+
+                - Can now print in color if this is handled by the printer.
+
+                - Added an option to expand items with a single click in treeviews.
+
+                - Added some templates/snippets and a compilation skin for
+                  Digital Mars C/C++ compiler.
+
+                - Changed directories structure.
+
+                - WINAPIDIR renamed to DATABASESDIR (databases renamed too).
+
+                - MAsmEd.ini renamed to Main.ini.
+
+                - Added three colors profiles for 256 colors displays
+                  (ugly but functional).
+
+                - Open/Execute file under cursor option now recognizes text selections.
+
+                - User can now save FTP passwords in encrypted format
+                  (lousy algorithm don't rely on it).
+
+                - Columns in FTP manager files list can now be sorted.
+
+                - Added a little context menu in FTP manager.
+
+                - Added some keywords in C language file.
+
+                - Added the ability to use different menus files
+                  (look in user menus ed.).
+                  (The two provided files are: MASM32 and NASM).
+
+                - Added some icons in default toolbars.
+
+                - Various improvments in user interface
+                  (like some comboboxes here and there).
+
+                - Added some menus entries in default user menus.
+
+                - Improved user menus commands: %8 %9 %# and %&
+                  These commands now accept two optional parameters enclosed with < and >
+                  chars (first parameter is initial directory and second one is
+                  dialog filters). 
+
+                  Example:
+
+                        %#<[ROOTDIR]\PLUGINS><QEditor Template (*.dll):*.dll>
+
+                        Will display a file requester initially sets into
+                        [ROOTDIR]\PLUGINS directory displaying all .dll files
+                        of that directory. (Notice the : char instead of |).
+
+                - Chrome now stores the list of run programs.
+
+                - Added %N command in user menus; This command will create a new child
+                  window (handy when used with QEditor's templates).
+
+                - Del key is now functional in user menus editor.
+
+                - Shift+arrows up/down now move up/down selected entry
+                  in user menus editor.
+
+                - RC.hlp added in [MAINHELPDIR] (due to it's "universality").
+
+                - Added IDC.mln language file (IDA scripting language).
+
+                - Added a descent favorite files manager
+                  (Idea borrowed from Ultra Edit).
+
+                - Created the PILL language to replace the "Advanced insertions"
+                  (This scripting language will probably be used for wizards
+                   and various code generation processes).
+                  (All functions available to the AddIns are also available here).
+
+                - Chrome should start faster.
+
+                - Chrome now auto-correct APIs functions and constants names.
+
+                - Added an option to open all files contained in project folders:
+                  Include/Modules/Resources in context menu.
+
+                - Added the ability to open several files at once
+                  (instead of one by one) in almost every commands asking for a file.
+
+                - Chrome now also accepts a directory as command line argument
+                  (a file selector will be displayed).
+
+                - Added the ability to use several wildcards in search in files command
+                  (separated by ; chars) (+ added a list of available extensions)
+                  (+ options are now saved) (+ added a list of used directories).
+
+                - Skins can now contains explicit prologue/epilogue
+                  that are inserted during building operations
+                  (Edit the skin file and look for [EXTRACODE] section;
+                   Put UsePrologue=0/UseEpilogue=0 if you don't need this feature
+                   or your old MASM32 project doesn't like it very much).
+
+                  Note: this is mainly used by assembly as C compilers generate
+                        their own code before and after main(). The one provided
+                        in masm32.mln will more or less act as a standard C crt
+                        except that arguments for console exes will not be parsed
+                        C like (both are parsed in WinMain style, that is command
+                        line doesn't contains executable name) i'm too lazy to
+                        implement the C argv/argc filler in asm but if someone
+                        would like to code it then feel free to do so, also an
+                        exception handler could be set here for fun and profit.
+
+                - Added the infamous "Tip of the day".
+
+                - Included my DirectWrap library in distrib.
+
+                - Added a directory for Wizards.
+
+                - Added a template file for wizards (done in PILL language).
+                  To create one you'll need to modify the projectstype.ini by hand.
+                  And add ..\Wizards\<Nameofthewizardfile> if the file is located in
+                  Wizards dir. (There's none actually, due to my lazyness).
+
+                - Added HexType/BinType in languages files
+                  (used for bases conversions output).
+
+                - Made some needed modifications to adapt Chrome to MASM32V8
+                  (humor, humor...).
+
+                - Added a menu for favorite files.
+
+                - Added support for GoAsm (snippets/templates/menus).
+
+                - Snippets menu now only displays snippets related to current
+                  source language (if possible) (Idea by cakmak).
+
+        [FIX]   - Extended DOS trapping commands output buffer to 64kb
+                  (was default ~4kb previously), so that huge number of errors
+                   occuring while building a project or trapping output
+                   of DOS commands shouldn't freeze Chrome anymore (let's hope).
+
+                - Chrome won't hide files bookmarks while validating main properties
+                  (This bug was here since at least one year, a proof of concept).
+
+                - Block save option will correctly remember last used directory
+                  (within a session).
+
+                - Improved recognition of procedures/functions names
+                  (also nested procedures calls in Pascal/C or other languages).
+
+                - Fixed a bug in resource properties dialog:
+                  an empty resource name caused a crash.
+
+                - Child windows resizing modified (hopefully, it should work
+                  correctly on exotic machines (read: Austrians machines)).
+
+                - Corrected child windows activation with mouse.
+
+                - Caret position is now reported correctly while selecting
+                  blocks of texts.
+
+                - Fixed a problem with project creation dialog
+                  (crashed under some old versions of common controls).
+
+                - Fixed a little bug in "open file under cursor" option.
+
+                - Fixed a weird bug with child windows under WinNT 4.
+
+                - Parsing of user commands should be better.
+
+                - Correctly dispatchs lines of texts separated with LF only
+                  in output box.
+
+                - Won't set modified flag when pasting empty texts.
+
+                - Slightly improved popup menu in output window.
+
+                - FTP manager will ask for password when required.
+
+                - Default transfers type for FTP accounts is now binary.
+
+                - Languages files can now accept several tags for single line comments
+                  (separated by space char).
+
+                - ColorFHelp/ColorGHelp/ColorHHelp keys in language files
+                  weren't functionals.
+
+                - Auto indent mode will be desactivated if no language is set
+                  for the corresponding window.
+
+                - Cpp.mln now declared as case a sensitive language
+                  (i wonder why it wasn't).
+
+                - Fixed a little bug in accelerators files saving routine.
+
+                - Added some missing keywords in Rc.mln.
+
+                - Speeded up Block/Registers.
+
+                - Fixed some troubles with auto-saving.
+
+                - Improved handling of horizontal scrollbar in output window
+                  (should only appears when necessary).
+
+                - Multi line comments weren't handled correctly in search routines.
+
+                - Should handle read-only files correctly.
+
+                - Project directory is now correct after first installation.
+
+                - You may find a shortcut placed on your desktop after installation.
+
+                - Revised Windows SDI project type.
+
+                - Corrected handling of LCC32 errors/warnings messages.
+
+                - Improved functions recognitions.
+
+                - Corrected GUIDStyle in asm.mln and Cpp.mln.
+
+                - Syntax highlighting now recognizes 0x prefix for hexadecimal numbers.
+
+                - Modified comments precedence in syntax highlighting (higher).
+
+                - Won't use [SOURCEDIR] when saving projects.
+
+                - Corrected Raw results in searches (should also be slightly faster).
+
+                - Fixed CommonDialogs project example.
+
+                - Added lotsa keywords in asm.mln.
+
+                - Fixed AddInConst.h.
+
+                - Fixed a bug in AddIns manager (AddIn insertions).
+
+                - Chrome crashed when trying to retrieve procedures list
+                  of an empty file.
+
+                - Updated weblinks.
+
+                - Added file extensions in file saving requesters.
+                  (A file saved without extension will automatically receive
+                   the first one of the selected filetype).
+
+                - MDI hwnd is now available to AddInLoad().
+
+        [MISC]  - Added [ExtrasExt] section in main.ini (no interface yet).
+
+                - Changed reading of custominclude/customlib keys in projectstype.ini
+                  (now melted with include/lib due to lameness of lcclnk).
+
+                - MASMEDBUILD/MASMEDBUILDEND renamed to BUILDBLOCK/BUILDBLOCKEND
+                  (sorry for that).
+
+                - Removed dumppe.
+
+                - Splash screen isn't topmost anymore.
+
+--------------------------------------------------------------------------------
+Version 0.34 (known as MasmEd)
+
+        [NEW]   - Created the long time promised resource editor.
+                  Handled resources are:
+        
+                        - Icons
+                        - Cursors
+                        - Bitmaps
+                        - Strings
+                        - Accelerators
+                        - Menus
+                        - Raw datas (anything else)
+
+                   Constants for resources will be generated by MAsmEd
+                   User just have to use the object name, example:
+                   
+                        invoke  LoadIcon,hInst,ICON_0
+
+                   to load the first icon in list or:
+
+                        invoke  LoadMenu,hInst,MENU_5
+
+                   to load the sixth menu.
+
+                        invoke  FindResource,0,RAWDATAS_0,RT_RCDATA
+                        invoke  LoadResource,0,eax
+
+                   to load first raw datas.
+                   (Nb: LoadResource performs a GlobalAlloc then resources 
+                   are freed by Windows itself).
+
+                   This work for all resources except for strings of course.
+                   
+                   Resources labels can be renamed at will.
+
+                   Also notice that the icon associated with project
+                   (in project properties) can be accessed with constant:
+                   
+                        ICON_APP
+
+                   (Project templates have been modified accordingly).
+
+                   This resource name is FROZEN forever.
+                   (Means you can't use it for your own resources).
+
+                   For the interested ones:
+                   
+                   ICON_APP=500 and the rest begins at 501.
+                   
+                   Using auto generated constants will help you to make
+                   more flexible and cleaner code.
+
+                   Other resources are free but you shouldn't use numbers below 256
+                   (according to mickeysoft specifications).
+
+                  Produced files SHOULDN'T be modified outside MAsmEd
+                  (don't come to cry if u modified them in a wrong way).
+                  
+                  Notice that this resources editor is not exactly finished
+                  i saved some details for later.
+                  
+                  Notice also that empty popup menus will be filled with a faked entry
+                  (won't compile otherwise).
+                  
+                - SNAP Will reports much more informations about used windows/objects
+                  of a debugged process (the system changed a bit due to freezed
+                  processes vs. messages sending synchronizations).
+
+                - Text files referenced in a project can be either opened in MAsmEd
+                  or opened with a ShellExecute().
+                  (This can be useful for example with registry files or any other).
+        
+                - Added the ability to run or debug project without compiling it
+                  (Available in treeview contextual menu, 
+                  (also debugged a little thing here).
+
+                - Added options to erase recent files/projects lists.
+
+                - Files drag'n'drop is now accepted by mdiclient:
+                  The files will simply be opened (dropping files in documents windows
+                  will still insert files content at current caret position).
+
+                - Added an option to embed a selected text into a
+                  multiline comment block (depending of the file's language).
+
+                - Added a tag char for prototypes generator (First char ONLY):
+
+                  Example:
+
+                        |[INCLUDEDIR]\%3.inc
+
+                  will tell MAsmEd to not pass the complete entry to the prototype
+                  generator but only use it as destination directory
+                  (User will be prompted to include the real file after generation).
+
+                  Another fine example of Mr. Steve H. sense of humor.
+
+                  (Or maybe it was me but it worked correctly before).
+                  (Anyway, project wasn't marked as modified here, fixed).
+
+                - Added 2 shortcuts to switch project structure and output window
+                  on/off (can be useful).
+
+                - SNAP will uses some of the Windows 2000/XP new features
+                  (mainly to reports much more informations about currently
+                  debugged process and some other things).
+                  Except much more support for this in future releases.
+
+                - Added an option to create and insert a GUID a current caret position
+                  (depending of the file's language).
+
+                - Changed "Date/time" to "Create GUID" in contextual menu (a minor one).
+                  (Amusing coz it changed again some times after).
+
+                - Added "Builtin directives" entry in user menus:
+                  MAsmEd will check the file for assembling/compilations directives
+                  and will execute the specified commands.
+
+                  The keywords are:
+                                  
+                        MASMEDBUILD / MASMEDBUILDEND
+                        
+                          Specify a group of commands.
+
+                        other commands will be parsed/executed in the specified way.
+
+                  Directives must be embedded in a comment block or following
+                  a single line comment (depending of the file's language)
+                  and can be placed anywhere in the source.
+
+                  The available shortcuts and quick directories are the standard
+                  ones (look in user menus editor for lists).
+
+                  Here is a typical MASM32 build all:
+
+                        ; masmedbuild RELEASE
+                        ;       CAPT [BINDIR]\rc.exe /v rsrc.rc
+                        ;       CAPT [BINDIR]\cvtres.exe /machine:ix86 rsrc.res
+                        ;       CAPT [BINDIR]\ml.exe /c /coff %1.asm
+                        ;       CAPT [BINDIR]\Link.exe /SUBSYSTEM:WINDOWS %1.obj rsrc.obj
+                        ; masmedbuildend
+
+                  Same as above but it will generate debug infos:
+
+                        comment |
+                        masmedbuild DEBUG
+                                CAPT [BINDIR]\rc.exe /v rsrc.rc
+                                CAPT [BINDIR]\cvtres.exe /machine:ix86 rsrc.res
+                                CAPT [BINDIR]\ml.exe /Zd /Zi /c /coff %1.asm
+                                CAPT [BINDIR]\Link.exe /DEBUG /DEBUGTYPE:COFF /SUBSYSTEM:WINDOWS %1.obj rsrc.obj
+                        masmedbuildend
+                        |
+
+                  Another one for TASM:
+
+                        ; masmedbuild RELEASE
+                        ;       CAPT [BINDIR]\tasm32.exe /s /m /ml /z %1.asm
+                        ;       CAPT [BINDIR]\tlink32.exe -x -c -Tpe %1.obj,,,import32.lib
+                        ; masmedbuildend
+
+                  Also for lcc32:
+
+                        // masmedbuild RELEASE
+                        //      CAPT [BINDIR]\lcc.exe -O %1.c -Fo%1.obj
+                        //      CAPT [BINDIR]\lcclnk.exe -s -o %1.exe -subsystem windows %1.obj
+                        // masmedbuildend
+
+                  These examples can be contained in the same file.
+                  Just make sure that the user command specify:
+
+                        PREP <Directives block name>
+
+                  Note that block names are case sensitive.
+
+                  Note also that very few checks are performed on commands blocks,
+                  the above examples will work for sure but nothing else is allowed
+                  inside blocks (well actually it is allowed but will be
+                  considered as a command to be executed).
+
+                  Another note (VERY VERY IMPORTANT):
+                  The commands embedded inside blocks are executed RECURSIVELY
+                  with the same parsing engine, that's means that any user commands
+                  can be issued. For example this:
+
+                        ; masmedbuild RELEASE
+                        ;       PREP RELEASE
+                        ; masmedbuildend
+
+                  The Result ?
+                  A never ending loop (and probably a crash due to stack overflow
+                  after a while). I haven't implemented any blocks tracing.
+
+                  Well, i hope u got the picture.
+
+                  Also commands errors will be reported in output window instead
+                  of messageboxes for obvious reasons.
+
+                  Look into Examples\LDIRC.asm or Examples\Packetsview.asm
+                  for a concrete example.
+
+                  I've also included some examples as snippets.
+
+                - Added an option to toggle case in selected text block.
+
+                - Added support for Microsoft DDK help.
+
+                - Added "ResolveIP" snippet.
+
+                - Some little additions to "Convert to db statements" function:
+                  it now creates a constant with the size of the datas and a label.
+
+                - Added an option to registers/unregister files extensions
+                  associated with languages files.
+                  (Also added an entry for these files in windows shell's
+                  contextual menu).
+
+                - Added an option to toggle the auto popup of output window on/off
+                  (I found it annoying after a while).
+
+                - Added an option to convert every spaces of a selected block 
+                  into tabulations.
+
+                - Modified MAsm32.skm file to handle CodeView debugging informations
+                  (Can be useful for SoftIce and some other debuggers).
+
+                - API tooltips now supports: call <APIName>,<Argumentsxxx> format.
+
+                - Added highlighting supports for %<Register> format.
+
+                - Added 2 snippets for MASM32 (Starter console and Starter window).
+
+                - File/New menu now display snippets entries
+                  so user can now create a document from a registered snippet
+                  (this can acts as template of course).
+
+                - Added an option to save a block of text and replace it by an include
+                  statement (language dependant).
+
+                - MAsmEd can let windows deals with files under caret:
+                  ("Execute file under caret" option).
+
+                - %7 shortcut will retrieve extension of current filename.
+
+                - Added an option to reload the current source.
+
+                - User can now switch MAsmEd into fullscreen mode.
+
+                - Added a contextual menu in output window.
+
+                - Skins now accepts TEXTB statement
+                  (i modified the 3 provided skins in order to use 
+                  this new feature, i also corrected tabulations here).
+
+                - Added a handler for DEL key in FTP client
+                  (will trigger delete files option).
+
+                - Added some C++ keyword in Cpp.mln.
+
+                - Double clicks on output window can now be done 
+                  on reported Warnings (i forgot that).
+
+                - Added a new project type for Windows NT/2000 services
+                  (not tested under Windows XP but it might work).
+
+                - MAsmEd now checks and report missing files of a loaded project
+                  (These files won't be included in project tree).
+
+                - User can now include a file as db statements.
+
+                - Modified date/time insertions, the function now displays several 
+                  dates formats to paste (formats are located in Dates.ini).
+
+                - Added an option to use current file's directory (if any opened) when
+                  opening/including/saving new file (also performed in user commands)
+                  (should be more standard that way).
+
+                - Added CUSTOMINCLUDExxx keys to ProjectsType.ini.
+                  Similar to MODULExxx except that files will be referenced in Includes.
+                  Allowing to reference files outside assembler/compiler
+                  includes directory.
+
+                  Similary, CUSTOMLIBxxx key will do the same for Libs.
+
+                  Notice that projects templates will be enhanced in a near future.
+
+                - Added some little things in Examples directory.
+
+                - Added a project type for DirectDraw animations.
+                  Also added several examples showing various basic technics
+                  done during 2 intensive days.
+                  (it was fun to code some graphical effects again after so many years).
+
+                - Added some functions into WinAPI.db file for Windows 2000/XP
+                  (not complete at all, will fix this later together with
+                  a forthcoming database containing standard constants).
+
+                - Better procedures recognition for C and Pascal language:
+                  MAsmEd will now checks inner blocks balancing and keywords
+                  on single lines according to language definition file
+                  (new keywords have been added).
+                  Note that there's still some problems with C language because
+                  instructions blocks and procedures blocks uses same keywords.
+
+                - Added some scope keywords in Asm.mln especially for macros 
+                  definitions. Also changed:
+                  (.#%)if/(.#%)else/(.#)%elseif/(.#%)endif
+                  definitions to use cross references allowing else keyword to acts 
+                  as both indent and outdent trigger (work also for NAsm).
+                  Also modified Cpp.mln and Pascal.mln accordingly.
+
+                - Introduced Advanced insertions system macros
+                  (located in languages files); shortcuts are similar to the user 
+                  menus ones and quick directories are also available.
+                  + some extras chars {TAB} and {NL} 
+                  and an extra command: {SEL} (select current word).
+                  Commands can be separated by "|" char if necessary.
+
+                - MAsmEd now saves splitters positions
+                  (Thanks to Rainer for this suggestion).
+
+                - Proc/Variables search and search in files options speeded up
+                  (especially for big files).
+
+                - Added an option to include current source file into project
+                  modules / includes / resources / documents lists.
+                  (contextual menus in project structure).
+
+                - Added 3 new colors for languages (Colors F G H in Mln files)
+                  (Idea by Neon).
+
+                - MAsmEd will only display a simple MessageBox if there's only 
+                  one file to be saved or to be reloaded.
+
+                - Added keys for new resources handling in ProjecsType.ini:
+
+                                ICONSxxx
+                                CURSORSxxx
+                                BITMAPxxx
+                                STRINGSxxx
+                                ACCELERATORSxxx
+                                MENUSxxx
+                                DIALOGSxxx
+                                RAWDATASxxx
+
+        [POST 0.34 OFFICIAL PREVIEW 1]
+
+                - Added a Custom comment blocks option
+                  {TAB} and {NL} flags are accessible here.
+
+                - Added an option to clear arguments list
+                  (can also be found in custom comments option).
+
+                - Added a ASCII view/paste table.
+
+                - User can now de/select the steps of project building process
+                  in properties (Building Resource,Compiling/Assembling,Linking,Cleaning).
+                
+                  (Clean out will simply delete main .obj and .res)
+
+                - Slightly changed some layouts here and there.
+
+                - %8 shortcut added (simply a mix between %# and %3).
+
+                - Current opened project is now saved into workspace files.
+
+                - Added an option to save/restore MAsmEd state (opened files+project).
+                  Notice that state will be restored only when opening MAsmEd 
+                  with no arguments (displaying the splash screen).
+
+                - MAsmEd will prompt the user for conversion when trying to open 
+                  UNIX files. Also added an option in properties to remove this 
+                  prompting. The converted file will just be marked as modified 
+                  and not saved on disk.
+
+                - Added an option to minimize MAsmEd into Windows Systray
+                  (This function will have slightly different behaviour under Win2000++).
+
+                - Added an option to bring MAsmEd on topmost (or not).
+
+                - Added %C and %D shortcuts (repectively returns a selected color
+                  into decimal or hexadecimal).
+
+                - Sources templates ('New' menu) have been separated from Snippets.
+                  So basically:
+                  
+                        - Templates files are those you can find in New menu.
+                        - Snippets files are those you can find in sources context menu.
+
+                  Also notice that a type for the file is automatically
+                  added after the description (according to registered file extension).
+
+                - Added the ability to move files inside project's treeview sections
+                  with drag'n'drop (files cannot be moved across sections for obvious 
+                  reasons) (Can be useful to fastly correct files inter-dependencies).
+
+                - Added 3 empty project types for dos executables/static libraries
+                  and dlls.
+
+                - Projects entries in treeview can now be removed with DEL key
+                  (not much but...).
+
+                - Used enhanced directories browser under Windows 2000/XP.
+
+                - Added a new skin for Free Pascal.
+
+                  VERY IMPORTANT:
+                  
+                   - LIBRARIES folder in projects are considered as UNITS.
+                   - Most compiler options are in properties.
+                   - Program/Library/Unit names are auto generated.
+                   - "Interface" keyword isn't required for units.
+                   - To produce an UNIT use a STATIC LIBRARY project.
+                   
+                   So basically a module file should start with CONST
+                   or imports/exports (or something like that).
+
+                   (I had to enhance the Skins Engine to add this one (a real bitch)).
+
+                - Added an option to disable regression algorithm in "search in files"
+                  and "proc/var/const search" functions (Raw results).
+
+                - Proc/Var search (renamed to Proc/Var/Const Search)
+                  now also looks into plain resources files referenced in projects.
+
+                - Added a lot of declarations in WinApi.db again (more to come).
+
+                - File extensions for projects and workspaces files 
+                  now uses 2 different icons (just for clarity purpose).
+
+                - Modified user menus editor layout slightly 
+                  and added an option to erase complete menus entries.
+
+        [POST 0.34 OFFICIAL PREVIEW 2]
+
+                - Added "To doc" option in found registers window
+                  (creates a new source window with list content).
+
+                - Added CopyMem snippet (was lacking).
+
+                - Added an option to automagically zoom on already opened file without
+                  asking the user (someone suggested this but i don't remember clearly
+                  who, probably F0dder).
+
+                - Added handling for entry point in exports definition
+                  (Only relevant in MASM32 skin so far).
+                  Notice that user shouldn't use this for DLLs, it is reserved for
+                  some forthcoming expansions of projects types.
+
+                - Introduced an Add-Ins engine. I've added a project template for this
+                  No SDK yet, i'll write one if there's enough people interested 
+                  by writing some. 3 stock examples are included in projects directory
+                  (and in AddIns).
+
+                  The Add-Ins manager works like this:
+
+                        - Check the box on the left side of an add-in entry to add it
+                          into the add-ins menu.
+
+                        - Double-click on an entry to change the running state of a
+                          persistant add-in, Red=stopped Green=Running.
+                          (This state have no effect on correctly coded simple add-ins).
+
+                  Persistant add-ins are loaded/unloaded when user wants them running/stopped
+                  and at MAsmEd start/stop (the running state of a persistant add-in is saved).
+
+                - Created AddIns:
+                
+                        - AddInASCII (View/Paste ascii chars)
+                        - AddInGUID (Create/Paste a GUID)
+                        - AddInDATEIME (Paste current date)
+
+                - Added the ability to change projects directory.
+
+                - Projects and output box toolbars are now embedded in pagers
+                  so it should be easier to add new icons here.
+
+                - Added recents files and recents projects lists into systray menu.
+
+                - Added a project type to create control panel extensions.
+
+                - Changed projectstype.ini slightly: added an optional field in
+                  main definition, if present MAsmEd will perform a post
+                  rename operation on the produced file with the given extension
+                  (See definition of control panel type).
+
+                - Added Release in versioning system (as it should be).
+
+                - User can now specify if MAsmEd should include version resource
+                  in produced file or not.
+                  Note: this function supersedes skin's AddVInfo tag if unchecked.
+                  
+                - Added the ability to include a Windows XP manifest resource
+                  in produced files (not tested extensively but should work).
+
+                - Improved project creation dialog (it can now be displayed at start
+                  and it includes recents opened projects).
+
+                - Added a project type for Windows NT++ drivers creation
+                  (not tested at all).
+
+                - Added handling and language def. for HTML files.
+
+                - Added an user menu entry to display current HTML file
+                  in default web browser.
+
+                - Added HighlightNbrs tag in languages definitions files.
+
+                - %9 shortcut added (like %8 but returns %4 instead of %3).
+
+                - Created a true about window (blah).
+
+                - Added a little contextual menu in user menus editor.
+
+                - Added an option to auto correct APÏs names cases on the fly.
+
+                - API database handling revised, should be MUCH faster
+                  (especially for APIs names cases corrections).
+
+                - Added handling for ENTER key in projects treeview: 
+                  it will performs default option for the selected entry.
+
+                - Added current file percent position in status bar.
+
+                - Added some colors profiles.
+
+                - Added optional linkers arguments ability in skins.
+
+                - Added a pascal test example (borrowed from Free Pascal distribution).
+
+                - Added an entry in Tools user menu to run Windows calculator
+                  (Useful to have it ready sometimes).
+
+        [FIX]   - Corrected some problems with filenames passed to resource builders
+                  (Spaces and slashes commands).
+
+                - SNAP will not display debugged process working sizes if not supported
+                  by Operating System.
+
+                - Forgot to send project arguments when debugging with SNAP.
+                  Also arguments won't be passed with quotes anymore.
+
+                - Modified some factory settings due to
+                  Mr Steve Hutchesson's sense of humor
+                  (and my lameness of course).
+
+                - Fixed a bug in user commands: directory without filename (%5)
+                  crashed when no files opened (a.s.o.).
+
+                - Shift+S keystroke in source windows wasn't accessible due
+                  to registered accelerator (a.s.o. again)
+                  (Was fixed in v0.33 Rev B).
+
+                - Another stupid one on open file under caret option: 
+                  trying to open a file from column 1 made it crash.
+                  Also this command will open a file selector if it determines
+                  that the selection is only a directory.
+                  (Fixed in v0.33 Rev C).
+
+                - Files dialogs in user commands will now remembers last used
+                  directories. (Was fixed in v0.33 Rev C).
+
+                - Fixed some little things with SysCommands
+                  (especially windows list weren't reachable).
+
+                - Non-recoverable exceptions puts SNAP into DeadEnd mode.
+
+                - Added Realxx types in Asm.mln.
+
+                - Trying to run an user command on a newly created file while autosave
+                  was turned on confused the commands parser a bit
+                  (trying to perform command on the old name).
+
+                - Fixed a bug in required arguments (%? trigger).
+
+                - Finally, MAsmEd can handle user commands with spaces 
+                  (A very old one, just found out the time to fix it).
+
+                - Saving a file under a new/different extension (registered or not)
+                  will modify the layout accordingly (the syntax highlighting mainly).
+
+                - Expand procedure function should work correctly now.
+
+                - Escape key should now work correctly in dialog windows
+                  (also it can be used to remove API tooltips).
+
+                - MAsmEd crashed when trying to open weird files from
+                  Run command (like inexistant files).
+
+                - Updated Asm.mln: some @xxx commands and NAsm constants
+                  were misplaced.
+
+                - Project icon wasn't displayed in project properties 
+                  right after creation.
+
+                - Better syntax highlighting for NAsm (especially for the preprocessor).
+
+                - Conversion to db statements should be faster.
+
+                - Syntax highlighting improved (especially for hexadecimal numbers)
+                  I finally found some times to improve that CodeMax slightly,
+                  there's still some bugs left (like the page up/down column problem)
+                  i'll check that next time.
+
+                - Changed the status bar handling
+                  (status flags should not disappears anymore).
+
+                  Meaning of the flags:
+
+                        O = Overtype
+                        X = Syntax highlighting
+                        W = White spaces
+                        T = Auto expand Tabs to spaces
+                        B = Cursor wrap (bounded to selection)
+                        S = Smooth scrolling
+                        L = Line tooltips
+                        N = Auto normalize case
+
+                        (On=Sunken Off=Raised)
+
+                - Updated Asm.mln again: added some MASM high level syntax keywords
+                  + some instructions for C inlines.
+
+                - Fixed a bug in search in files function: 
+                  compressed directories weren't checked correctly.
+
+                - %% shortcut (Save file dialog in user menus) changed to %&
+                  (%% now means single % char).
+
+                - Rc.mln improved slightly.
+
+                - MAsmEd now recognizes if an opened file had been deleted externally
+                  (how smart !) and will mark it has modified.
+
+                - Shame on me (again): i forgot to clear modified flag for saved files.
+
+                - Corrected a little thing with the files selection window:
+                  The list will auto-adapt to largest filename.
+
+                - Corrected a "misconception" when checking for externally 
+                  modified files (Never thrust VB to internally report 
+                  correct filetime under WinNT/2000).
+
+                - Fixed a bug in project building (errors weren't correctly reported).
+
+                - Boyer moore's algorithm for strings length calculations
+                  dropped completly (some procedures will be slightly slower
+                  but will not produce page faults).
+
+                - MAsmEd's context help sometimes crashed when no sources opened.
+
+                - Fixed registers report files (lines numbers weren't saved correctly).
+
+                - Fixed a bug in FTP client: forgot to re-display directory after 
+                  uploading files (also client mode wasn't resetted).
+
+                - Corrected a bug in dlls procedures exports:
+                  MAsmEd always used assembly language prototypes (even for C).
+
+                - Proc search and search in files functions now adapts better
+                  to scanned files (there's still some problems with blocks 
+                  of comments for non-asm files).
+
+                - Added some keywords in Rc.mln concerning MENUITEM resource
+                  and some other things.
+
+                - Corrected some bugs in files dropping into source windows
+                  (MAsmEd will append dropped files correctly and will use
+                  language of the first one if source window is untitled).
+
+                - MAsmEd should now react more correctly to system colors changes.
+
+                - Slightly improved projects treeview.
+
+                - Projects opened via shell are now added into recent projects list.
+
+                - Fixed a bug in api tooltips
+                  (crashed when trying to find (impossible) api names with 
+                  "weird" second char (eg. digit) due an early exit generating
+                  a stack corruption).
+
+                - Adding an entry into treeview project now correctly refreshes
+                  parent item (same goes for others treeviews).
+
+                - Fixed Dasm.bat file to use local dumppe.exe instead of MASM32's one.
+
+                - Corrected a bug with %6 trigger: Froze if caret was in first column
+                  and under a dot char (Thanks to f0dder for this tricky one).
+
+                - Proc/Variables search crashed when performing on non-saved files
+                  and other little things. (Thanks to f0dder for that one too).
+                  
+                - Proc/Variables and search in file functions now passes over
+                  undertermined files types (also missed some included files).
+
+                - Fixed toolbars little layout problem
+                  (i was well aware of that but f0dder reminded this to me).
+
+                - Should be able to handle spaces in user batch files and in
+                  projects names.
+
+                - Changed some layout in sources lines tooltips (not very important).
+
+                - Handling of Enter key added where it can be handled (in most dialogs).
+
+                - Corrected bookmarks's shortcuts in contextual menus
+                  (were from an older version).
+
+                - Fixed a problem with width of fonts under Windows 2000
+                  (maybe XP too), so Lucida console font should looks better.
+                  Also the highlighted lines should be displayed correctly (i hope).
+
+                - .asi and .mac files correctly handled.
+
+                - Better handling of projects templates files
+                  (won't crash if referenced file doesn't exists).
+
+                - Replaced nasm.exe entries in user menus with nasmw.exe.
+
+        [POST 0.34 OFFICIAL PREVIEW 1]
+
+                - Use of ES_NUMBER in Goto Line dialog (looks less messy that way).
+
+                - AutoSave notifications should appears when expected
+                  (not while debugging hehe).
+
+                - Main window went to background sometimes. Fixed.
+
+                - Skins structure have been revised SERIOUSLY.
+
+                - API tooltips slightly improved regarding C/Pascal functions.
+
+                - Properties dialog can be validated with ENTER key (ESC cancels it).
+
+                - Fixed lotsa bugs in skins files (especially TAsm32.skm).
+
+                - Project building now reports warnings (forgot that).
+
+                - Improved Lcc32 compilation skin (also debugged).
+
+                - Corrected some little things in Rc.mln and Pascal.mln.
+
+                - Improved procedures collapsing/expanding.
+                  (I suggest you to NOT to try this one with C/C++ files,
+                  so far the procedure recognition for these files
+                  is not working at 100%).
+
+                - Improved DLLs procedures exports
+                  (goes with procedure/function recognition).
+
+                - Fixed a little bug in auto generated VERSIONINFO resource
+                  (some resources compiler REQUIRES four digits for versions numbers).
+
+                - Slightly improved Rc.mln.
+
+                - Better recognition of includes for C/C++, Pascal and Resources.
+
+                - Added some recognitions keywords in cgrep.ini
+                  (mainly for C/C++, Pascal and Resources).
+
+                - Fixed a bug while saving toolbars in TB manager.
+
+                - Fixed a little bug in properties: MAsmEd won't complain about
+                  unsaved FTP accounts forever and ever.
+
+        [POST 0.34 OFFICIAL PREVIEW 2]
+
+                - Ctrl+C won't copy empty selections into clipboard anymore
+                  (was a little bit annoying after a while).
+
+                - Double clicks on lists checkboxes won't check/uncheck wrong items.
+
+                - Fixed some dates formats in dates.ini file.
+
+                - Corrected a Windows 95 bug in DirectDraw examples/Template
+                  (Thanks to hutch for having noticed that).
+
+                - Treeview drag'n'drop should now works correctly in resources folder.
+                
+                - Click'o'mania won't disturb MAsmEd anymore on API tooltips
+                  and Windows 2000++ menus extensions of scrollbars.
+                  (Thanks to VKim or VSkim or Skim).
+
+                - Added SWORD in Asm.mln (hehe).
+
+                - Now zoom correctly on already opened files
+                  (Tried to focus on null hwnd).
+
+                - API tooltips correctly replaced after active view changing.
+
+                - Corrected some little things on search routines.
+
+                - Added several keywords in Asm.mln.
+
+                - Cleaned up some skins again.
+
+                - Fixed a bug in exports files for available plugins templates
+                  (functions weren't exported at all).
+
+                - Main popup menu will be displayed at caret position if keyboard's
+                  popup key is used (thanks to volki tolki for that one).
+
+                - Corrected a bug in projects properties: frame disapeared when
+                  pressing escape key in version informations datas
+                  (thanks to volki tolki for that one too).
+
+                - Non-modal dialogs should adapt more correctly to various
+                  Windows appearances.
+
+                - Added ifnb and elseif in Asm.mln (forgot that).
+
+                - Fixed a problem with memory handling concerning APIs database
+                  functions.
+
+                - Added XMMs registers in languages files.
+
+                - Fixed a bug with non-existant files registered as snippets or
+                  templates (stoopid one).
+
+                - Fixed a bug in registers searching function
+                  (wasn't language sensitive).
+
+                - MAsmEd won't run on outdated systems anymore
+                  (my eyes nearly felt out of my head when i saw how awful it was).
+                  I can think of some workaround if someone ask it expressively
+                  (But i hope not).
+
+                - Improved Pascal.mln slightly.
+
+                - Fixed a bug when trying to save a read only file
+                  (was marked as saved).
+
+                - Fixed a bug in FTP client: answering 'no' to connection breaking
+                  didn't worked very well...
+
+        [NOTE]  - Due to the new debugging system introduced in previous version
+                  Snap.asm is not automagically included in project before building:
+                  you'll have to do it yourself (forgot to point that last time).
+                  The file is still located in [TEMPLATEDIR]\Snap.asm.
+
+                - Never mentioned it but comment blocks in asm can be customized
+                  in file [LANGUAGESDIR]\Asm.mln in MultiLineComment1/2 entries.
+
+--------------------------------------------------------------------------------
+Version 0.33
+
+        [!!!]   - User MUST REPLACE the -> PAUSE <- commands included in each MAsm32
+                  batch files with -> EXIT <- or MAsmEd DOS CAPT feature won't work
+                  properly. 
+
+                  Also some of these batch redirects output to custom files:
+
+                        Example:
+
+                        \masm32\bin\ml /c /coff %1.asm > \masm32\bin\asmbl.txt
+
+                  MAsmEd won't trap such tricks.
+
+                  Every other batch files must follow the same rules.
+
+                - ICE removed: it will be back soon, stronger and more usable.
+
+                - Install process changed a bit.
+                  MAsmEd doesn't register files anymore in registry base
+                  it doesn't overwrite these ini files:
+
+                        usermenus.ini
+                        colors.ini
+                        toolbars.ini
+                        ftpaccounts.ini
+                        skins.ini
+                        and maybe some others...
+
+                  and only put icons in programs folder.
+
+        [NEW]   - INTERNAL STRUCTURE CHANGED RADICALLY:
+
+                        - Source rewritten in a more modular way.
+                        - All COM servers removed (ocxs/dlls).
+                          (except for the vb virtual machine
+                          but it will disappear in a next version).
+
+                  So everything is done "by hand" (APIs) resulting nicer interface,
+                  greater overall speed, distribution filesize reduction,
+                  lighter memory usage (much lighter)
+                  and a permanent headache for me, thank you.
+
+                Apart from that here are the news:
+
+                - MAsmEd now send it's statusbar handle to the QEPlugins
+                  the toolbar handle remains 0 (so a QEPlugin can recognizes from where
+                  it is called from and acts accordingly).
+
+                - Added options to remove obsoletes files from recent files/projects lists.
+
+                - Added 3DNow(tm)(r)(c)(agaga) instructions in languages.ini file.
+
+                - Added an option to jump to procedure prototypes.
+
+                - Languages.ini file corrected/updated for MAsm32 v7
+                  (also added some missing keywords for x86).
+
+                - User can now reorganize (drag and drop) columns in search results
+                  (file will be saved accordingly).
+
+                - Improved editing capabilities.
+
+                - Improved user menus editor slightly.
+
+                - Documents windows can be auto maximized when opened.
+
+                - Added a menu entry for sending bugs reports, it will create
+                  an auto mail, just fill it with your comments.
+
+                - Added a FTP manager (client).
+                  Please notice that this manager was done for coders teams
+                  who wants to share files on mini-hosts/personal workstations
+                  ftp servers which contents changes a lot
+                  (i don't know if it can be used by TACs).
+                  So no cache is used for directories, resulting lack of performances
+                  in directories refreshing for example (but it's still fast enough).
+                  Also it was not tested on unix servers.
+                  Dirty users who wants to download big files still needs a true 
+                  ftp client.
+                  Also notice that you will need to use binary transfers types
+                  if you're about to retrieve binary files (executables for example)
+                  coz there's no file type checking.
+
+                - Changed some menus layout and added some shortcuts here and there.
+
+                - Lucky (and proud) owners of a three buttons mouse will be able
+                  to click on the left margin with the middle button to select a
+                  procedure (left margin must be turned on, of course).
+                  Also notice that a click on a word with this button will select it
+                  and a double click will select the complete line.
+                  (Provided that the system is correctly configured to recognize
+                  third mousebutton of course).
+
+                - Added a toolbars manager.
+                  Maybe it is not clear: user can drag and drop commands he/she
+                  wants to put in or remove from the lists
+                  (double clicks also works but adds the entry at the end of the list).
+
+                - MAsmEd should be fully Windows 2000 compatible now.
+                  In fact it was re-developped on it with my brand new old Cyrix 133,
+                  so now what you say ? (Idiotic Bullshit Machine ?)
+
+                - User can select Document file in user menus editor.
+                  The command will be considered as a text, workspace or project
+                  and will be opened directly into MAsmEd,
+                  so it can be used as "favorites" or something like that.
+
+                - Changed the way AutoSaving works.
+                  MAsmEd can now display or not all opened and non saved files
+                  at the periodic interval selected by the user.
+
+                - Added a find fast option.
+                  (search for word under caret or current selection).
+
+                - Added a MakeLib batch file in MAsmEd main directory
+                  (and an according entry in MASM32 menu).
+
+                - Added an option to clear output window before running
+                  user commands that uses DOS capture.
+
+                - Added some help messages in user menus editor.
+
+                - Added a MakeDll batch file in MAsmEd main directory
+                  (and an according entry in MASM32 menu too).
+
+                - Templates definitions changed a little:
+                  Added some extras infos and .def files handling for dlls.
+                  (older projects are still compatible).
+
+                - Added a project type for QEditor plugins.
+
+                - Added a project type for mIRC plugins (why not after all).
+
+                - Introduced project building skins files.
+                  so user can now uses project manager with other things that MAsm32.
+
+                - Prototypes generator for static libraries is now customizable.
+                  Where to find it out ?
+                  Context menu in project treeview (libraries entries).
+                  Shortcuts are same as for user menus.
+
+                - Added Dec2Hex/Dec2Bin/Hex2Dec/Hex2Bin/Bin2Dec/Bin2Hex
+                  numeric conversions in documents contextual menu.
+
+                - Contextual grep results skew exported in cgrep.ini.
+
+                - Languages engine is now much more flexible:
+                  All definitions have been exported into languages directory
+                  (No editor yet).
+
+                - MAsmEd will now checks plugins entries in user menus to determine
+                  the type of it (implemented here for futurs extensions).
+
+                - Added an option to select default language for new created files.
+                
+                - Added an option to remove that annoying tooltips in projects treeview.
+
+                - Added an option to use windows recent files list.
+
+                - API tooltips now recognizes ( char.
+
+                - SNAP v0.2 completly rewritten too
+                  (not yet a full debugger but still "astucious" enough and working
+                  correctly under Windows 2000 this time).
+
+                - Added TIMER command to SNAP: It should be used by pair, the first
+                  one will will store current uptime and the second will calculate
+                  (and display) the difference in milliseconds between the two uses.
+                  (Can be useful to measure routines speeds).
+                  Also SNAP will now reports much more informations about created
+                  processes/threads and DLLs loading.
+
+                - SNAP now handles exceptions and reports FPU state.
+                  No MMX instructions yet coz my CPU doesn't handle them
+                  so i can't make tests (all simply).
+
+                - SNAP also maintains a windows list
+                  (Can be updated with "Retrieve process informations" option).
+
+                - Added a color profile in properties and modified another one.
+
+                - User will now be able to specify debug program for project building.
+
+                - Added some instructions for PIII.
+
+                - Improved several little things for TASM.
+
+                - Search functions will now try to search includes in the directory
+                  of the currently checked file.
+
+        [FIX]   - MAsmEd crashed when trying to create or open a file
+                  from a project without appropriate directory structure
+                  (masm32 distribution not installed for example hehe).
+
+                - Newly created projects are now added in recent projects list.
+
+                - Comment/Uncomment blocks should be faster now (couldn't be worser)
+                  Also debugged a little bit.
+
+                - Insert date/time improved slightly.
+
+                - Corrected some little problems with expand procedure function.
+
+                - Snippets registration fastened.
+
+                - Relative path correctly handled when referring to source directory.
+
+                - Improved caret behaviours (especially when focusing).
+
+                - User menus editor crashed when no menus present.
+
+                - Registers search fastened and corrected.
+
+                - Variables / procedures searches completly rewritten
+                  (should be slightly faster and "clever and smart").
+
+                - Words selections in editor should be better.
+
+                - DOS output listbox improved slightly (removed some weird chars).
+
+                - Drag listbox in user menus editor changed slightly too.
+
+                - MAsmEd now stays in tasklist while displaying a dialog window
+                  (f0dder noticed that a long time ago).
+
+                - DOS output capture completly rewritten.
+
+                - API tooltips font now handled correctly under Windows 2000 (hehehe).
+
+                - Search functions won't process obsoletes files specified
+                  in include statements anymore
+                  (caused mangled results due to function brutal exiting).
+
+                - "Update" shortcut now points to MAsmEd page (important or what ?).
+
+                - Listview sorting is now handled correctly (especially with numbers).
+
+                - Corrected a bug in recent lists (empty list sometimes).
+
+                - Corrected numerous GPF under windows 2000
+                  (well it was internal to 0.33 version but who knows).
+
+                - Changed the menu entry: Run Makeit.bat, it now uses [SOURCEDIR].
+
+                - Corrected a little bug in project properties:
+                  MAsmEd crashed when user selected same icon file.
+
+                - Project properties layout changed a bit: modifications are
+                  only effective after user press ok.
+
+                - MAsmEd now checks if a file exists before opening it when
+                  using recent lists.
+
+                - Adding include file with .asm/.s extensions didn't included
+                  corresponding library file (after user's choice).
+
+                - MAsmEd now checks if filename is already referenced
+                  in a project before adding it.
+
+                - Project building fastened.
+
+                - Some texts renamed according to new functions.
+
+                - Couldn't select procedures at end of files. Fixed.
+
+                - Output window behaviours changed slightly
+                  (user must now double click to jump to error).
+
+                - Search options crashed sometimes, fixed.
+
+                - Removed file extensions for lousy languages.
+
+                - Removed useless projects examples.
+
+                - C/Pascal (also Asm) highlighting improved.
+                  (Pascal file also recognizes Delphi up to version 2).
+
+                - Fixed some problems with little dos (dirty) irc example
+                  (Still mostly harmless coz mostly bugged).
+
+                - Fixed the way arguments dialog works: command will be issued
+                  only when user press Ok button (wasn't intuitive enough ?).
+
+                - SNAP processes switched in pause mode right after being created
+                  (more useful that way or what ?).
+
+                - Fixed some extras problems with SNAP (like zombies processes).
+
+                - Removed big.api file: only winapi.db is now distributed
+                  (makedb.exe vanished too).
+
+                - User commands weren't translated when no documents windows opened
+                  it will now acts the same way with our without opened documents.
+
+                - ANY unknown commands to SNAP will be displayed
+                  and a FREEZE command will be issued.
+
+                - Empty user commands are not processed anymore.
+
+        [NOTE]  - User menus are now located in file: UserMenus.ini.
+                  This will prevent overwriting during future installations
+                  (if there's any).
+
+                - Languages.ini structure changed: it is now an entry point file
+                  pointing to the "Languages" directory.
+                  File extensions related to languages are also stored in this file.
+                  Context help files are referenced in each *.mln file.
+
+                - [MASMDIR] renamed to [ROOTDIR] so beware.
+
+                - Toolbars buttons using user commands will be refreshed if user menus
+                  are modified, MAsmEd will try to correct associated buttons or 
+                  delete them if referenced commands can't be found so don't be 
+                  surprised if things disapears. Also notice that modifying parameters
+                  while running several instances of MAsmEd will certaintly produces
+                  strange results.
+
+--------------------------------------------------------------------------------
+Version 0.32
+
+        [NEW]   - Added an option to generate prototypes from .lib files
+                  in project manager (right click in a lib) it uses hutch's
+                  L2inca.exe.
+
+                - User can now specify .chm/.col help files in user menus
+                  (I forgot that last time).
+
+                - User menus editor improved a bit, user can now specify
+                  command type with a combobox.
+
+                - MAsmEd can now trap DOS boxes output:
+
+                        (Command prefixed with "CAPT " keyword).
+
+                        All StdOut/StdErr writes will be redirected to
+                        MAsmEd's status window.
+
+                        Note:
+                         If You're using hutch's distrib batch files you'd
+                         better remove the "pause" keyword at the end of the
+                         files or it will stay with an empty dos box until you
+                         press the "any" key.
+
+                - Added an option to clear status window.
+
+                - Added a button to save project on project (little) toolbar.
+
+                - New available path:
+
+                        [SOURCEDIR]             Current source directory.
+
+                - Added an option to Select a procedure and collapse it
+                  (mapped to Ctrl+Q):
+
+                        Example user hit Ctrl+Q on this procedure:
+
+                                RaiseError      proc    ErrorMessage:dword
+                                                invoke  StdOut,addr MsgErr
+                                                invoke  StdOut,ErrorMessage
+                                                invoke  StdOut,addr CRLF
+                                                invoke  StdOut,addr MsgTerminated
+                                                invoke  ExitProcess,0
+                                RaiseError      endp
+
+                        It will be converted to:
+
+                                                include RaiseError.asm ; --- Collapsed procedure: RaiseError
+
+                        And a new file called "RaiseError.asm" will be created
+                        in the same source directory (any similar file will be
+                        erased so be careful).
+
+                        Note:
+                         Do NOT modify the generated line in any way !
+                         (You can still remove the lousy comment if you want).
+
+                        Procedure are expanded with Ctrl+W by placing
+                        caret on concerned line.
+
+                - User can now use %6 in user commands to retrieve current word
+                  of current source (will be blank if no source opened)
+                  so user can now add his own context help files (.hlp/.chm/.col)
+                  by adding %6 as argument for help files.
+
+                - User can now specify if command opens a html file
+                  (MAsmEd will not ask for file saving).
+
+                - All factory settings have been changed according to new
+                  users commands (also acts as examples).
+
+                -  DumpPE now included with MAsmEd and added a new option to
+                   use it on a project: Dump project
+                   (Work better with debug informations on turned on).
+
+                - API tooltips now uses windows current tooltips font/size.
+                  (F0dder was here again with this fine idea).
+
+        [FIX]   - Proc/Variables search speeded up.
+
+                - Search in files now performs include checking (again).
+
+                - Removed a bug in menus handling: MAsmEd won't remove windows
+                  menus anymore (sorry, i didn't noticed that).
+
+                - MSDN popup menu was not reachable.
+
+--------------------------------------------------------------------------------
+Version 0.31
+
+        [NOTE]  - This version never happened what you're reading is just a time slip.
+
+        [NEW]   - MAsmEd now supports .chm and .col help files.
+                  (Thanks to F0dder for the idea).
+
+                - MAsmEd can be linked to MSDN (key mapped to Ctrl+F1)
+                  it also works as context help.
+
+        [FIX]   - Search in files option fastened and improved
+                  (should be usable now).
+
+--------------------------------------------------------------------------------
+Version 0.30
+
+        [NEW]   - Added an option to switch accept files on/off.
+                  (Like said before files accept option can be used
+                  to construct sources as it includes the content of a file
+                  at cursor position).
+
+                - Added an option to enable a vertical splitter in source windows.
+
+        [FIX]   - Changed the ghost install 1.6.4 to 1.6.5 this will hopefully
+                  correct some problems with windows XP.
+
+                  If not then extract the whole archive with winrar
+                  (i guess you already did that didn't you ?) and use
+                  regsvr32.exe to register the file cmax20.ocx.
+
+                  This can solve the problem (not sure).
+
+                - Corrected some problems with hutch's QEPlugins
+                  now MAsmEd will emulate some RTB messages:
+
+                        EM_EXGETSEL
+                        EM_GETSELTEXT
+                        EM_REPLACESEL
+
+                        EM_EXSETSEL is ignored
+
+                  (AblockC and CBlockC are working).
+
+                  ** Tell me if you need more **
+
+                - Corrected LDIRC.asm example.
+
+                - Some words in languages.ini were wrong? fixed my colonel!
+
+                - I didn't mentioned it but programs running without project
+                  manager and using SNAP should include this:
+
+                        include \masmed\templates\snap.asm
+
+                  in order to access to the commands.
+
+--------------------------------------------------------------------------------
+Version 0.29
+
+        [NEW]   - Created a module for SNAP functions (snap.asm).
+
+                - User can choose to turn SNAP Off/On or On + Include
+                  The later option will include the SNAP functions to a project
+                  at the end of includes list (it will requires kernel32.inc).
+
+                - SNAP function "SAVFILE" modified: Snap_FileName now must contains
+                  a pointer to the filename (which MUST be null terminated).
+
+                        Snap_SavFile            db      "SAVFILE:"
+                                                db      0               ; Must be null
+                        Snap_FileName           dd      0               ; Changed here
+                        Snap_AdrToSave          dd      0
+                        Snap_LenToSave          dd      0
+                                                db      0
+
+                        Check the file Snap.asm in Templates dir for more infos.
+
+                - SNAP commands ShowHex8/ShowHex16/ShowHex32 also display number
+                  in decimal.
+
+                - User can now add .asm files in includes section of a project
+                  (this will allow more flexibility in project creation).
+
+                - Added a function to register user infos in project properties
+                  (fields will be automatically filled at each new project creation).
+                  It register (in MasmEd.ini):
+
+                                - Company name
+                                - Legal copyright
+                                - Legal trademarks
+
+                - MAsmEd now search in API reference when assembling reports
+                  undefined symbols and display the corresponding lib (if found).
+
+                - Added an option to use smooth (synchronized) scrolling in source windows.
+
+                - Added an option to make caret always visible (follow scrolling).
+
+                - Changed layout of Editor properties.
+
+                - Added colors profiles.
+
+                - Added SNAP "official" functions in languages.ini.
+
+                - Added an option to enable/disable text drag and drop in source windows.
+
+                - Added an option to use italic comments (saved in profiles too).
+
+                - Added an option to auto expand tabs to spaces.
+
+                - Added an option to automatically create .BAK files.
+
+                - User can choose where .BAK files will be created
+                  (If no directory specified MAsmEd will save the file at
+                  current location).
+
+                - User can specify if new files will be auto saved or not.
+
+                - Implemented an auto correction option
+                  (it will normalize the case from words registered in languages.ini).
+
+                - Added support for hutch's MASMLIB in context help.
+
+                - Changed the "factory settings" of the user menus.
+
+                - User can add PLUG prefix in user menus editor in order
+                  to TRY to run a hutch's QEditor plugin (some are not working at all).
+
+        [FIX]   - Changing background color in properties won't produce
+                  garbage in source files (thanks to dxantos for that one).
+
+                - Changed icons of sizer bars to standard ones (very important !).
+
+                - MAsmEd will correctly empty project informations.
+
+                - Couldn't remove any project file if no forms opened, fixed.
+
+                - API tooltip will be replaced when window is resized.
+
+                - Corrected some little things with source preview in properties.
+
+                - Languages.ini extended to MASM32 SP2.
+
+                - User commands weren't correctly launched when an untitled
+                  document was opened without being modified.
+
+--------------------------------------------------------------------------------
+Version 0.28
+
+        [NEW]   - Added 2 snippets.
+
+                - Added some options to project building:
+
+                        - Maximum processor type.
+                        - Allow privileged instructions or not.
+                        - Allow MMX instructions or not.
+                        - Default data aligments.
+
+                - Added a little test project for OpenGL.
+
+        [FIX]   - Shame on me !
+
+                        Clicking Yes on saving files form didn't saved anything.
+
+                - Also a bug in the history file (look below):
+                        You should read:
+
+                                OutputDebugString
+
+                        Instead of:
+
+                                OutDebugString
+
+                - Fixed MAsm separators in languages.ini
+                  + added some missing words.
+
+                - Removed a bug in Resource error jumps
+                  (MAsmEd opened a new instance of the resource file
+                  bcoz of an extra space at end of the filename)
+                  (how life can be sometimes).
+
+                - Corrected a little bug with api tooltips.
+
+--------------------------------------------------------------------------------
+Version 0.27
+
+        [NEW]   - Added some more menus for existing commands.
+
+                - Added a jump to previous/next procedure (Mapped to Alt+Up/Down).
+
+                - Added 2 snippets for files handling.
+
+                - Added WinAPI syntax completion for INVOKE instruction
+                  (with a rather big database).
+
+                - Added a (very) primitive debugger (called SNAP) to project
+                  manager. It can be controlled in user's program with
+                  OutputDebugString() API function. SNAP have 8 commands:
+
+                        (Every commands should ends with a null byte)
+
+                        Snap_CmdState   db      "STATE"
+                                        db      0
+                                        invoke  OutputDebugString,ADDR Snap_CmdState
+
+                        this will display the current processor state for the thread.
+
+                        Snap_CmdFreeze  db      "FREEZE"
+                                        db      0
+                                        invoke  OutputDebugString,ADDR Snap_CmdFreeze
+
+                        this will freeze the current thread (pause mode).
+
+                        Snap_CmdDead    db      "DEAD"
+                                        db      0
+                                        invoke  OutputDebugString,ADDR Snap_CmdDead
+
+                        this will stop the current thread.
+
+                        Snap_CmdShowMem db      "SHOWMEM:"
+                        Snap_AdrToView  dd      0
+                                        db      0
+
+                                        mov     Snap_AdrToView,eax
+                                        invoke  OutputDebugString,ADDR Snap_CmdShowMem
+
+                        this will display AdressToView in Memory view part of Snap
+                        (provided that there's a valid address in eax).
+
+                        Snap_CmdToHex08 db      "TOHEX08:"
+                        Snap_BToShow    db      0
+                                        db      0
+
+                                        mov     Snap_BToShow,al
+                                        invoke  OutputDebugString,ADDR Snap_CmdToHex08
+
+                        this will display the byte in output area.
+
+                        Snap_CmdToHex16 db      "TOHEX16:"
+                        Snap_WToShow    dw      0
+                                        db      0
+
+                                        mov     Snap_WToShow,ax
+                                        invoke  OutputDebugString,ADDR Snap_CmdToHex16
+
+                        this will display the word in output area.
+
+                        Snap_CmdToHex32 db      "TOHEX32:"
+                        Snap_DToShow    dd      0
+                                        db      0
+
+                                        mov     Snap_DToShow,eax
+                                        invoke  OutputDebugString,ADDR Snap_CmdToHex32
+
+                        this will display the longword in output area.
+
+                        Snap_SavFile    db      "SAVFILE:"
+                        Snap_FileName   db      "c:\myfile",0
+                        Snap_AdrToSave  dd      0
+                        Snap_LenToSave  dd      0
+                                        db      0
+
+                                        invoke  OutputDebugString,ADDR Snap_SavFile
+
+                        this will fill a new file with the contents of the given address.
+
+                   All other strings will simply popup in the output area
+                   (this can be used for variables watches for example).
+
+                   Note 1: Disassembly is not supported yet (maybe later)
+                           also there's no exceptions handling.
+
+                   Note 2: To change registers or memory address,
+                           SNAP must be in pause mode.
+                           (Use right mousebutton on a register or memory area).
+
+                   Note 3: You can also run an user command with SNAP by using
+                           "SNAP" prefix before the command (this only work with
+                           win32 executables) example:
+
+                           SNAP "%1.exe" "%@"
+
+                           this will open the .exe file of the current source
+                           with SNAP (and asks for optional arguments).
+
+                - MAsmEd now display corresponding import lib for
+                  unresolved symbols in project linking (if found in database).
+
+                - Added an option to specify case sensitive assembly in
+                  Properties/Assembler.
+
+                - MAsmEd now reports some informations about project creation
+                  in status window.
+
+        [FIX]   - (These 2 ones were fixed in the lastest release of 0.26)
+                  - MAsmEd now recognizes and uses relative paths for registered snippets.
+                  - Passing over ICE Server menu won't crash MAsmEd.
+
+                - Splash screen wasn't removed in single instance mode
+                  (another stupid one).
+
+                - "Run project" now passes project's current directory.
+
+                - Select procedure command now recognizes single endp
+                  found in a line (for TASM).
+
+                - Changed the way of handling calls types.
+                  Change it only if you know what you're doing.
+
+                - Added some keywords to languages.ini
+
+        [NOTE]  - I just found out that user can swap between opened files
+                  with Ctrl+TAB (hehe).
+
+--------------------------------------------------------------------------------
+Version 0.26
+
+        [NEW]   - Script engine removed and replaced by the first public
+                  version of I.C.E. (look in ice.txt for more infos)
+                  the "debugger" still needs a lot of improvments.
+
+                - Added an option to open a file and convert it into DB statements.
+
+                - You can now add text files to your projects (for docs or todo list).
+
+                - Added jump to first/last bookmark option.
+
+                - Added a most recent projects list.
+
+                - Added some common files extensions.
+
+                - MAsmEd now checks if opened files are modified by other applications.
+
+                - Added an option to generate debug informations in project assembly.
+
+                - Added a new project type to create .lib files.
+
+                - Available paths are now:
+
+                        [MASMDIR]               Masm32 main directory
+                        [BINDIR]                Masm32\Bin
+                        [INCLUDEDIR]            Masm32\Include
+                        [LIBDIR]                Masm32\Lib
+                        [HELPDIR]               Masm32\Help
+                        [MASMEDDIR]             MAsmEd main directory
+                        [WINDIR]                Windows directory
+                        [WINSYSDIR]             Windows\System (or system32) directory
+                        [TEMPDIR]               Windows\Temp (usually)
+                        [TEMPLATEDIR]           MAsmEd templates directory
+                        [PROJECTSDIR]           MAsmEd projects directory
+                        [MASMEDHELPDIR]         MAsmEd help directory
+                        [SNIPPETSDIR]           MAsmEd registered snippets directory
+                        [ICEINCLUDEDIR]         I.C.E include directory
+                        [ICESCRIPTSDIR]         I.C.E sources directory
+
+                - Added an option to use auto indents for languages
+                  (look for ScopeKeyWords in languages.ini for more).
+
+                - Added Tabify/Untabify in block options.
+
+                - Added an option to save output window content into a log file.
+
+                - Added an option to create a new window with output window content.
+
+                - Added an AutoSave option.
+
+                - File extensions editor improved.
+
+                - User can now select files to save before exiting.
+
+                - Added a C/C++ standard libary help file reference
+                  (also available in context help).
+
+                - Added an editor preview in properties.
+
+                - Added standard C functions recognition for syntax highlighting
+                  (.c/.cpp/.h files).
+
+                - Added some examples of snippets (just to get the user on start).
+
+                - Added a little example in 'Examples' directory (more to come).
+
+                - MAsmEd will now remember last used directories in load/save operations.
+
+                - Changed the way to specify masm32 directories in properties
+                  so user can now modify them individually or not.
+
+                - Ctrl+[ = quick jump to the matching bracket in an expression.
+
+                - Added some menus for existing commands here and there.
+
+                - Added an option to specify calls type in project building.
+
+                - Added a function to search for used registers in a text block
+                  or whole source and easily locate them. (mapped to Ctrl+R).
+
+                - MAsmEd now reports lines number with current line in status bar.
+
+                - %5 in user commands now returns directory without filename.
+
+        [FIX]   - Files in project manager are loaded only when needed
+                  so projects will be loaded / created much faster.
+
+                - Hidden and read only files were not opened correctly.
+
+                - Better handling of the search results window
+                  (it won't mess with sources windows).
+
+                - Overall nicer handling of sources windows in project manager.
+
+                - Corrected a bug in output window (crashed when clicking on a linker error).
+
+                - Corrected a bug in file/proc searches (missed includes under certains circonstances).
+
+                - Arguments with spaces are now correctly passed to user commands
+                  (enclosed with quotes).
+
+                - 'Add Cmd' option was broken in user menus editor due to a stupid test from me
+                  (sorry for that).
+
+                - MAsmEd won't produce null chars in FILEVERSION resource if there's no datas to write in.
+
+                - StatusBar won't flash anymore when displaying comment texts or lines/col numbers.
+
+                - Better support for TASM.
+
+                - Corrected and added some things in languages.ini file.
+
+                - Open file under cursor crashed sometimes, fixed.
+
+                - Default icons mapped to resource 2 instead of 500.
+
+                - Char ";" was registered as single line comment for C/C++ fixed.
+
+--------------------------------------------------------------------------------
+Version 0.25
+
+        [NEW]   - Added some new commands to the script engine:
+
+                  Editor Command,Data               : Total control over the source editor
+
+                  Look in ScriptEngine.txt for a complete list of commands.
+
+        [FIX]   - Corrected some bugs in script engine.
+
+--------------------------------------------------------------------------------
+Version 0.24
+
+        [NEW]   - Added some commands to the little script engine:
+
+                   MoveFile FileName,FileName       : Move a file (Copy + Delete)
+                   UserCommand CommandNumber        : Execute an user command (0 based)
+                   Do <AccNumber>,Number            : Initialize a loop sequence
+                   Loop                             : Perform the last loop
+
+                   The "Do ... Loop" command syntax:
+
+                        Do _LoopAcc1_,10            : Initialize a loop for accumulator 1
+                                                    : for 10 times
+                        ...
+                        Loop                        : Perform last loop in sequence
+
+                   There's 5 loop accumulators available (they can be nested).
+
+                - Project properties implemented, MAsmEd will create the correct
+                  resources informations for you at ID 1
+                  (old project files are still compatibles).
+
+        [FIX]   - Lines numbers are no reported correctly in script interpreter.
+
+                - Added a status window for projects loading.
+
+--------------------------------------------------------------------------------
+Version 0.23
+
+        [NEW]   - User can now use Ctrl+Space to fastly insert registered code
+                  snippets into the sources.
+
+                - Added a %# argument to user commands. MAsmEd will prompt the user
+                  with a file selector before running the command (look somewhere
+                  in this file for a complete set of commands).
+
+                - Added %% argument (same as above except that it gives the user
+                  a SaveFileName dialogbox).
+
+                - Added %* argument (same as above except that it gives the user
+                  a Shell BrowseDirectory dialogbox).
+
+                - Added a little script engine for fast code pasting
+                  (Some examples ar included).
+
+                  Available commands are:
+
+                   Write Text                       : Write a line of text in the current source
+                   DeleteFile FileName              : Delete a file (or several)
+                   OpenFile FileName                : Open a file
+                   SaveFile FileName                : Save a file
+                   CopyFile FileName,FileName       : Copy a file
+                   RenameFile FileName,FileName     : Rename a file
+                   Run FileName                     : Run an external file
+                   MsgBox Text                      : Display a standard messagebox
+
+                   Tab                              : Tabulate
+                   CrLf                             : Line feed
+                   ;                                : Comment
+
+                  Some functions are also availables:
+
+                   GetFileName(FileName)            : Extract the filename from a complete path
+                   RemExtension(FileName)           : Remove the extension from a given filename
+                   GetDirectory(FileName)           : Extract the directory from a complete path
+
+                  All commands/functions results are stored in a variable called
+                  _straccumulator_ for later uses.
+
+                  You can also use %1 %2 %3 %4 %? %@ %# %% %* to retrieve
+                  filenames/directories as in user commands.
+
+        [FIX]   - Comment<tab><char> should work now.
+
+--------------------------------------------------------------------------------
+Version 0.22
+
+        [NEW]   - Error report for project assembling changed to a listbox
+                  so you can now click on an error to jump directly to it
+                  (for resources and assembly errors only).
+
+                - U can catch events from dos batch files by using -s
+                  switch in command line
+                        For example:
+
+                           \masm32\bin\ml /c /coff %1.asm >Output
+
+                        Use:
+
+                           c:\MAsmEd\MAsmEd.exe -s Output
+
+                  The opened file will by redirected to listbox and will work
+                  the same way as mentioned before.
+
+        [FIX]   - The VB runtimes are not in the install pack anymore
+                  (You can download this on the site if you need them).
+
+        [NOTE]  - I never mentioned it but MAsmEd can recognize C and Pascal syntax
+                  as well so it can be used for several purposes.
+
+--------------------------------------------------------------------------------
+Version 0.21
+
+        [NEW]   - MAsmEd can now open the corresponding library file
+                  related to the include file depending on the [LIBDIR] contents.
+
+                - Added a new example for common dialogs.
+
+                - Added the ability to add external .obj files to a project
+                  (files are passed to the linker).
+
+        [FIX]   - The search for procedure declarations now reports external
+                  references if nothing else is found.
+                  (This one was corrected in some version of MAsmEd 0.20).
+
+                - MAsmEd won't close files used in a project.
+
+                - Remove library from project wasn't working, fixed.
+
+                - Linker errors are now reported correctly.
+
+                - Fast search corrected and speeded up.
+
+                - File search and smart search also speeded up.
+
+                - Delete line mapped to Ctrl+E.
+
+                - Redo was melted with select all, fixed now.
+
+--------------------------------------------------------------------------------
+Version 0.20
+
+        [NEW]   - Added workspace ablity: you can now load several files at the same time
+                  (Using *.Mws files registered during installation process).
+
+                - Added functions to search for procedures/variables declarations/use
+                  in opened files.
+
+        [FIX]   - Project building completly rewritten: it's now faster and report
+                  correct errors lines (so it's usable).
+
+                - "Open file under cursor slightly improved: it now perform a search
+                  into MAsmEd's registered directories (includes and so on...).
+
+                - Changed some "cosmetic" layout with re-sizing bars.
+
+                - Minimizing a source window when several are opened won't
+                  do "disco-night-club" anymore.
+
+                - MAsmEd will popup status window if errors are found during project
+                  assembling.
+
+        [NOTE]  - A temporary way to redirect the output of dos commands to MAsmEd:
+                  In properties:
+                        Uncheck "Allow multiple instance" option.
+                        In ur batch file put a >Output at the end of any command.
+                        For example:
+                           \masm32\bin\ml /c /coff %1.asm >Output
+                        And add:
+                           c:\MAsmEd\MAsmEd.exe Output
+                        at the end of the batch file.
+
+--------------------------------------------------------------------------------
+Version 0.19
+
+        [FIX]   - Search in files and Procedures/Variables search fixed
+                  improved and optimized.
+
+                - Columns numbers are now reported correctly (according to tabs).
+
+                - Properties won't crash if no tabs specified.
+
+                - "Open file under cursor option" crashed under certain circonstances.
+
+                - File size reduced.
+
+--------------------------------------------------------------------------------
+Version 0.18
+
+        [NEW]   - User commands arguments improved:
+
+                        %1 : Filename with directory / without extension
+                        %2 : Filename with directory / with extension
+                        %3 : Filename without directory / without extension
+                        %4 : Filename without directory / with extension
+
+                - Added a way to specify custom dos command interpreter.
+
+                - Tabulations can now be redefined in properties.
+
+                - Added the ability to drag and drop files into
+                  sources windows (file are included directly at line
+                  pointed by the dropping cursor).
+
+                - User menus editor improved: you can now drag and drop items
+                  from place to place.
+
+                - Added an option to search a procedure/variable in a complete
+                  directory.
+
+        [FIX]   - Some minors fixes on left margin displaying with bookmarks commands
+                  (the margin will be auto displayed at first bookmark toggle and
+                  removed at last if "left margin" is not selected in properties).
+
+                - Lines numbers were not displayed correctly at start.
+
+                - Font selection trashed MAsmEd when no font selected.
+
+                - "Open file under cursor" now should find files in many more cases
+                  (check only in current drive).
+
+                - MAsmEd will warn you before clearing a modified file.
+
+                - Fixed a problem with files extensions shorter than 3 chars
+                  (files weren't passed correctly to user commands).
+
+                - Changing working directory now changes current drive too.
+
+                - Changed shortcut for smart search function (eg. softice).
+
+                - Smart search should miss less variables.
+
+                - Alt+Bkspace handler changed. It should not mess anymore with
+                  other applications.
+
+        [NOTE]  - Keyboard freaks can register their hotkeys with the char "&"
+                  in user menus of course.
+
+--------------------------------------------------------------------------------
+Version 0.17
+
+        [NEW]   - Added an "open file under cursor" option.
+
+                - MAsmEd can now remember the last cursor position of an already
+                  opened file (within a same session).
+
+                - Added a help file for masm directives in context help.
+
+        [FIX]   - Context menu won't crash when passing the mouse over it
+                  (sorry for that "little" one).
+
+                - Changes in languages.ini MAsmEd now accepts masm "comment" blocks
+                  with a specified char (several chars are possible).
+
+                - Procedures/Variables search won't report variables included
+                  in strings anymore.
+
+                - Procedures/Variables search now handles lines ending with \
+
+                - Tabulations are now set to standard 8.
+
+--------------------------------------------------------------------------------
+Version 0.16
+
+        [NEW]   - Added a duplicate file option.
+                  (Well it's more convenient that way).
+
+                - Added a search function to easily locate
+                  any functions or variables thru ur opened files
+                  and referenced includes.
+
+        [FIX]   - MAsmEd will now check for unsaved projects.
+
+--------------------------------------------------------------------------------
+Version 0.15:
+
+        [NEW]   - Added a new help file for x86 instructions. F1 will display
+                  it if the cursor is under a word recognized as asm operator
+                  (Added it as popup menu too).
+
+                - You can now specify both Windows API and x86 instructions
+                  help files you want to use in editor properties.
+
+        [FIX]   - Better low in memory managment (especially at start).
+
+                - SDIWin project re-constructed.
+
+--------------------------------------------------------------------------------
+Version 0.14:
+
+        [NEW]   - You can now specify if your user command is a help file or not
+                  (MAsmEd won't try to save opened files when opening a help file).
+                  Thanks to hutch for that one.
+
+                - Added contextual windows help (just hit F1 under an api keyword)
+                  (The help file is referenced in MAsmEd.ini under WinHelp key)
+                  Thanks to hutch for that one too.
+
+        [FIX]   - Fixed a bug in recent file list.
+
+                - User files didn't run if no other files opened sometimes
+                  (inexistant working directory).
+
+--------------------------------------------------------------------------------
+Version 0.13:
+
+        [NEW]   - MAsmEd will now recognizes it's own projects files (hehe)
+                  (.med extensions added to registry during installation).
+
+                - Editor syntax colors can now be modified in properties form.
+
+                - Added a bookmark manager (menu+toolbar).
+
+        [FIX]   - The toolbars are not perfect but still better than before
+                  (positions and floating status are remembered).
+
+                - MAsmEd now assumes that Masm32 distribution is in c:\Masm32
+                  at first.
+
+--------------------------------------------------------------------------------
+Version 0.12:
+
+        [NEW]   - Added a project handler for Win SDI applications.
+
+                  Available projects:
+
+                        - Empty
+                        - Win SDI Application
+                        - Win DLL
+                        - Dos EXE Application
+
+                - Resources files are now handled.
+
+                        - Index 500 is reserved for application icon.
+                        - Index 6xx will be used for menus definitions.
+                          (Menu items will use at least index 1000).
+                          others are free to use.
+                          (language.ini updated for resources directives).
+
+                - You can now select an icon for your application
+                  (the .ico file is copied in Project's directory
+                  and then compiled with the application).
+
+                - Toolbar and status windows are now un/dockables on dblclick.
+                  (No drag/drop yet).
+
+        [FIX]   - TreeView popup menus are working now (except forms entries).
+
+--------------------------------------------------------------------------------
+Version 0.11:
+
+        [NEW]   - Path in projects files are now relative to global paths
+                  (same in batch files).
+
+                  Available paths are (also used in user commands):
+
+                        [MASMDIR]               Masm32 main directory
+                        [BINDIR]                Masm32\Bin
+                        [INCLUDEDIR]            Masm32\Include
+                        [LIBDIR]                Masm32\Lib
+                        [HELPDIR]               Masm32\Help
+                        [MASMEDDIR]             MAsmEd main directory
+                        [WINDIR]                Windows directory
+                        [WINSYSDIR]             Windows\System directory
+                        [TEMPDIR]               Windows\Temp (usually)
+                        [TEMPLATEDIR]           MAsmEd templates directory
+                        [PROJECTSDIR]           MAsmEd projects directory
+
+                - Also i didn't mentioned it but u can specify arguments in
+                  user commands like that:
+
+                        %1 = Filename without extension
+                        %2 = Filename with extension
+                        %? = Ask user for required argument
+                        %@ = Ask user for optional argument
+
+        [FIX]   - Now handles linker error messages.
+
+                - MAsmEd will wont really close windows that are referenced
+                  in project (just hide them).
+
+--------------------------------------------------------------------------------
+Version 0.10:
+
+        [NEW]   - Added an option to save all opened files.
+
+                - Added project handler
+                  (still early release: you can't edit/create forms or resources yet).
+
+                - Syntax highlighting editor is not yet implemented
+                  but u can change all those ugly colors (!) in
+                  languages.ini (keep the same format).
+
+                - Added a Web site menu (veeery important one!)
+                  watch out for new coming releases at this url.
+
+                - Added Masm32 folders selection in properties.
+
+        [FIX]   - Slight changes in modified texts handling
+                  (for read-only and non-modified files).
+
+                - MAsmEd crashed when opening certains files with longnames.
+
+--------------------------------------------------------------------------------
+Version 0.9b:
+
+        [FIX]   - Corrected the ComDlg32.ocx bug under Windows 2000
+                  (Thanks to Syntax for that one: i removed it finally).
+
+--------------------------------------------------------------------------------
+Version 0.9:
+
+        [NEW]   - Finally the User menus Editor is working (i hope).
+
+        [FIX]   - Corrected a bug in recent files menu when list was empty
+                  (wrong position).
+
+--------------------------------------------------------------------------------
+Version 0.8:
+
+        [NEW]   - Added support for Assembler syntax highlighting (languages.ini).
+                - Modified layout of properties screen accordingly.
+
+--------------------------------------------------------------------------------
+Version 0.7:
+
+        [NEW]   - Added support for lines numbers (+associated color).
+
+                - Added "Delete to start of line" and "Delete to end of line" options.
+
+                - Mouse cursor turned off when a key is pressed in source windows.
+
+        [FIX]   - Recent files list will not keep bad files anymore.
+
+                - Recent files list will be correctly updated even if
+                  child windows are maximized (i forgot that one :).
+
+--------------------------------------------------------------------------------
+Version 0.6:
+
+        [NEW]   - Added a popup menu in source windows for faster access.
+
+                - Added next/previous window option.
+
+                - Added a most recent files list.
+
+                - Created VBPointers.dll for more convenient coding.
+
+        [FIX]   - Changed some "cosmetic" layouts with source windows.
+
+--------------------------------------------------------------------------------
+Version 0.5:
+
+        [NEW]   - Added more edit commands (Delete group and Block group).
+
+                - Opened files can be redirected to only one instance of MAsmEd.
+
+                - Added a list for most recents arguments.
+
+        [FIX]   - Set working directory option now uses standard shell requester.
+
+                - Fixed a bug with command user: starting directory was empty.
+
+--------------------------------------------------------------------------------
+Version 0.4:
+
+        [NEW]   - Several GUI enhancements.
+
+                - Added some options in properties screen.
+
+                - Added include file option.
+
+        [FIX]   - Completly new source windows handler.
+
+--------------------------------------------------------------------------------
+Version 0.3:
+
+        [NEW]   - Added a Properties screen (not finished).
+
+                - Added a screen to edit user menus (not finished).
+
+                - Added optional arguments (%@) prompt.
+
+        [FIX]   - User commands debugged (now work with multiple arguments).
+
+--------------------------------------------------------------------------------
+Version 0.2:
+
+        [NEW]   - Added support for multiple windows.
+
+                - Added support for user commands.
+
+                - Added several minors functions.
+
+--------------------------------------------------------------------------------
+Version 0.1:
+
+        [NEW]   - First (and best) version ever. (1 August 2001)
