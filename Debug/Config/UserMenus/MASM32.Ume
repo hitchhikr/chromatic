@@ -36,12 +36,12 @@ Menu023=Select source buildblock to use... | PREP$%?
 [Tools]
 Menu000=Code generator | "[ROOTDIR]\Prostart.exe"
 Menu001=Subclass builder | "[ROOTDIR]\Subclass.exe"
-Menu002=Binary to DB converter | "[ROOTDIR]\Bintodb.exe"
+Menu002=Binary to DB converter | "[ROOTDIR]\bin2dbex.exe"$%2
 Menu003=-
 Menu004=Hex to mnemonic | "[ROOTDIR]\mnemonix.exe"
 Menu005=API library list | [ROOTDIR]\LIBLIST.EXE
 Menu006=Open current file with QEditor | [ROOTDIR]\QEDITOR.EXE$"%2"
-Menu007=TheGun text editor | [ROOTDIR]\Thegun.exe$"%2"
+Menu007=TopGun text editor | [ROOTDIR]\topgun.exe$"%2"
 Menu008=Procedure browser | [ROOTDIR]\Qetb.exe$[ROOTDIR]\procs
 Menu009=Display MASM32 folder | "[ROOTDIR]\SHELLEX.EXE"$[ROOTDIR]
 Menu010=Select folder to display... | "[ROOTDIR]\SHELLEX.EXE"$"%*"
@@ -51,8 +51,8 @@ Menu013=Run Windows calculator | "Calc.exe"
 Menu014=Run Windows explorer | "Explorer.exe"
 [Plug-Ins]
 Menu000=Create Library Module | PLUG$"[ROOTDIR]\LIBMOD.DLL"
-Menu001=Block ASM Comment | PLUG$"[ROOTDIR]\ABLOCKC.DLL"
-Menu002=Block C++ Comment | PLUG$"[ROOTDIR]\CBLOCKC.DLL"
+Menu001=Block ASM Comment | PLUG$"[ROOTDIR]\plugins\ABLOCKC.DLL"
+Menu002=Block C++ Comment | PLUG$"[ROOTDIR]\plugins\CBLOCKC.DLL"
 Menu003=-
 Menu004=Template advisor | PLUG$%N"[ROOTDIR]\PLUGIN\Template.dll"
 Menu005=Select template... | PLUG$%N%#<[ROOTDIR]\PLUGIN><QEditor$Template$(*.dll):*.dll>

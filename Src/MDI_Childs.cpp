@@ -2520,7 +2520,6 @@ void CreateTemplateMenu(HMENU hsMenu)
     int k = 0;
     CStr RetVal2;
     long SnippetNumber = 0;
-    CStr TempLang;
     CStr BufString;
 
     TemplatesArray.Erase();
@@ -2538,12 +2537,7 @@ void CreateTemplateMenu(HMENU hsMenu)
             // Add a separator at first place
             if(SnippetNumber == 0) MenuAddSeparator(hsMenu);
             SnippetNumber = 1;
-            // Get the language
-            TempLang = GetLanguageToOpen(RetVal2);
-            if(TempLang.Len() == 0) TempLang = "Unknown";
-            // Add it in menu
-            BufString = ChildRetVal + (CStr) " (" + (CStr) TempLang + (CStr) ")";
-            MenuAddString(hsMenu, BufString, k + MENU_TEMPLATES_IDBASE, TRUE);
+            MenuAddString(hsMenu, ChildRetVal, k + MENU_TEMPLATES_IDBASE, TRUE);
             TemplatesArray.Add(RetVal2.Get_String());
             k++;
         }

@@ -1,4 +1,5 @@
 Chromatic IDE is a small and rather obsolete IDE for Windows.
+
 It's a work in progress since a long time and some parts are currently unfinished.
 
 03 June 2022:

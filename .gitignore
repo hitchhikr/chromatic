@@ -1,5 +1,9 @@
 *.obj
 *.nbc
+*.sbr
 *.opt
+*.idb
 *.ilk
 *.pdb
+*.plg
+
