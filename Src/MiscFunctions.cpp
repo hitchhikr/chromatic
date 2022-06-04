@@ -372,7 +372,6 @@ void Exec(CStr CmdName, CStr CmdFakeName, long IsInHelp)
     int i = 0;
     int Script_Return_Code;
     long RunWithsnap = 0;
-    long RunPlugIn = 0;
     long RunCatch = 0;
     long RunHtml = 0;
     long RunDocu = 0;
@@ -397,11 +396,6 @@ void Exec(CStr CmdName, CStr CmdFakeName, long IsInHelp)
         {
             LocalCmdName = LocalCmdName.Mid(6);
             RunWithsnap = 1;
-        }
-        else if(BufString == "PLUG ")
-        {
-            LocalCmdName = LocalCmdName.Mid(6);
-            RunPlugIn = 1;
         }
         else if(BufString == "CAPT ")
         {
@@ -504,34 +498,6 @@ ReAssembleArg:
     }
     else
     {
-        if(RunPlugIn == 1)
-        {
-            TrimedCommand = StringGetSplitElement(LocalCmdName, CmdParsed, 0).Trim();
-            PlugDllHandle = LoadLibrary(StringReplace(TrimedCommand, "\"", "", 1, -1, Binary_Compare).Get_String());
-            if(PlugDllHandle == 0)
-            {
-                WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Can't load Plug-In (LoadLibrary() failed).");
-                goto NoRunSnap;
-            }
-            PlugAddr = GetProcAddress(PlugDllHandle, "QePlugIn");
-            if(PlugAddr == 0)
-            {
-                WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Not a QEditor Plug-In.");
-                FreeLibrary(PlugDllHandle);
-                goto NoRunSnap;
-            }
-            if(NbForms == 0)
-            {
-                WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Can't run a QEditor Plug-In without any opened documents.");
-                FreeLibrary(PlugDllHandle);
-                goto NoRunSnap;
-            }
-            // Run the Quick Editor function
-            ChildStruct = LoadStructure(CurrentForm);
-            QEPlug((QEPROC) PlugAddr, ApphInstance, CurrentForm, ChildStruct->hChildCodeMax, 0, hStatusBar);
-            FreeLibrary(PlugDllHandle);
-            goto NoRunSnap;
-        }
         if(RunWithsnap == 1)
         {
             TrimedCommand = StringGetSplitElement(LocalCmdName, CmdParsed, 0).Trim();
@@ -4947,21 +4913,6 @@ HWND CALLBACK DisplayChm(char *FileName, char *KeyWord)
     MyhLink.pszKeywords = KeyWord;
     MyhLink.fIndexOnFail = TRUE;
     return(HtmlHelp(0, FileName, HH_KEYWORD_LOOKUP, (DWORD) &MyhLink));
-}
-
-// -----------------------------------------------------------------------
-// Run a Quick Editor plugin
-void CALLBACK  QEPlug(QEPROC PlugAddr,
-                      HINSTANCE hInstance,
-                      HWND hWnd,
-                      HWND hText,
-                      HWND hToolBar,
-                      HWND hStatusBar)
-{
-    if(PlugAddr)
-    {
-        PlugAddr(hInstance, hWnd, hText, hToolBar, hStatusBar);
-    }
 }
 
 // -----------------------------------------------------------------------

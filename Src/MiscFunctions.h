@@ -40,10 +40,6 @@ extern CStr GlobalRetVal;
 extern int CursorDisabled;
 
 // -----------------------------------------------------------------------
-// Structures
-typedef void (*QEPROC)(HINSTANCE, HWND, HWND, HWND, HWND);
-
-// -----------------------------------------------------------------------
 // Functions declarations
 CStr ChangeRelativePaths(CStr Path, CStr SubsidDir = "");
 CStr RemoveRelativePaths(CStr Path);
@@ -183,12 +179,6 @@ void CALLBACK ToggleCase(char *String, int Len);
 void TabToSpace(char *String, int MaxSize);
 int CALLBACK AsciiToDw(char *String);
 HWND CALLBACK DisplayChm(char *FileName, char *KeyWord);
-void CALLBACK QEPlug(QEPROC PlugAddr,
-                     HINSTANCE hInstance,
-                     HWND hWnd,
-                     HWND hText,
-                     HWND hToolBar,
-                     HWND hStatusBar);
 BYTE * CALLBACK MLoadFile(char *FileName, long *Bytes);
 
 #endif

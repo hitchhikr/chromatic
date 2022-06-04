@@ -153,7 +153,7 @@ int CALLBACK FRMUserMenusProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
             ComboBoxAddItem(FRMUserMenusCbRunType, "Windows app", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "WinHelp file", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Capture DOS output", -1);
-            ComboBoxAddItem(FRMUserMenusCbRunType, "QEditor Plugin", -1);
+            //ComboBoxAddItem(FRMUserMenusCbRunType, "QEditor Plugin", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Run with Snap", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Html page", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Document file", -1);

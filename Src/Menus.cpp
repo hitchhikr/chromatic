@@ -730,7 +730,7 @@ void CreateMenuEntry(CStr MName)
     CStr SecondElement;
     CStr RecognizedPlug;
     CStr MMName;
-    long MPlug = 0;
+//    long MPlug = 0;
     CStr PlugToCheck;
     CStr BufString;
 
@@ -755,9 +755,9 @@ void CreateMenuEntry(CStr MName)
         if(StringGetSplitElement(MainMenusRetVal, ArEntry, 0).Len() != 0)
         {
             // Command menu
-            MPlug = 0;
+//            MPlug = 0;
             BufString = SecondElement.Left(4).Upper_Case();
-            if(BufString == "PLUG") MPlug = 1;
+  //          if(BufString == "PLUG") MPlug = 1;
             MenusCmdsLbl.Add(StringGetSplitElement(MainMenusRetVal, ArEntry, 0).Trim().Get_String());
             MenusCmds.Add(SecondElement.Get_String());
             if(StringGetSplitUBound(ArEntry) == 2)
@@ -772,7 +772,7 @@ void CreateMenuEntry(CStr MName)
                 MenusCmdsComments.Add(SecondElement.Get_String());
                 MenusCmdsHelp.Add(0L);
                 // Try to recognize a plugin
-                if(MPlug == 1)
+/*                if(MPlug == 1)
                 {
                     PlugToCheck = SecondElement.Mid(6).Trim();
                     PlugToCheck = ChangeRelativePaths(PlugToCheck);
@@ -781,9 +781,9 @@ void CreateMenuEntry(CStr MName)
                     else RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
                 }
                 else
-                {
+                {*/
                     RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
-                }
+//                }
             }
         }
         else
@@ -1262,24 +1262,6 @@ void RegCMCom(CStr CmdName, CStr CmdComment, long CmdNumber, long CmdModif, long
     CHotKey.nVirtKey1 = CmdKey;
     CHotKey.nVirtKey2 = 0;
     hCodeMaxCMRegisterHotKey((long) &CHotKey, CmdNumber);
-}
-
-// -----------------------------------------------------------------------
-// Retrieve a plugin type
-// 0=not recognized
-// 1=QEditor
-long GetPlugInType(CStr PlugInName)
-{
-    long ReturnValue = 0;
-    HMODULE hPlug = 0;
-    
-    hPlug = LoadLibrary(PlugInName.Get_String());
-    if(hPlug != 0)
-    {
-        if(GetProcAddress(hPlug, "QePlugIn") != 0) ReturnValue = 1;
-        FreeLibrary(hPlug);
-    }
-    return(ReturnValue);
 }
 
 // -----------------------------------------------------------------------

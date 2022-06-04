@@ -119,7 +119,6 @@ void InitMenuToolTips(void);
 void InitMenuComments(void);
 void RegCodeMaxLocalCommands(void);
 void RegCMCom(CStr CmdName, CStr CmdComment, long CmdNumber, long CmdModif, long CmdKey);
-long GetPlugInType(CStr PlugInName);
 void AddInWinRecent(CStr FName);
 void CreateRunProgMenu(void);
 void AddRecentRunProg(CStr FName, long AddFile, long ForceRemove);
