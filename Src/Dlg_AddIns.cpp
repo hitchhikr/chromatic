@@ -64,6 +64,7 @@ int CALLBACK FRMAddInsProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
     CStr OpFilters;
     CStr LdFile;
     FARPROC AddInAuthUpDate = 0;
+    FARPROC AddInVersUpDate = 0;
     FARPROC AddInDescUpDate = 0;
     long OldRunningState = 0;
     CStr BufString;
@@ -80,7 +81,8 @@ int CALLBACK FRMAddInsProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
             FRMAddInsCmdCancel = CreateButton(406, 292, 77, 23, hwndDlg, "Cancel", 2, 0, 0, 0, WS_TABSTOP, Buttons_StaticEdge);
             FRMAddInsListView = CreateListView(2, 1, 482, 278, hwndDlg, 0, GlobalImageList1, 0, LVS_EX_FULLROWSELECT | LVS_EX_LABELTIP | LVS_EX_CHECKBOXES, LVS_REPORT | LVS_SINGLESEL | WS_TABSTOP | LVS_NOSORTHEADER, WS_EX_STATICEDGE);
             ListViewAddCol(FRMAddInsListView, "Author", 198, 0);
-            ListViewAddCol(FRMAddInsListView, "Description", 265, 1);
+            ListViewAddCol(FRMAddInsListView, "Version", 50, 1);
+            ListViewAddCol(FRMAddInsListView, "Description", 265, 2);
             ListViewSetItemSel(FRMAddInsListView, 0);
             FillAddinsList();
             hAddInsMenu = CreatePopupMenu();
@@ -146,7 +148,7 @@ int CALLBACK FRMAddInsProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
                         }
                         // Check if names are identicals
                         if(_strcmpi(LocalAddInsFiles.Get(CurrentPopupItem)->Content,
-                                   FileGetFileName(LdFile).Get_String()) != 0)
+                                    FileGetFileName(LdFile).Get_String()) != 0)
                         {
                             MiscMsgBox(hwndDlg, "AddIn name doesn't match.", MB_ERROR, Requesters);
                             return(0);
@@ -175,8 +177,10 @@ int CALLBACK FRMAddInsProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam
                         // Step 5: Update listview with possible new infos
                         AddInDescUpDate = GetProcAddress(AddInsDLL.Get(CurrentPopupItem)->Content, "AddInDescription");
                         AddInAuthUpDate = GetProcAddress(AddInsDLL.Get(CurrentPopupItem)->Content, "AddInAuthor");
+                        AddInVersUpDate = GetProcAddress(AddInsDLL.Get(CurrentPopupItem)->Content, "AddInVersion");
                         ListViewSetSelItemText(FRMAddInsListView, GetDLLDescription(LocalAddInsFiles.Get(CurrentPopupItem)->Content, AddInDescUpDate), 0);
-                        ListViewSetSelItemText(FRMAddInsListView, GetDLLAuthor(AddInAuthUpDate), 1);
+                        ListViewSetSelItemText(FRMAddInsListView, GetDLLVersion(AddInVersUpDate), 1);
+                        ListViewSetSelItemText(FRMAddInsListView, GetDLLAuthor(AddInAuthUpDate), 2);
                         LastAddInDir = FileGetDirectory(LdFile);
                         MiscMsgBox(hwndDlg, "AddIn '" + GetDLLDescription(LocalAddInsFiles.Get(CurrentPopupItem)->Content, AddInDescUpDate) + (CStr) "' updated.", MB_INFORMATION, Requesters);
                     }
@@ -231,11 +235,13 @@ void FillAddinsList(void)
     HMODULE AddInLib = 0;
     FARPROC AddInDesc = 0;
     FARPROC AddInAuth = 0;
+    FARPROC AddInVers = 0;
     FARPROC AddInLoad = 0;
     FARPROC AddInUnload = 0;
     FARPROC AddInMenu = 0;
     CStr Description;
     CStr Auth;
+    CStr Vers;
     long PosInIniFile = 0;
     CStr LoadedInIniFile;
     long AddInIcon = 0;
@@ -252,6 +258,7 @@ void FillAddinsList(void)
         {
             AddInDesc = GetProcAddress(AddInLib, "AddInDescription");
             AddInAuth = GetProcAddress(AddInLib, "AddInAuthor");
+            AddInVers = GetProcAddress(AddInLib, "AddInVersion");
             AddInLoad = GetProcAddress(AddInLib, "AddInLoad");
             AddInUnload = GetProcAddress(AddInLib, "AddInUnLoad");
             AddInMenu = GetProcAddress(AddInLib, "AddInMenu");
@@ -260,6 +267,8 @@ void FillAddinsList(void)
             {
                 Description = GetDLLDescription(AddInName, AddInDesc);
                 Auth = GetDLLAuthor(AddInAuth);
+                Vers = GetDLLVersion(AddInVers);
+
                 AddInIcon = ICON_ADDINR;
                 PosInIniFile = CheckAddInIniList(AddInName);
                 if(PosInIniFile != -1)
@@ -269,7 +278,9 @@ void FillAddinsList(void)
                     if(_strcmpi(RunningInIniFile.Get_String(), "1") == 0) AddInIcon = ICON_ADDINS;
                 }
                 ListViewAddItem(FRMAddInsListView, Description, i, AddInIcon);
-                ListViewSetSubItem(FRMAddInsListView, Auth, i, 1);
+                ListViewSetSubItem(FRMAddInsListView, Vers, i, 1);
+                ListViewSetSubItem(FRMAddInsListView, Auth, i, 2);
+                 
                 // Check in the ini file if it's been already loaded
                 PosInIniFile = CheckAddInIniList(AddInName);
                 if(PosInIniFile != -1)

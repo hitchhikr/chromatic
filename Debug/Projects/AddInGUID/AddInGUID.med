@@ -31,4 +31,4 @@ DEF=[PROJECTSDIR]\AddInGUID\AddIn.mdf
 [Windows]
 Window000=[PROJECTSDIR]\AddInGUID\AddIn.asm
 Focus=[PROJECTSDIR]\AddInGUID\AddIn.asm
-FocusLine=7
+FocusLine=30

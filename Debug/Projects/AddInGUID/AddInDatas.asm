@@ -5,6 +5,7 @@ ChromaticLib            dd      0
 AddInContext            ADDINCONTEXT <>
 
 MsgDescription          db      "Create and paste a GUID",0
+MsgVersion              db      "1.0",0
 MsgAuthor               db      "Franck Charlet",0
 MsgChildError           db      "No opened documents.",0
 MsgGUIDError            db      "No GUID definitions found for current language.",0

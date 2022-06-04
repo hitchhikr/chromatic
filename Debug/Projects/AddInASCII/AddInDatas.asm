@@ -8,6 +8,7 @@ AddInChooseFont         CHOOSEFONT <>
 
 MsgDescription          db      "ASCII table viewer",0
 MsgAuthor               db      "Franck Charlet",0
+MsgVersion              db      "1.0",0
 MsgChildError           db      "No opened documents.",0
 MsgTitle                db      "ASCII table",0
 MsgPaste                db      "Paste",0

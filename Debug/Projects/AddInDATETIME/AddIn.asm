@@ -36,6 +36,14 @@ AddInDescription        proc
                         ret
 AddInDescription        endp
 
+; --- AddInVErsion()
+; In: N/A
+; Out: Can return version string in eax or 0
+AddInVersion            proc
+                        mov     eax,offset MsgVersion
+                        ret
+AddInVersion            endp
+
 ; --- AddInAuthor()
 ; In: N/A
 ; Out: Can return author string in eax or 0

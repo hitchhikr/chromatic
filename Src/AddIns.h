@@ -825,6 +825,7 @@ long SearchAddInName(CStr AddInName);
 long SearchOldAddInName(CStr AddInName);
 CStr GetDLLDescription(CStr AddInName, FARPROC DescriptionRoutine);
 CStr GetDLLAuthor(FARPROC AuthorRoutine);
+CStr GetDLLVersion(FARPROC VersionRoutine);
 long IsAddIn(CStr AddInName);
 long IsSpAddIn(CStr SpAddInName);
 long RunAddIn(long AddInToRun);

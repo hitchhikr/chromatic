@@ -36,8 +36,8 @@ MODULE001=[PROJECTSDIR]\AddInASCII\AddIn.asm
 [DEFS]
 DEF=[PROJECTSDIR]\AddInASCII\AddIn.mdf
 [Windows]
-Window000=[PROJECTSDIR]\AddInASCII\AddIn.asm
-Focus=[PROJECTSDIR]\AddInASCII\AddIn.asm
-FocusLine=218
+Window000=[PROJECTSDIR]\AddInASCII\AddInDatas.asm
+Focus=[PROJECTSDIR]\AddInASCII\AddInDatas.asm
+FocusLine=10
 Window001=[TEMPLATESDIR]\AddInConst.inc
-Window002=[PROJECTSDIR]\AddInASCII\AddInDatas.asm
+Window002=[PROJECTSDIR]\AddInASCII\AddIn.asm

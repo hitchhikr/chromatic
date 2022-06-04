@@ -108,6 +108,7 @@ void FillAddInsArrays(void)
     HMODULE AddInLibMod = 0;
     FARPROC AddInDesc = 0;
     FARPROC AddInAuth = 0;
+    FARPROC AddInVers = 0;
     FARPROC AddInLoad = 0;
     FARPROC AddInUnload = 0;
     FARPROC AddInMenu = 0;
@@ -137,11 +138,12 @@ void FillAddInsArrays(void)
         {
             AddInDesc = GetProcAddress(AddInLibMod, "AddInDescription");
             AddInAuth = GetProcAddress(AddInLibMod, "AddInAuthor");
+            AddInVers = GetProcAddress(AddInLibMod, "AddInVersion");
             AddInLoad = GetProcAddress(AddInLibMod, "AddInLoad");
             AddInUnload = GetProcAddress(AddInLibMod, "AddInUnLoad");
             AddInMenu = GetProcAddress(AddInLibMod, "AddInMenu");
             // We need all procedures to run it correctly
-            if(AddInAuth != 0 && AddInDesc != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
+            if(AddInAuth != 0 && AddInVers != 0 && AddInDesc != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
             {
                 // Register dll name
                 AddInsDLL.Add(AddInLibMod);
@@ -193,6 +195,7 @@ void ReFillAddInsArrays(void)
     HMODULE AddInLibMod = 0;
     FARPROC AddInDesc = 0;
     FARPROC AddInAuth = 0;
+    FARPROC AddInVers = 0;
     FARPROC AddInLoad = 0;
     FARPROC AddInUnload = 0;
     FARPROC AddInMenu = 0;
@@ -252,11 +255,12 @@ void ReFillAddInsArrays(void)
         }
         AddInDesc = GetProcAddress(AddInLibMod, "AddInDescription");
         AddInAuth = GetProcAddress(AddInLibMod, "AddInAuthor");
+        AddInVers = GetProcAddress(AddInLibMod, "AddInVersion");
         AddInLoad = GetProcAddress(AddInLibMod, "AddInLoad");
         AddInUnload = GetProcAddress(AddInLibMod, "AddInUnLoad");
         AddInMenu = GetProcAddress(AddInLibMod, "AddInMenu");
         // We need all procedures to run it correctly
-        if(AddInAuth != 0 && AddInDesc != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
+        if(AddInAuth != 0 && AddInVers != 0 && AddInDesc != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
         {
             // Register dll name
             AddInsFiles.Add(AddInFileName.Get_String());
@@ -385,6 +389,7 @@ long RestartAddIn(long AddInNumber)
 {
     FARPROC AddInDesc = 0;
     FARPROC AddInAuth = 0;
+    FARPROC AddInVers = 0;
     FARPROC AddInLoad = 0;
     FARPROC AddInUnload = 0;
     FARPROC AddInMenu = 0;
@@ -397,6 +402,7 @@ long RestartAddIn(long AddInNumber)
     {
         AddInDesc = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInDescription");
         AddInAuth = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInAuthor");
+        AddInVers = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInVersion");
         AddInLoad = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInLoad");
         AddInUnload = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInUnLoad");
         AddInMenu = GetProcAddress(AddInsDLL.Get(AddInNumber)->Content, "AddInMenu");
@@ -534,12 +540,43 @@ CantGuessAuthor:
 }
 
 // -----------------------------------------------------------------------
+// Retrieve the version of a DLL (AddIn of Filter)
+CStr GetDLLVersion(FARPROC VersionRoutine)
+{
+    long VersLng = 0;
+    long VersLen = 0;
+    CStr ReturnValue;
+    CStr BufString;
+
+    if(VersionRoutine == 0) goto CantGuessVersion;
+    // Should return an author name string or 0
+    VersLng = VersionRoutine();
+    if(VersLng == 0)
+    {
+CantGuessVersion:
+        // Get filename if no description found
+        VersLen = strlen("N/A");
+        BufString = &BufString.String(VersLen, 1);
+        RtlCopyMemory(BufString.Get_String(), (void *) "N/A", VersLen);
+    }
+    else
+    {
+        VersLen = strlen((char *) VersLng);
+        BufString = &BufString.String(VersLen, 1);
+        RtlCopyMemory(BufString.Get_String(), (void *) VersLng, VersLen);
+    }
+    ReturnValue = BufString;
+    return(ReturnValue);
+}
+
+// -----------------------------------------------------------------------
 // Check if a file is a suitable addin
 long IsAddIn(CStr AddInName)
 {
     HMODULE AddInLibMod = 0;
     FARPROC AddInDesc = 0;
     FARPROC AddInAuth = 0;
+    FARPROC AddInVers = 0;
     FARPROC AddInLoad = 0;
     FARPROC AddInUnload = 0;
     FARPROC AddInMenu = 0;
@@ -550,17 +587,20 @@ long IsAddIn(CStr AddInName)
     {
         AddInDesc = GetProcAddress(AddInLibMod, "AddInDescription");
         AddInAuth = GetProcAddress(AddInLibMod, "AddInAuthor");
+        AddInVers = GetProcAddress(AddInLibMod, "AddInVersion");
         AddInLoad = GetProcAddress(AddInLibMod, "AddInLoad");
         AddInUnload = GetProcAddress(AddInLibMod, "AddInUnLoad");
         AddInMenu = GetProcAddress(AddInLibMod, "AddInMenu");
         // Must export all procedures
-        if(AddInDesc != 0 && AddInAuth != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
+        if(AddInDesc != 0 && AddInAuth != 0 && AddInVers != 0 && AddInLoad != 0 && AddInUnload != 0 && AddInMenu != 0)
         {
             // It is an AddIn
             ReturnValue = 1;
         }
         FreeLibrary(AddInLibMod);
-        CloseHandle((HANDLE) AddInLibMod);
+        #ifndef _DEBUG
+            CloseHandle((HANDLE) AddInLibMod);
+        #endif
     }
     return(ReturnValue);
 }
@@ -572,6 +612,7 @@ long IsSpAddIn(CStr SpAddInName)
     HMODULE SpAddInLib = 0;
     FARPROC SpAddInDesc = 0;
     FARPROC SpAddInAuth = 0;
+    FARPROC SpAddInVers = 0;
     FARPROC SpAddInLoad = 0;
     FARPROC SpAddInUnload = 0;
     FARPROC SpAddInMenu = 0;
@@ -582,12 +623,14 @@ long IsSpAddIn(CStr SpAddInName)
     {
         SpAddInDesc = GetProcAddress(SpAddInLib, "SpAddInDescription");
         SpAddInAuth = GetProcAddress(SpAddInLib, "SpAddInAuthor");
+        SpAddInVers = GetProcAddress(SpAddInLib, "SpAddInVersion");
         SpAddInLoad = GetProcAddress(SpAddInLib, "SpAddInLoad");
         SpAddInUnload = GetProcAddress(SpAddInLib, "SpAddInUnLoad");
         SpAddInMenu = GetProcAddress(SpAddInLib, "SpAddInAskResource");
         // Must export all procedures
         if(SpAddInDesc != 0 &&
            SpAddInAuth != 0 &&
+           SpAddInVers != 0 &&
            SpAddInLoad != 0 &&
            SpAddInUnload != 0 &&
            SpAddInMenu != 0)
