@@ -2,7 +2,7 @@
 // Chromatic
 // Integrated Development Environment
 //
-// Copyright (C) 2001-2010 Franck Charlet.
+// Copyright (C) 2001-2022 Franck Charlet.
 // All rights reserved.
 //
 // This file is copyright (C) bjarke viksoe

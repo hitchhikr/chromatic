@@ -4,7 +4,7 @@
 ; ------------------------------------
 ; Version: 2.0
 ; ------------------------------------
-; (C) Copyright 2001-2010 Franck Charlet.
+; (C) Copyright 2001-2022 Franck Charlet.
 ; ------------------------------------
 
 ; --- AddIns Standard invoke

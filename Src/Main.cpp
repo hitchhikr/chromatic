@@ -2,7 +2,7 @@
 // Chromatic
 // Integrated Development Environment
 //
-// Copyright (C) 2001-2010 Franck Charlet.
+// Copyright (C) 2001-2022 Franck Charlet.
 // All rights reserved.
 //
 // Redistribution and use in source and binary forms, with or without
@@ -60,7 +60,7 @@
 // Constants
 #define CHROMATIC_VERSION 1
 #define CHROMATIC_REV_MAJ 3
-#define CHROMATIC_REV_MIN 6
+#define CHROMATIC_REV_MIN 7
 
 // -----------------------------------------------------------------------
 // Variables
@@ -347,7 +347,7 @@ void InitAppArrays(void)
 
 // -----------------------------------------------------------------------
 // Set exceptions handler
-void InstallExceptFilter(void)
+/*void InstallExceptFilter(void)
 {
     SetErrorMode(SEM_NOOPENFILEERRORBOX | SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);
     OldExceptFilter = SetUnhandledExceptionFilter(&MainFilter);
@@ -572,7 +572,7 @@ long CALLBACK MainFilter(EXCEPTION_POINTERS *Filter)
     MiscMsgBox(NULL, (CStr) "Created dump file: " + (CStr) AppPath + (CStr) "\\Crash.Txt", MB_INFORMATION, Requesters);
     return(EXCEPTION_CONTINUE_SEARCH);
 }
-
+*/
 // -----------------------------------------------------------------------
 // Check directories structure and reconstruct it if necessary
 void CheckDirectories(void)

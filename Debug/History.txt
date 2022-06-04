@@ -1,5 +1,13 @@
 Chromatic history file
-Copyright (C) 2001-2010 Franck Charlet.
+Copyright (C) 2001-2022 Franck Charlet.
+
+--------------------------------------------------------------------------------
+Version 1.3.7
+
+- Lot of cleanup in the files.
+- Added win32.chm.
+- Removed nasm.ume & goasm.ume.
+- Fixed a small bug in templates menus displaying wrong processor (actually removed them).
 
 --------------------------------------------------------------------------------
 Version 1.3.6
