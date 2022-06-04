@@ -968,7 +968,7 @@ void CreatePropPage1(HWND hParent)
 void CreatePropPage2(HWND hParent)
 {
     FRMPropertiesPageColors = CreateFrame(4, 26, 257, 210, hParent, "Editor colors", 0, &FRMPropertiesFrameColors, 0);
-    FRMPropertiesPageAPIHelp = CreateFrame(263, 26, 260, 43, hParent, "Windows API help", 0, 0, 0);
+    FRMPropertiesPageAPIHelp = CreateFrame(263, 26, 260, 43, hParent, "Processor mnemonics help", 0, 0, 0);
     FRMPropertiesPageSDKHelp = CreateFrame(263, 69, 260, 43, hParent, "MSDN/Platform SDK help", 0, 0, 0);
     FRMPropertiesPageDDKHelp = CreateFrame(263, 112, 260, 43, hParent, "Windows DDK help", 0, 0, 0);
     FRMPropertiesPageDirectXSDKHelp = CreateFrame(263, 155, 260, 43, hParent, "DirectX SDK help", 0, 0, 0);
@@ -1416,7 +1416,7 @@ void FillProperties(void)
     }
     ControlSetText(FRMPropertiesTxtArgs, IniReadKey("Layout", "PrjArg", MainIniFile));
     ControlSetText(FRMPropertiesCbDebugger, IniReadKey("Layout", "PrjDebugger", MainIniFile));
-    ControlSetText(FRMPropertiesTxtWindowsAPI, IniReadKey("Layout", "WinHelp", MainIniFile));
+    ControlSetText(FRMPropertiesTxtWindowsAPI, IniReadKey("Layout", "ProcHelp", MainIniFile));
     ControlSetText(FRMPropertiesTxtMSDN, IniReadKey("Layout", "MSDNHelp", MainIniFile));
     ControlSetText(FRMPropertiesTxtDDK, IniReadKey("Layout", "DDKHelp", MainIniFile));
     ControlSetText(FRMPropertiesTxtDirectXSDK, IniReadKey("Layout", "DirectXSDKHelp", MainIniFile));
@@ -1657,7 +1657,7 @@ void SavePrefs(void)
     TmpHelpMSDN = ChangeAbsolutePaths(TmpHelpMSDN);
     TmpHelpDDK = ChangeAbsolutePaths(TmpHelpDDK);
     TmpHelpDirectXSDK = ChangeAbsolutePaths(TmpHelpDirectXSDK);
-    IniWriteKey("Layout", "WinHelp", TmpHelpWinAPI, MainIniFile);
+    IniWriteKey("Layout", "ProcHelp", TmpHelpWinAPI, MainIniFile);
     IniWriteKey("Layout", "MSDNHelp", TmpHelpMSDN, MainIniFile);
     IniWriteKey("Layout", "DDKHelp", TmpHelpDDK, MainIniFile);
     IniWriteKey("Layout", "DirectXSDKHelp", TmpHelpDirectXSDK, MainIniFile);

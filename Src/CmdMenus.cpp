@@ -3663,10 +3663,10 @@ void MCMD_ContextHelp(void)
         }
     }
     // Launch win32api help file if nothing can be found
-    BufString = IniReadKey("Layout", "WinHelp", MainIniFile);
+    BufString = IniReadKey("Layout", "ProcHelp", MainIniFile);
     if(BufString.Len() == 0)
     {
-        switch(MiscMsgBox(hMDIform.hWnd, "Windows API help directory not specified.\rDo you want to set it now ?", MB_ICONQUESTION | MB_YESNO, Requesters)) {
+        switch(MiscMsgBox(hMDIform.hWnd, "Processor mnemonics help directory not specified.\rDo you want to set it now ?", MB_ICONQUESTION | MB_YESNO, Requesters)) {
             case IDYES:
                 FRMPropertiesFirstTab = 1;
                 DisplayProperties();
