@@ -730,8 +730,6 @@ void CreateMenuEntry(CStr MName)
     CStr SecondElement;
     CStr RecognizedPlug;
     CStr MMName;
-//    long MPlug = 0;
-    CStr PlugToCheck;
     CStr BufString;
 
     hMenu = hMainMenu;
@@ -755,9 +753,7 @@ void CreateMenuEntry(CStr MName)
         if(StringGetSplitElement(MainMenusRetVal, ArEntry, 0).Len() != 0)
         {
             // Command menu
-//            MPlug = 0;
             BufString = SecondElement.Left(4).Upper_Case();
-  //          if(BufString == "PLUG") MPlug = 1;
             MenusCmdsLbl.Add(StringGetSplitElement(MainMenusRetVal, ArEntry, 0).Trim().Get_String());
             MenusCmds.Add(SecondElement.Get_String());
             if(StringGetSplitUBound(ArEntry) == 2)
@@ -771,19 +767,7 @@ void CreateMenuEntry(CStr MName)
             {
                 MenusCmdsComments.Add(SecondElement.Get_String());
                 MenusCmdsHelp.Add(0L);
-                // Try to recognize a plugin
-/*                if(MPlug == 1)
-                {
-                    PlugToCheck = SecondElement.Mid(6).Trim();
-                    PlugToCheck = ChangeRelativePaths(PlugToCheck);
-                    PlugToCheck = StringReplace(PlugToCheck, "\"", "", 1, -1, Binary_Compare);
-                    if(GetPlugInType(PlugToCheck) == 1) RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
-                    else RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
-                }
-                else
-                {*/
-                    RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
-//                }
+                RecognizedPlug = StringGetSplitElement(MainMenusRetVal, ArEntry, 0);
             }
         }
         else

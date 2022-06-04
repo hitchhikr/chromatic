@@ -153,7 +153,6 @@ int CALLBACK FRMUserMenusProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
             ComboBoxAddItem(FRMUserMenusCbRunType, "Windows app", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "WinHelp file", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Capture DOS output", -1);
-            //ComboBoxAddItem(FRMUserMenusCbRunType, "QEditor Plugin", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Run with Snap", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Html page", -1);
             ComboBoxAddItem(FRMUserMenusCbRunType, "Document file", -1);
@@ -221,34 +220,29 @@ int CALLBACK FRMUserMenusProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
                                         ComboBoxSetIndex(FRMUserMenusCbRunType, 2);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
-                                    else if(BufString == "PLUG ")
+                                    else if(BufString == "SNAP ")
                                     {
                                         ComboBoxSetIndex(FRMUserMenusCbRunType, 3);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
-                                    else if(BufString == "SNAP ")
+                                    else if(BufString == "HTML ")
                                     {
                                         ComboBoxSetIndex(FRMUserMenusCbRunType, 4);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
-                                    else if(BufString == "HTML ")
+                                    else if(BufString == "DOCU ")
                                     {
                                         ComboBoxSetIndex(FRMUserMenusCbRunType, 5);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
-                                    else if(BufString == "DOCU ")
+                                    else if(BufString == "PREP ")
                                     {
                                         ComboBoxSetIndex(FRMUserMenusCbRunType, 6);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
-                                    else if(BufString == "PREP ")
-                                    {
-                                        ComboBoxSetIndex(FRMUserMenusCbRunType, 7);
-                                        ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
-                                    }
                                     else if(BufString == "LUAS ")
                                     {
-                                        ComboBoxSetIndex(FRMUserMenusCbRunType, 8);
+                                        ComboBoxSetIndex(FRMUserMenusCbRunType, 7);
                                         ControlSetText(FRMUserMenusTxtDat, ControlGetText(FRMUserMenusTxtDat).Mid(6));
                                     }
                                     else
@@ -546,21 +540,18 @@ void FRMUserMenusListboxReplace(void)
             CmdToReplace = "CAPT " + (CStr) CmdToReplace;
             break;
         case 3:
-            CmdToReplace = "PLUG " + (CStr) CmdToReplace;
-            break;
-        case 4:
             CmdToReplace = "SNAP " + (CStr) CmdToReplace;
             break;
-        case 5:
+        case 4:
             CmdToReplace = "HTML " + (CStr) CmdToReplace;
             break;
-        case 6:
+        case 5:
             CmdToReplace = "DOCU " + (CStr) CmdToReplace;
             break;
-        case 7:
+        case 6:
             CmdToReplace = "PREP " + (CStr) CmdToReplace;
             break;
-        case 8:
+        case 7:
             CmdToReplace = "LUAS " + (CStr) CmdToReplace;
             break;
     }
@@ -613,21 +604,18 @@ void FRMUserMenusListboxAddCmd(void)
             CmdToReplace = "CAPT " + CmdToReplace;
             break;
         case 3:
-            CmdToReplace = "PLUG " + CmdToReplace;
-            break;
-        case 4:
             CmdToReplace = "SNAP " + CmdToReplace;
             break;
-        case 5:
+        case 4:
             CmdToReplace = "HTML " + CmdToReplace;
             break;
-        case 6:
+        case 5:
             CmdToReplace = "DOCU " + CmdToReplace;
             break;
-        case 7:
+        case 6:
             CmdToReplace = "PREP " + CmdToReplace;
             break;
-        case 8:
+        case 7:
             CmdToReplace = "LUAS " + CmdToReplace;
             break;
     }

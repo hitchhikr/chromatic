@@ -377,8 +377,6 @@ void Exec(CStr CmdName, CStr CmdFakeName, long IsInHelp)
     long RunDocu = 0;
     long RunBuiltin = 0;
     long RunScript = 0;
-    HMODULE PlugDllHandle = 0;
-    FARPROC PlugAddr = 0;
     CStr TrimedCommand;
     long DBlockBeg = 0;
     long DBlockEnd = 0;
