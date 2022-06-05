@@ -25,6 +25,9 @@ Copyright (C) 1994-2004 Tecgraf, PUC-Rio.  All rights reserved.
 win32.chm
 Copyright vieuxcrapaud (?) (https://sourceforge.net/projects/win32-help-chm/)
 
+OllyDbg
+Copyright (c) 2000-2004 Oleh Yuschuk.
+
 -----------------------------------------------------------------
 Minimum Requirements:
 
