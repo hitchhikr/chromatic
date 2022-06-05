@@ -66,17 +66,7 @@ pfd			            PIXELFORMATDESCRIPTOR <	sizeof PIXELFORMATDESCRIPTOR, \
                         						04h or 020h or 1, \
                         						0, \
                         						0, \
-                        						0, 0, 0, 0, 0, 0, \
-                        						0, \
-                        						0, \
-                        						0, \
-                        						0, 0, 0, 0, \
-                        						16, \
-                        						0, \
-                        						0, \
-                        						0, \
-                        						0, \
-                        						0, 0, 0 >
+                        						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0, 0, 0, 0, 0, 0 >
 HTimerVal		        LARGE_INTEGER <>
 HTimerFreq		        LONGLONG 0
 

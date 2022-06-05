@@ -1,5 +1,5 @@
 [Project]
-Name=TestOglAsm
+Name=testoglasm
 Type=OGL_ASM
 TypeExt=WINEXE
 TypeRename=
@@ -42,4 +42,6 @@ MODULE000=[PROJECTSDIR]\testoglasm\OGLMain.asm
 MODULE001=[PROJECTSDIR]\testoglasm\OGLStartup.asm
 [Windows]
 Window000=[TEMPLATESDIR]\OGLStartup.inc
+Focus=[TEMPLATESDIR]\OGLStartup.inc
+FocusLine=58
 Window001=[PROJECTSDIR]\testoglasm\OGLStartup.asm

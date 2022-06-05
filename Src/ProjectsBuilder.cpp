@@ -2957,7 +2957,7 @@ void DebugProject(void)
     DebuggerToUse = DebuggerToUse.Trim();
     if(DebuggerToUse.Lower_Case() != "(use internal debugger)")
     {
-        DebuggerToUseArgs = DebuggerToUse;
+        DebuggerToUseArgs = IniReadKey("Layout", "PrjArg", MainIniFile);
         // Search for the real filename
         while(!FileExist(DebuggerToUse))
         {
@@ -2968,11 +2968,7 @@ void DebugProject(void)
                 return;
             }
         }
-        // Extract the arguments
-        DebuggerToUseArgs = DebuggerToUseArgs.Mid(DebuggerToUse.Len());
-        // Replace the filename wildcard
-        DebuggerToUseArgs = DebuggerToUseArgs.Replace("%1", FileToDebug, 1, -1, Binary_Compare);
-        DebuggerToUse = DebuggerToUse.Trim();
+        DebuggerToUseArgs = FileToDebug + (CStr) " " + DebuggerToUseArgs;
         DebuggerToUseArgs = DebuggerToUseArgs.Trim();
     }
     

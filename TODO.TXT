@@ -34,8 +34,6 @@ Debugger:
 	  and datas watches (VC like)).
 	- Add a processes / threads datas viewer.
 
-    - Or integrate gdb as internal debugger.
-
 Templates:
 
 	- Add Virtual Dub filter project (Asm/C).
