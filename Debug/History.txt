@@ -8,6 +8,7 @@ Version 1.3.7
 - Added win32.chm.
 - Removed nasm.ume & goasm.ume.
 - Fixed a small bug in templates menus displaying wrong processor (actually removed them).
+- Addins now have a version number.
 
 --------------------------------------------------------------------------------
 Version 1.3.6

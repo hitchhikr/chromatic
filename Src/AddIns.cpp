@@ -525,9 +525,9 @@ CStr GetDLLAuthor(FARPROC AuthorRoutine)
     {
 CantGuessAuthor:
         // Get filename if no description found
-        AuthLen = strlen("(The unknown soldier)");
+        AuthLen = strlen("(The unknown coder)");
         BufString = &BufString.String(AuthLen, 1);
-        RtlCopyMemory(BufString.Get_String(), (void *) "(The unknown soldier)", AuthLen);
+        RtlCopyMemory(BufString.Get_String(), (void *) "(The unknown coder)", AuthLen);
     }
     else
     {

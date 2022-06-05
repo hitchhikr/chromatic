@@ -2,7 +2,7 @@
 ; Chromatic
 ; Integrated Development Environment
 ;
-; Copyright (C) 2001-2010 Franck Charlet.
+; Copyright (C) 2001-2022 Franck Charlet.
 ; All rights reserved.
 ;
 ; Redistribution and use in source and binary forms, with or without
@@ -34,11 +34,11 @@
 
 [Setup]
 AppName=Chromatic IDE
-AppVerName=Chromatic IDE v1.3.6
+AppVerName=Chromatic IDE v1.3.7
 AppPublisher=hitchhikr SoftWorks
-AppPublisherURL=http://perso.wanadoo.fr/franck.charlet/index.htm
-AppSupportURL=http://perso.wanadoo.fr/franck.charlet/index.htm
-AppUpdatesURL=http://perso.wanadoo.fr/franck.charlet/index.htm
+AppPublisherURL=http://franck.charlet.pagesperso-orange.fr/
+AppSupportURL=http://franck.charlet.pagesperso-orange.fr/
+AppUpdatesURL=http://franck.charlet.pagesperso-orange.fr/
 DefaultDirName=c:\Chromatic\
 DefaultGroupName=Chromatic IDE
 DisableProgramGroupPage=yes
@@ -46,9 +46,9 @@ LicenseFile=..\Debug\LicenseInstall.txt
 Compression=lzma
 SolidCompression=yes
 VersionInfoCompany=hitchhikr SoftWorks
-VersionInfoTextVersion=Chromatic IDE v1.3.6
-VersionInfoVersion=1.3.6.0
-OutputBaseFilename=Chromatic_svn
+VersionInfoTextVersion=Chromatic IDE v1.3.7
+VersionInfoVersion=1.3.7.0
+OutputBaseFilename=Chromatic
 OutputDir=.\
 
 [Tasks]
@@ -80,8 +80,7 @@ Source: "..\Debug\Examples\PacketsView\PacketsView.asm"; DestDir: "{app}\Example
 Source: "..\Debug\Examples\PacketsView\PacketsView.ini"; DestDir: "{app}\Examples\PacketsView"; Flags: ignoreversion
 Source: "..\Debug\Examples\LDIrc\LDIrc.asm"; DestDir: "{app}\Examples\LDIrc"; Flags: ignoreversion
 Source: "..\Debug\Filters\*.dll"; DestDir: "{app}\Filters"; Flags: ignoreversion
-Source: "..\Debug\Help\Rc.hlp"; DestDir: "{app}\Help"; Flags: ignoreversion
-Source: "..\Debug\Help\X86Eas.hlp"; DestDir: "{app}\Help"; Flags: ignoreversion
+Source: "..\Debug\Help\win32.chm"; DestDir: "{app}\Help"; Flags: ignoreversion
 Source: "..\Debug\Help\Cpp.chm"; DestDir: "{app}\Help"; Flags: ignoreversion
 Source: "..\Debug\Languages\*.mln"; DestDir: "{app}\Languages"; Flags: ignoreversion
 Source: "..\Debug\Languages\Scripts\*.lua"; DestDir: "{app}\Languages\Scripts"; Flags: ignoreversion
