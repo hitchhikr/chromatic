@@ -60,7 +60,7 @@
 // Constants
 #define CHROMATIC_VERSION 1
 #define CHROMATIC_REV_MAJ 3
-#define CHROMATIC_REV_MIN 7
+#define CHROMATIC_REV_MIN 8
 
 // -----------------------------------------------------------------------
 // Variables

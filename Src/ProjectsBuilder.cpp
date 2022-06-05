@@ -1597,7 +1597,6 @@ void BuildProject(long BuildType)
     WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Building skin: " + (CStr) PrjBuildIniFile);
     WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Creating project: " + (CStr) ProjectFName + (CStr) "...");
     
-
     BufString = ProjectTypeExt.Upper_Case();
     if(BufString == "WINLIB")
     {
@@ -2944,6 +2943,7 @@ void DebugProject(void)
     }
 
     DebuggerToUse = IniReadKey("Layout", "PrjDebugger", MainIniFile);
+    DebuggerToUse = ChangeRelativePaths(DebuggerToUse);
     /*if(ProjectPostRename.Len() != 0) {
         RealExt = ProjectPostRename;
     } else {

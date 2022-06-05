@@ -462,7 +462,8 @@ void Exec(CStr CmdName, CStr CmdFakeName, long IsInHelp)
     CStr CurSourceTextBlock;
     CStr BufString;
     CStr LUA_Args;
-    
+    CStr DebuggerToUse;
+
     LocalCmdName = StringReplace(CmdName, "\t", " ", 1, -1, Binary_Compare);
     LocalCmdName = LocalCmdName.Trim();
     if(LocalCmdName.Len() > 6)
@@ -576,10 +577,32 @@ ReAssembleArg:
     {
         if(RunWithsnap == 1)
         {
-            TrimedCommand = StringGetSplitElement(LocalCmdName, CmdParsed, 0).Trim();
-            if(WaitForDebugOutput(StringReplace(TrimedCommand, "\"", "", 1, -1, Binary_Compare), Args) == 0)
+            DebuggerToUse = IniReadKey("Layout", "PrjDebugger", MainIniFile);
+            DebuggerToUse = ChangeRelativePaths(DebuggerToUse);
+            DebuggerToUse = DebuggerToUse.Trim();
+            if(DebuggerToUse.Lower_Case() != "(use internal debugger)")
             {
-                WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Can't create process.");
+                // Search for the real filename
+                while(!FileExist(DebuggerToUse))
+                {
+                    DebuggerToUse = DebuggerToUse.Left(DebuggerToUse.Len() - 1);
+                    if(DebuggerToUse.Len() == 0)
+                    {
+                        WriteToStatus("Can't find external debugger.");
+                        goto NoRunSnap;
+                    }
+                }
+                WriteToStatus("Starting external debugger...");
+                RunDOSCmd(DebuggerToUse, LocalCmdName, FileGetDirectory(DebuggerToUse), "");
+                WriteToStatus("Done.");
+            }
+            else
+            {
+                TrimedCommand = StringGetSplitElement(LocalCmdName, CmdParsed, 0).Trim();
+                if(WaitForDebugOutput(StringReplace(TrimedCommand, "\"", "", 1, -1, Binary_Compare), Args) == 0)
+                {
+                    WriteToStatus(PutStatusDatePrefix().Get_String() + (CStr) "Can't create process.");
+                }
             }
             goto NoRunSnap;
         }
