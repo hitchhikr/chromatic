@@ -8,6 +8,7 @@ Version 1.3.8
 - Filters now have a version number.
 - Ollydbg included in the distrib.
 - External debuggers can be used on individual files.
+- Fixed an issue with project debugging when using an external debugger.
 
 --------------------------------------------------------------------------------
 Version 1.3.7
