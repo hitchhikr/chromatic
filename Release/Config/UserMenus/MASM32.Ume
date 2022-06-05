@@ -38,7 +38,7 @@ Menu001=Subclass builder | "[ROOTDIR]\Subclass.exe"
 Menu002=Binary to DB converter | "[ROOTDIR]\bin2dbex.exe"$%2
 Menu003=-
 Menu004=Window code creation | "[ROOTDIR]\cg.exe"
-Menu005=API library list | [ROOTDIR]\LIBLIST.EXE
+Menu005=Image editor | [ROOTDIR]\bin\imagedit.exe
 Menu006=Open current file with QEditor | [ROOTDIR]\QEDITOR.EXE$"%2"
 Menu007=TopGun text editor | [ROOTDIR]\topgun.exe$"%2"
 Menu008=Procedure browser | [ROOTDIR]\Qetb.exe$[ROOTDIR]\procs
@@ -48,7 +48,6 @@ Menu011=-
 Menu012=Display current file with default application | HTML$"%2"
 Menu013=Run Windows calculator | "Calc.exe"
 Menu014=Run Windows explorer | "Explorer.exe"
-[Plug-Ins]
 [Help]
 Menu000=MAsm32 help | "[HELPDIR]\Masm32.chm"$%6 | HELP
 Menu001=MAsm32 library help | "[HELPDIR]\MasmLib.chm"$%6 | HELP

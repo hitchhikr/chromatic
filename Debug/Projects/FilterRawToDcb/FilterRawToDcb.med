@@ -32,7 +32,3 @@ DEF=[PROJECTSDIR]\FilterRawToDcb\Filter.mdf
 [Constants]
 Name000=_WIN32_IE
 Value000=0x0500
-[Windows]
-Window000=[PROJECTSDIR]\FilterRawToDcb\Filter.c
-Focus=[PROJECTSDIR]\FilterRawToDcb\Filter.c
-FocusLine=73

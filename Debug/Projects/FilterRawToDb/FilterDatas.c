@@ -1,6 +1,7 @@
 /* --------------- Datas Section */
 
 char *MsgDescription = "Raw datas to assembly db";
+char *MsgVersion = "1.0";
 char *MsgAuthor = "Franck Charlet";
 
 char *TabHex[] = {

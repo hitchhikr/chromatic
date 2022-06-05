@@ -6,9 +6,11 @@
 [EXPORTS]
 FilterDescription=1
 Fnc000=FilterDescription
+FilterVersion=1
+Fnc001=FilterVersion
 FilterAuthor=1
-Fnc001=FilterAuthor
+Fnc002=FilterAuthor
 FilterProc=1
-Fnc002=FilterProc
+Fnc003=FilterProc
 [ENTRYPOINT]
 Proc=

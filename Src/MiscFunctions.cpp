@@ -116,58 +116,136 @@ CStr RemoveRelativePaths(CStr Path)
     CStr BufString;
     CStr ReturnValue;
     
-    BufString = Dirs[DIR_INCLUDE] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_BIN] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_LIB] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_HELP] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_ROOT] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_WINSYS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_TEMP] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_WIN] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_SNIPPETS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_MAINHELP] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_TEMPLATES] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_PROJECTS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_TOOLS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_DATABASES] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_SKINS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_LANGSCRIPTS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_LANGUAGES] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_DOWNLOADS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_ADDINS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_CONFIG] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_MENUS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_WIZARDS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_SCRIPTS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_FILTERS] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_EXTRACODE] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
-    BufString = Dirs[DIR_MAIN] + (CStr) "\\";
-    Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    if(strlen(Dirs[DIR_INCLUDE]))
+    {
+        BufString = Dirs[DIR_INCLUDE] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_BIN]))
+    {
+        BufString = Dirs[DIR_BIN] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_LIB]))
+    {
+        BufString = Dirs[DIR_LIB] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_HELP]))
+    {
+        BufString = Dirs[DIR_HELP] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_ROOT]))
+    {
+        BufString = Dirs[DIR_ROOT] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_WINSYS]))
+    {
+        BufString = Dirs[DIR_WINSYS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_TEMP]))
+    {
+        BufString = Dirs[DIR_TEMP] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_WIN]))
+    {
+        BufString = Dirs[DIR_WIN] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_SNIPPETS]))
+    {
+        BufString = Dirs[DIR_SNIPPETS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_MAINHELP]))
+    {
+        BufString = Dirs[DIR_MAINHELP] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_TEMPLATES]))
+    {
+        BufString = Dirs[DIR_TEMPLATES] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_PROJECTS]))
+    {
+        BufString = Dirs[DIR_PROJECTS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_TOOLS]))
+    {
+        BufString = Dirs[DIR_TOOLS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_DATABASES]))
+    {
+        BufString = Dirs[DIR_DATABASES] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_SKINS]))
+    {
+        BufString = Dirs[DIR_SKINS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_LANGSCRIPTS]))
+    {
+        BufString = Dirs[DIR_LANGSCRIPTS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_LANGUAGES]))
+    {
+        BufString = Dirs[DIR_LANGUAGES] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_DOWNLOADS]))
+    {
+        BufString = Dirs[DIR_DOWNLOADS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_ADDINS]))
+    {
+        BufString = Dirs[DIR_ADDINS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_CONFIG]))
+    {
+        BufString = Dirs[DIR_CONFIG] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_MENUS]))
+    {
+        BufString = Dirs[DIR_MENUS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_WIZARDS]))
+    {
+        BufString = Dirs[DIR_WIZARDS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_SCRIPTS]))
+    {
+        BufString = Dirs[DIR_SCRIPTS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_FILTERS]))
+    {
+        BufString = Dirs[DIR_FILTERS] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_EXTRACODE]))
+    {
+        BufString = Dirs[DIR_EXTRACODE] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
+    if(strlen(Dirs[DIR_MAIN]))
+    {
+        BufString = Dirs[DIR_MAIN] + (CStr) "\\";
+        Path = StringReplace(Path, BufString, "", 1, -1, Text_Compare);
+    }
     ReturnValue = Path;
     return(ReturnValue);
 }

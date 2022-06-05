@@ -34,7 +34,7 @@ Debugger:
 	  and datas watches (VC like)).
 	- Add a processes / threads datas viewer.
 
-    - Integrate gdb as internal debugger.
+    - Or integrate gdb as internal debugger.
 
 Templates:
 
@@ -50,7 +50,6 @@ Templates:
 Menus:
 
 	- Add MingW32 usermenus.
-	- Add FreePascal usermenus.
     - Modify the system to use 4 bytes keys instead of indexes
       (with a keys sanity checkup system).
 

@@ -35,4 +35,6 @@ Value000=0x0500
 [Windows]
 Window000=[PROJECTSDIR]\FilterRawToC\Filter.c
 Focus=[PROJECTSDIR]\FilterRawToC\Filter.c
-FocusLine=87
+FocusLine=46
+Window001=[TEMPLATESDIR]\AddInConst.h
+Window002=[PROJECTSDIR]\FilterRawToC\FilterDatas.c

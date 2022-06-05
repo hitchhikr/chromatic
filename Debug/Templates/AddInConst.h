@@ -10,6 +10,8 @@ Version: 2.0
 #ifndef _ADDINCONST_H_
 #define _ADDINCONST_H_
 
+#include <winsock2.h>
+
 /* --- Support constants for Windows.inc */
 #ifndef TBSTYLE_DROPDOWN
 #define TBSTYLE_DROPDOWN 8

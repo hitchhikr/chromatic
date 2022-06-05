@@ -115,8 +115,9 @@ int CALLBACK FRMFiltersProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPara
             ToolBarAddButton(FRMFiltersToolbar, "", REM_FILTERS, ICON_DELETE, TBSTYLE_BUTTON, TBSTATE_ENABLED, 1);
             FRMFiltersListView = CreateListView(2, 26, 403, 203, hwndDlg, 4, 0, 0, LVS_EX_FULLROWSELECT | LVS_EX_LABELTIP, LVS_REPORT | WS_TABSTOP | LVS_NOSORTHEADER, WS_EX_STATICEDGE);
             ListViewAddCol(FRMFiltersListView, "Author", 100, 0);
-            ListViewAddCol(FRMFiltersListView, "Description", 170, 1);
-            ListViewAddCol(FRMFiltersListView, "Name", 110, 2);
+            ListViewAddCol(FRMFiltersListView, "Version", 50, 1);
+            ListViewAddCol(FRMFiltersListView, "Description", 170, 2);
+            ListViewAddCol(FRMFiltersListView, "Name", 110, 3);
             // Fill the list
             FillFiltersList();
             FRMFiltersSelectedListView = CreateListView(408, 26, 136, 203, hwndDlg, 5, 0, 0, LVS_EX_FULLROWSELECT | LVS_EX_LABELTIP, LVS_REPORT | LVS_NOCOLUMNHEADER | WS_TABSTOP, WS_EX_STATICEDGE);
@@ -267,9 +268,11 @@ void FillFiltersList(void)
     CStr FilterName;
     HMODULE FilterLib = 0;
     FARPROC FilterDesc = 0;
+    FARPROC FilterVers = 0;
     FARPROC FilterAuth = 0;
     FARPROC FilterProc = 0;
     CStr Description;
+    CStr Vers;
     CStr Auth;
     CStr BufString;
 
@@ -281,16 +284,19 @@ void FillFiltersList(void)
         if(FilterLib != 0)
         {
             FilterDesc = GetProcAddress(FilterLib, "FilterDescription");
+            FilterVers = GetProcAddress(FilterLib, "FilterVersion");
             FilterAuth = GetProcAddress(FilterLib, "FilterAuthor");
             FilterProc = GetProcAddress(FilterLib, "FilterProc");
             // Must have all procedures
-            if(FilterDesc != 0 && FilterAuth != 0 && FilterProc != 0)
+            if(FilterDesc != 0 && FilterAuth != 0 && FilterVers != 0 && FilterProc != 0)
             {
                 Description = GetDLLDescription(FilterName, FilterDesc);
                 Auth = GetDLLAuthor(FilterAuth);
+                Vers = GetDLLAuthor(FilterVers);
                 ListViewAddItem(FRMFiltersListView, FileRemoveExtension(FileGetFileName(FilterName)), i, -1);
                 ListViewSetSubItem(FRMFiltersListView, Description, i, 1);
-                ListViewSetSubItem(FRMFiltersListView, Auth, i, 2);
+                ListViewSetSubItem(FRMFiltersListView, Vers, i, 2);
+                ListViewSetSubItem(FRMFiltersListView, Auth, i, 3);
                 i++;
             }
             FreeLibrary(FilterLib);

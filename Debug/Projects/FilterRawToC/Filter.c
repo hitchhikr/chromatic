@@ -31,15 +31,23 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD ul_reason_for_call, LPVOID lpReserve
 
 /* --- FilterDescription()
    In: N/A
-   Out: Can return filter description or NULL */
+   Out: Return filter description */
 char * __stdcall FilterDescription()
 {
     return(MsgDescription);
 }
 
+/* --- FilterVersion()
+   In: N/A
+   Out: Return filter version */
+char * __stdcall FilterVersion()
+{
+    return(MsgVersion);
+}
+
 /* --- FilterAuthor()
    In: N/A
-   Out: Can return author's name or NULL */
+   Out: Return author's name */
 char * __stdcall FilterAuthor()
 {
     return(MsgAuthor);
@@ -71,7 +79,7 @@ LPFILTERFILE __stdcall FilterProc(char *FileName, LPFILTERFILE File, LPCHROMATIC
     /* Convert main part */
     if(File_Len > 15) CL->StringFillHexBytes(File->FileMem, Output_Buffer, 16, 3, 3, File_Len16, 3);
     /* Convert remaining bytes */
-    if(File_Remainder != 0) CL->StringFillHexBytes(File->FileMem + (File_Len - File_Remainder), Output_Buffer_End, File_Remainder, 3, 0, 1, 3);
+    if(File_Remainder != 0) CL->StringFillHexBytes(((char *) File->FileMem + (File_Len - File_Remainder)), Output_Buffer_End, File_Remainder, 3, 0, 1, 3);
     /* Write the header */
     Output_Buffer_Final = CL->StringCat("/*\r\nCreated from file: ", FileName);
     Output_Buffer_Final = CL->StringCat(Output_Buffer_Final, "\r\n");

@@ -35,4 +35,5 @@ Value000=0x0500
 [Windows]
 Window000=[PROJECTSDIR]\FilterRawToDb\Filter.c
 Focus=[PROJECTSDIR]\FilterRawToDb\Filter.c
-FocusLine=39
+FocusLine=81
+Window001=[PROJECTSDIR]\FilterRawToDb\FilterDatas.c
